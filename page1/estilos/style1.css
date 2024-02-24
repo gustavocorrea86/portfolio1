@@ -106,7 +106,7 @@ section div i:hover {
 footer{
     display: flex;
     width: 300px;
-    align-items:;
+    align-items:center;
     margin:20px;
     color: white;
     font-family: "Ruluko", sans-serif;
