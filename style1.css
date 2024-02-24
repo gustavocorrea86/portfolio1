@@ -1,0 +1,115 @@
+@charset "UTf-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-image: url(imagens/woman-1853939_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+header{
+    width: 370px;
+}
+header > h3{
+    font-family: "Barrio", system-ui;
+    font-size: 15px;
+    margin: 20px;
+}
+main{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+   
+}
+section{
+    margin: 10px 0 0px 20px;
+    width: 380px;
+    @media(max-width:600px){
+        margin-left: 20px;
+       
+    }
+}
+main > h1{
+    font-family: "Indie Flower", cursive;
+    font-size: 100px;
+    margin-left: 90px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.507);
+    color: white;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-transform: initial;
+    @media(max-width: 600px){
+        font-size: 50px;
+        margin-left: 20px;
+        width: 400px;
+    }
+}
+section > p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 500px;
+    text-shadow: 2px 2px black;
+    font-family: "Ruluko", sans-serif;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.411);
+    @media(max-width: 600px){
+        width: 300px;
+    }
+}
+#iname{
+    width: 350px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+}
+#e-mail{
+    width: 220px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+   
+}
+#linkbtn{
+    display: inline-block;
+    background-color: orange;
+    padding: 8px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: "Ruluko", sans-serif;
+    font-weight: bolder;
+}
+span:hover{
+    transform: scale(1.3);
+}
+section > div{
+    margin-top: 25px;
+}
+section div i{
+    color: white;
+    margin-left: 10px;
+    font-size: 25px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.534);
+}
+section div i:hover {
+    color: orange;
+    transform: scale(1.2);
+}
+footer{
+    display: flex;
+    width: 300px;
+    align-items:;
+    margin:20px;
+    color: white;
+    font-family: "Ruluko", sans-serif;
+    position: absolute;
+    top: 90%;
+}
