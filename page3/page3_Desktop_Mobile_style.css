@@ -146,31 +146,31 @@ nav .menuDesktop a::before{
 }
 @keyframes slide{
     0%{
-        background-image: url(imagens/img_page3/accessories3.jpg);
+        background-image: url(img_page3/accessories3.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
     25%{
-        background-image: url(imagens/img_page3/accessories4.jpg);
+        background-image: url(img_page3/accessories4.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
     50%{
-        background-image: url(imagens/img_page3/accessories2.jpg);
+        background-image: url(img_page3/accessories2.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover; 
     }
     75%{
-        background-image: url(imagens/img_page3/acessorios11.jpg);
+        background-image: url(img_page3/acessorios11.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
     100%{
-        background-image: url(imagens/img_page3/watch-4468961_640.jpg);
+        background-image: url(img_page3/watch-4468961_640.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -307,7 +307,7 @@ img{
 .fotocliente1{
     width: 150px;
     height: 250px;
-    background-image: url(imagens/img_page3/man2.jpg);
+    background-image: url(img_page3/man2.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -315,7 +315,7 @@ img{
 .fotocliente2{
     width: 150px;
     height: 250px;
-    background-image: url(imagens/img_page3/relogio.jpg);
+    background-image: url(img_page3/relogio.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -555,7 +555,7 @@ i{
     }
     @keyframes slide{
         0%{
-            background-image: url(imagens/img_page3/accessories3.jpg);
+            background-image: url(img_page3/accessories3.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -563,7 +563,7 @@ i{
             width: 360px;
         }
         25%{
-            background-image: url(imagens/img_page3/accessories4.jpg);
+            background-image: url(img_page3/accessories4.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -571,7 +571,7 @@ i{
             width: 360px;
         }
         50%{
-            background-image: url(imagens/img_page3/accessories2.jpg);
+            background-image: url(img_page3/accessories2.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover; 
@@ -579,7 +579,7 @@ i{
             width: 360px;
         }
         75%{
-            background-image: url(imagens/img_page3/acessorios11.jpg);
+            background-image: url(img_page3/acessorios11.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -587,7 +587,7 @@ i{
             width: 360px;
         }
         100%{
-            background-image: url(imagens/img_page3/watch-4468961_640.jpg);
+            background-image: url(img_page3/watch-4468961_640.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -713,7 +713,7 @@ i{
     .fotocliente1{
         width: 150px;
         height: 260px;
-        background-image: url(imagens/img_page3/man2.jpg);
+        background-image: url(img_page3/man2.jpg);
         background-position: top center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -722,7 +722,7 @@ i{
     .fotocliente2{
         width: 150px;
         height: 260px;
-        background-image: url(imagens/img_page3/relogio.jpg);
+        background-image: url(img_page3/relogio.jpg);
         background-position: top center;
         background-repeat: no-repeat;
         background-size: cover;
