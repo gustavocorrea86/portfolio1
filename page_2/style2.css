@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    display: grid;
+    margin: 0 auto;
+    background: linear-gradient(to top, rgb(166, 201, 214), rgba(41, 41, 185, 0.76),  rgb(141, 196, 219) );
+    grid-template-areas: 
+    "header" "section1" "section2" "section3" "footer";
+}
+@media (min-width: 600px) {
+    body{
+    height: 100%;
+    margin: 0 auto;
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3 minmax(200, auto));
+    grid-template-areas: 
+    "header header"
+    "section2 section1"
+    "section2 section1"
+    "section2 section3"
+    ". section3"
+    "footer footer"
+    /*"header header"
+    "section2 section1"
+    "section2 section3"
+    "footer footer"*/
+    }
+    .fundo_branco{
+        margin-top: 200px;
+    }
+}
+/*============================header=========================*/
+header{
+    display:flex;
+    justify-content: center;
+    height: 95px;
+    grid-area: header;
+}
+nav{
+    display: flex;
+    padding: 10px;
+}
+header nav h1{
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 30px;
+    font-size: 40px;
+}
+.seta{
+    transform: rotate(-50deg);
+    animation: seta 2s;
+}
+@keyframes seta{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-50deg);
+    }
+}
+/*============================ section 1 =========================*/
+.section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    grid-area: section1;
+}
+.section1 div h1{
+    font-size: 40px;
+    margin: 10px 0px 10px 20px;
+}
+/*============================ section 2 =========================*/
+.section2{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: section2;
+}
+.fundo_branco{
+    background-color: white;
+    height: 470px;
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+}
+.circ_up{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(235, 235, 235);
+    position: absolute;
+    top: 4%;
+    border-radius: 50%;
+}
+.circ_down{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(235, 235, 235);
+    position: absolute;
+    top: 95%;
+    border-radius: 50%;
+}
+.tela_azul{
+    width: 300px;
+    height: 400px;
+    background-image: url(imagens/background-159244_640.png);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0px 0px 20px;
+    border-radius: 5px;
+    position: relative;
+}
+.bola_fora{
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin: -110px 0px 0px -20px;*/
+    transform: rotate(-15deg);
+    margin-bottom: 10px;
+    position: absolute;
+    top: -70px;
+    left: 10px;
+}
+.bola_dentro{
+    height: 80px;
+    width: 80px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.free_book{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    animation: zoom 1s infinite;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+        color: rgba(27, 27, 189, 0.966);
+    }
+}
+.section2 h4{
+    color: white;
+    font-size: 25px;
+    margin: -60px 10px 5px 90px;
+}
+.p1{
+    color: white;
+    margin: 0px 10px 20px 90px;
+}
+.section2 .h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.p2{
+    color: white;
+    margin-bottom: 10px;
+}
+.p3{
+    color: black;
+    text-decoration: none;
+}
+.p3:hover{
+    text-decoration: underline;
+}
+.faixa_preta{
+    background-color: black;
+    width: 300px;
+    height: 12px;
+    position: absolute;
+    top: 390px;
+    left: 0px;
+    border-radius: 0px 0px 5px 5px;
+}
+ /*============================ section 3 =========================*/
+
+.section3{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: section3;
+}
+.formulario{
+    background-color: white;
+    width: 360px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    padding-top: 5px;
+    position: absolute;
+}
+.section3 form .h2{
+    font-size: 22px;
+    margin-top: 10px;
+    color: rgb(221, 221, 221);
+    animation: zoom 2s infinite;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#iname{
+    width: 290px;
+    height: 30px;
+    margin: 20px 0px 5px 0px;
+    background-color: rgb(180, 224, 241);
+    border-radius: 5px;
+    border: none;
+}
+#e-mail{
+    width: 290px;
+    height: 30px;
+    margin: 10px 0px 5px 0px;
+    background-color: rgb(180, 224, 241);
+    border-radius: 5px;
+    border: none;
+}
+#company{
+    width: 290px;
+    height: 30px;
+    margin: 10px 0px 10px 0px;
+    background-color: rgb(180, 224, 241);
+    border-radius: 5px;
+    border: none;
+}
+#btn{
+    width: 170px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgba(255, 166, 0, 0.582);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.24);
+    border: none;
+}
+.check{
+    margin: 20px 0px 0px 10px;
+    display: flex;
+    font-size: 12px;
+}
+/*============================ footer =========================*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    font-size: 12px;
+    font-family: "Arimo", sans-serif;
+    grid-area: footer;
+}
