@@ -91,9 +91,25 @@
                 <h1 class="h1Section">Thank you!!!</h1>
                 <p class="pSection">Thanks for confirming your subscription! <br> We hope you have fun using our platform. If you ever need support, please feel free to email us at. <br> support@loremgaming.com</p>
             </div>
+            <dialog>
+                <h3>Caso queira repetir o processo, clique no número 1.</h3>
+                <button>Ok</button>
+            </dialog>
         </section>
     </body>
     <script>
         localStorage.clear()
+        let modal = document.querySelector('dialog')
+        let btnOk = document.querySelector('button')
+        let fundo = document.querySelector('body')
+
+        setTimeout(function(){
+            modal.showModal()
+            fundo.style.opacity = '0.5'
+        },3000)
+        btnOk.addEventListener('click',()=>{
+            modal.close()
+            fundo.style.opacity = '1'
+        })
     </script>
 </html>
