@@ -76,7 +76,7 @@ main{
 /*----------------------Section 1-------------------------*/
 .sec1{
     grid-area: sec1;
-    background-image: url(imagens/image-web-3-desktop.jpg);
+    background-image: url(../news-homepage-main/assets/images/image-web-3-desktop.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

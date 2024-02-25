@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="page5_Mobile_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="sunnyside-agency-landing-page-main/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="page5_mobile_desktop_style.css">
+    <title>Frontend Mentor Sunnyside Agency</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <header>
+        
+        <nav>
+            <h1 class="sunnyside">sunnyside</h1>
+            <div class="btnMenu">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </div>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li class="contactli"><a href="#" class="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="divWeAre">
+            <h1 class="we_are_creatives">we are creatives</h1>
+        </div>
+        <div class="seta">↓</div>
+    </header>
+    <div class="boxMenu">
+        <ul class="menuMobile">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#" class="contact">Contact</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="secComplement">
+            <h1>Transform your brand</h1>
+            <p>We are a full-service creative agency specializing in helping brands grow fast.Engage your clients through compelling visuals that do most of the marketing for you.</p>
+            <a href="*">Learn more</a>
+        </div>
+        <section class="sec1"></section>
+
+        <section class="sec2">
+            <h1>Transform your brand</h1>
+            <p>We are a full-service creative agency specializing in helping brands grow fast.Engage your clients through compelling visuals that do most of the marketing for you.</p>
+            <a href="*">Learn more</a>
+        </section>
+
+        <section class="sec3"></section>
+
+        <section class="sec4">
+            <h1>Stand out to the right audience</h1>
+            <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
+            <a href="">Learn more</a>
+        </section>
+
+        <section class="sec5">
+            <div class="graphicDesigner">
+                <h1>Graphic design</h1>
+                <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+            </div>
+        </section>
+
+        <section class="sec6">
+            <div class="photography">
+                <h1>Photography</h1>
+                <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+            </div>
+        </section>
+
+        <section class="sec7">
+            <div class="testimonials">
+                <h1>Client testimonials</h1>
+            </div>
+
+            <div class="divSec7">
+                <div class="emily">
+                    <img src="sunnyside-agency-landing-page-main/images/image-emily.jpg" alt="">
+                    <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+                    <h2>Emily R.</h2>
+                    <p style="color: var(--Grayish-blue);">Marketing Director</p>
+                </div>
+                <div class="thomas">
+                    <img src="sunnyside-agency-landing-page-main/images/image-thomas.jpg" alt="">
+                    <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+                    <h2>Thomas S.</h2>
+                    <p style="color: var(--Grayish-blue);">Chief Operating Officer</p>
+                </div>
+                <div class="jennie">
+                    <img src="sunnyside-agency-landing-page-main/images/image-jennie.jpg" alt="">
+                    <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+                    <h2> Jennie F.</h2>
+                    <p style="color: var(--Grayish-blue);">Business Owner</p>
+                </div>
+            </div>
+        </section>
+        <section class="sec8">
+            <div class="milk"></div>
+            <div class="orange"></div>
+            <div class="cone"></div>
+            <div class="sugar"></div>
+        </section>
+    </main>
+    <footer>
+        <h1>sunnyside</h1>
+        <ul class="menuFooter">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+        <div class="redesSociais">
+            <img src="sunnyside-agency-landing-page-main/images/icon-facebook.svg" alt="linkfacebook">
+            <img src="sunnyside-agency-landing-page-main/images/icon-instagram.svg" alt="linkinstagram">
+            <img src="sunnyside-agency-landing-page-main/images/icon-twitter.svg" alt="linktwiter">
+            <img src="sunnyside-agency-landing-page-main/images/icon-pinterest.svg" alt="">
+        </div>
+    </footer>
+</body>
+<script>
+    const btnMenu = document.querySelector('.btnMenu')
+    const boxMenu = document.querySelector('.menuMobile')
+    btnMenu.addEventListener('click', ()=>{
+        if (boxMenu.style.top =='0%'){
+            boxMenu.style.top ='-100%';
+        }else{
+            boxMenu.style.top ='0%';
+        }
+    })
+</script>
+</html>
