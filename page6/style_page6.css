@@ -1,0 +1,532 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+@font-face {
+    font-family: ubuntuBold;
+    src: url(multi-step-form-main/assets/fonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+    font-family: ubuntuMedium;
+    src: url(multi-step-form-main/assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+    font-family:ubuntuRegular;
+    src: url(multi-step-form-main/assets/fonts/Ubuntu-Regular.ttf);
+}
+:root{
+    --Marine_blue: hsl(213, 96%, 18%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel_blue: hsl(228, 100%, 84%);
+    --Light_blue: hsl(206, 94%, 87%);
+    --Strawberry_red: hsl(354, 84%, 57%);
+    --Cool_gray: hsl(231, 11%, 63%);
+    --Light_gray: hsl(225, 3%, 71%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+    --cadetblue:rgba(163, 204, 206, 0.397);
+
+}
+body{
+    background-color: var(--Light_blue); 
+    @media(min-width:600px){
+        background-image: linear-gradient(to left, skyblue, royalblue, skyblue);
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+div.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    @media(min-width:600px){
+        width: 780px;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+    }    
+}
+.headerMobile{
+    width: 100%;
+    height: 250px;
+    /*background-image: url(imagens/cube-sea-3429485_640.jpg);*/
+    background-image: url(multi-step-form-main/assets/images/bg-sidebar-mobile.svg);
+    border-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  left bottom;
+    @media(min-width: 600px){
+        display: none;
+    }
+}
+.headerDesktop{
+    width: 300px;
+    height: 500px;
+    background-image: url(multi-step-form-main/assets/images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    @media(max-width:600px){
+        display: none;
+    }
+}
+h3{
+    font-family: ubuntuBold;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+}
+h4{
+    font-family: ubuntuBold;
+    font-size: 15px;
+    color: var(--Light_gray);
+    text-transform: uppercase;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    @media(min-width: 600px){
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.step{
+    display: flex;
+    align-items: center;
+}
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 10px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(62, 98, 204);
+    border: 2px solid white;
+    border-radius: 50%;
+    @media(min-width: 600px){
+        margin: 20px 15px;
+    }
+}
+li:hover{
+    background-color: skyblue;
+    transform: scale(1.2);
+}
+ul li a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    padding: 12px;
+    border-radius: 50px;
+}
+ul li a:hover{
+    color:black;
+    
+}
+section{
+    width: 95%;
+    background-color: var(--Alabaster);
+    border-radius: 10px;
+    position: absolute;
+    top: 18%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+   
+    @media(min-width:600px){
+        position: relative;
+        width: 80%;
+        height: 500px;
+        padding: 30px 0px 30px 50px;
+        border-radius: 0px 10px 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        
+    }
+}
+.finish{
+    display: none;
+}
+section h1{
+    font-family: ubuntuBold;
+    color: var(--Marine_blue);
+}
+section p{
+    width: 260px;
+    font-family: ubuntuBold;
+    color: var(--Light_gray);
+    line-height: 21px;
+    @media(min-width:600px){
+        width: 300px;
+    }
+}
+.pSection{
+    width: 100%;
+}
+.h1Section{
+    font-size: 30px;
+}
+.twoMonthsArc{
+    font-family: ubuntuMedium;
+    font-size: 15px;
+    color: var(--Marine_blue);
+}
+.twoMonthsAdv{
+    font-family: ubuntuMedium;
+    font-size: 15px;
+    color: var(--Marine_blue);
+}
+.twoMonthsPro{
+    font-family: ubuntuMedium;
+    font-size: 15px;
+    color: var(--Marine_blue);
+}
+.typesPlans{
+    @media(min-width: 600px){
+        display: flex;
+    }
+}
+.plansArcade{
+    margin-left: 10px;
+    width: 200px;
+    @media(min-width:600px){
+        margin: 30px 0px 0px 10px;
+        width: 300px;
+    }
+}
+.plansAdvanced{
+    margin-left: 10px;
+    width: 250px;
+    @media(min-width:600px){
+        margin: 30px 0px 0px 10px;
+        width: 300px;
+    }
+}
+.plansPro{
+    margin-left: 10px;
+    width: 250px;
+    @media(min-width:600px){
+        margin: 30px 0px 0px 10px;
+        width: 300px;
+    }
+}
+.planYearly{
+    @media(min-width: 600px){
+        display: none;
+    }
+}
+.arcade{
+    margin-top: 15px;
+    padding: 10px;
+    border: 2px solid var(--Light_gray);
+    border-radius: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    @media(min-width:600px){
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 150px;
+    }
+}
+.planYearly{
+    @media(min-width:600px){
+        display: flex;
+        text-align: center;
+    }
+}
+.advanced{
+    margin-top: 15px;
+    padding: 10px;
+    border: 2px solid var(--Light_gray);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @media(min-width:600px){
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 150px;
+    }
+}
+.pro{
+    margin-top: 15px;
+    padding: 10px;
+    border: 2px solid var(--Light_gray);
+    border-radius: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    @media(min-width:600px){
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 150px;
+    }
+}      
+.typePlan{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media(min-width:600px){
+        display: flex;
+    }
+}
+.typePlan p{
+    color: var(--Light_gray);
+    font-weight: 700;
+}
+.boxButton{
+    width: 45px;
+    height: 25px;
+    background-color: var(--Marine_blue);
+    position: relative;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.circle{
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    left:44%;
+    margin: 3px;
+}
+.monthly{
+    position: absolute;
+    left:20%;
+    width: 60px;
+    @media(min-width: 600px){
+        position: static;
+        margin: 20px;
+    }
+}
+.yearly{
+    position: absolute;
+    left: 60%;
+    width: 60px;
+    @media(min-width: 600px){
+        position: static;
+        margin: 20px;
+    }
+}
+.nextAndbackMobile{
+    width: 350px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 90%;
+    @media(min-width:600px){
+        width: 450px;
+        top: 85%;
+        left: 38%;
+        padding: 10px;
+        justify-content: space-between;
+    }
+}
+
+.nextx{
+    font-family: ubuntuMedium;
+    width: 110px;
+    height: 40px;
+    background-color: var(--Light_gray);
+    color: var(--Marine_blue);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.nextYr{
+    font-family: ubuntuMedium;
+    width: 110px;
+    height: 40px;
+    background-color: var(--Light_gray);
+    color: var(--Marine_blue);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.nextMo{
+    font-family: ubuntuMedium;
+    width: 110px;
+    height: 40px;
+    background-color: var(--Light_gray);
+    /*color: var(--Marine_blue);*/
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.back{
+    font-family: ubuntuMedium;
+    color: var(--Light_gray);
+    text-decoration: underline;
+    
+}
+/*--------------------------------------------------------------------------------*/
+dialog{
+    min-width: 350px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
+}
+
+dialog h3{
+    font-size: 14px;
+    color: var(--Marine_blue);
+    
+}
+dialog button{
+    margin-top: 10px ;
+    padding: 5px 10px;
+   border-radius: 5px;
+}
+.dataUser{
+    padding: 10px 0 10px 0px;
+    border-radius: 5px;
+}
+.dataUser h3{
+    display: flex;
+    align-items: center;
+    color: var(--Marine_blue);
+   
+}
+.dataUser p {
+    margin-left: 5px;
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.vl{
+    color: var(--Marine_blue);
+    font-family: ubuntuRegular;
+    font-size: 15px;
+}
+.servAddMonthly h3{
+    color: var(--Marine_blue);
+    width: 200px;
+}
+.textServAdd {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+.servicesOnline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--Light_gray);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.vlservicesOnline{
+    width: 85px;
+    text-align: center;
+}
+.storageLarger{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--Light_gray);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.vlstorageLarger{
+    width: 85px;
+    text-align: center;
+}
+.profileCustom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--Light_gray);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.vlproCustom{
+    width: 85px;
+    text-align: center;
+}
+.divResumPlan{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.subTotalPlans{
+    width: 80px;
+}
+.addServ{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+   
+    border-radius: 5px;
+}
+.addServ1, .addServ2, .addServ3{
+    width: 200px;
+}
+.onliServ, .largerStorage, .customTheme {
+    width: 80px;
+}
+.resumTotal{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.totalPlanAndAdd{
+    width: 80px;
+    color: var(--Marine_blue);
+   
+}
