@@ -90,7 +90,6 @@ closeModal.addEventListener('click', ()=>{
     fundo.style.opacity = '1'
 })
 boxButton.addEventListener ('click', ()=>{
-   
     if(circle.style.left == '0%'){
         arcadeY.style.display = 'flex'
         arcadeM.style.display = 'none'
@@ -149,7 +148,6 @@ boxButton.addEventListener ('click', ()=>{
         circle.style.left = '0%';
         monthly.style.color ='var(--Marine_blue)';
         yearly.style.color = 'var(--Light_gray)';
-        
         arcadeY.style.border = '2px solid var(--Light_gray)'; 
         arcadeM.style.border = '2px solid var(--Light_gray)';  
         advancedY.style.border = '2px solid var(--Light_gray)'; 
@@ -166,7 +164,6 @@ boxButton.addEventListener ('click', ()=>{
 
     }
 })
-
 arcadeY.addEventListener('click', ()=>{
     if (arcadeY.style.border == '4px solid var(--Marine_blue)'){
         arcadeY.style.backgroundColor = 'white'
@@ -178,7 +175,6 @@ arcadeY.addEventListener('click', ()=>{
         localStorage.typePlanAdd = ''
         localStorage.totalPlan = 0
         localStorage.planArcadeY = 0
-        
     }else{
         proY.style.backgroundColor = 'white'
         advancedY.style.backgroundColor = 'white'
@@ -224,7 +220,6 @@ advancedY.addEventListener('click', ()=>{
         localStorage.typePlanAdd = 'Advanced'
     }
 })
-
 proY.addEventListener('click', ()=>{
     if (proY.style.border == '4px solid var(--Marine_blue)'){
         proY.style.backgroundColor = 'white'
@@ -252,7 +247,6 @@ proY.addEventListener('click', ()=>{
         localStorage.typePlanAdd = 'Pro'
     }
 })
-
 arcadeM.addEventListener('click', ()=>{
     if (arcadeM.style.border == '4px solid var(--Marine_blue)'){
         arcadeM.style.backgroundColor = 'white'
@@ -312,27 +306,27 @@ proM.addEventListener('click', ()=>{
     if (proM.style.border == '4px solid var(--Marine_blue)'){
         proM.style.backgroundColor = 'white'
         proM.style.border = '2px solid var(--Light_gray)'; 
-        localStorage.totalPlan = 0 
-        localStorage.subTotal = 0
-        localStorage.planProM = 0
+        localStorage.totalPlan = 0; 
+        localStorage.subTotal = 0;
+        localStorage.planProM = 0;
         nextMo.style.backgroundColor = 'var(--Light_gray)';
         nextMo.style.color = 'var(--Marine_blue)';
-        localStorage.typePlanAdd = ''
+        localStorage.typePlanAdd = '';
     }else{
-        arcadeM.style.backgroundColor = 'white'
-        advancedM.style.backgroundColor = 'white'
+        arcadeM.style.backgroundColor = 'white';
+        advancedM.style.backgroundColor = 'white';
         proM.style.border = '4px solid var(--Marine_blue)';
-        proM.style.backgroundColor = 'var(--cadetblue)'
-        localStorage.planProM = 15
-        localStorage.planAdvancedM = 0 
-        localStorage.planArcadeM = 0 
-        localStorage.totalPlan = localStorage.planProM
-        localStorage.subTotal = localStorage.planProM
+        proM.style.backgroundColor = 'var(--cadetblue)';
+        localStorage.planProM = 15;
+        localStorage.planAdvancedM = 0; 
+        localStorage.planArcadeM = 0 ;
+        localStorage.totalPlan = localStorage.planProM;
+        localStorage.subTotal = localStorage.planProM;
         arcadeM.style.border = '2px solid var(--Light_gray)'; 
         advancedM.style.border = '2px solid var(--Light_gray)';  
         nextMo.style.backgroundColor = 'var(--Marine_blue)';
-        nextMo.style.color = 'white'
-        localStorage.typePlanAdd = 'Pro'
+        nextMo.style.color = 'white';
+        localStorage.typePlanAdd = 'Pro';
     }
 })
 

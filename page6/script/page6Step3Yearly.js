@@ -23,9 +23,6 @@ servicesOnlineY.addEventListener('click', ()=>{
     }else{
         servicesOnlineY.style.backgroundColor = 'var(--cadetblue)'
         servicesOnlineY.style.border = '3px solid var(--Marine_blue)'
-        /*addServ1.style.display = 'block'
-        onliServ.style.display = 'block'*/
-        /*totalPlan = totalPlan + addServOnli*/
         localStorage.addServOnli = 10
         localStorage.servOnline = 'Online Service'
         localStorage.totalPlan = parseInt(localStorage.totalPlan) + parseInt(addServOnli)
