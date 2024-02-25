@@ -73,7 +73,7 @@ nextYr.addEventListener('click',()=>{
         modal.style.zIndex = 1
         fundo.style.opacity = '0.5'
     }else{
-        location.href = 'https://gustavocorrea86.github.io/landing_page2/page6_step3Yearly.html'
+        location.href = 'https://gustavocorrea86.github.io/portifolio/page6/page6_step3Yearly.html'
     }
 })
 nextMo.addEventListener('click',()=>{
@@ -82,7 +82,7 @@ nextMo.addEventListener('click',()=>{
         modal.style.zIndex = 1
         fundo.style.opacity = '0.5'
     }else{
-        location.href = 'https://gustavocorrea86.github.io/landing_page2/page6_step3Monthly.html'
+        location.href = 'https://gustavocorrea86.github.io/portifolio/page6/page6_step3Monthly.html'
     }
 })
 closeModal.addEventListener('click', ()=>{
