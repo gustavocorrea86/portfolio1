@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+:root{
+    --azulEscuro: rgb(11, 11, 34);
+    --orange: rgba(218, 151, 28, 0.623);
+    --cinzaClaro: lightslategray;
+    --vermelho: rgba(231, 40, 40, 0.589);
+}
+@font-face {
+    font-family: 'inter-bold';
+    src: url(news-homepage-main/assets/fonts/static/Inter-Bold.ttf);
+}
+@font-face {
+    font-family: 'inter-extrabold';
+    src: url(news-homepage-main/assets/fonts/static/Inter-ExtraBold.ttf);
+}
+@font-face {
+    font-family: 'inter-regular';
+    src: url(news-homepage-main/assets/fonts/static/Inter-Regular.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    margin: 0px 60px 60px 60px;
+}
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+nav{
+    display: flex;
+    margin-top: 10px;
+    z-index: 1;
+}
+.logo{
+    padding: 20px;
+    font-size: 50px;
+}
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.menu li{
+    list-style: none;
+    margin: 20px;
+    cursor: pointer;
+}
+.menu li:hover{
+    transform: scale(1.2);
+}
+.menu li a{
+    text-decoration: none;
+    color: var(--cinzaClaro);
+    font-size: 20px;
+    font-family: inter-bold;
+}
+.menu li a:hover{
+    color: var(--vermelho);
+}
+main{
+    display: grid;
+    grid-template-areas: 
+    "sec1 sec1 sec3"
+    "sec2 thePromise sec3"
+    "pcsRetro laptops games";
+}
+.menuMobile{
+    display: none;
+}
+/*----------------------Section 1-------------------------*/
+.sec1{
+    grid-area: sec1;
+    background-image: url(imagens/image-web-3-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    margin: 10px;
+}
+/*----------------------Section 2---------------------------*/
+.sec2{
+    grid-area: sec2;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+.sec2 h1{
+    font-family: 'inter-extrabold';
+    font-size: 60px;
+    color: var(--azulEscuro);
+    margin-right: 20px;
+}
+.thePromise{
+    padding: 10px;
+    position: relative;
+    grid-area: thePromise;
+    margin-bottom: 20px;
+}
+.thePromise p{
+    font-size: 20px;
+    margin-top: 5px;
+    color: var(--cinzaClaro);
+    font-family: 'inter-regular';
+    text-align: left;
+    margin-right: 10px;
+}
+.thePromise a{
+   position: absolute;
+   top: 80%;
+   background-color: var(--vermelho);
+   text-decoration: none;
+   color: white;
+   padding: 10px 30px;
+   font-family: inter-regular;
+}
+.thePromise a:hover{
+    color: var(--azulEscuro);
+    transform: scale(1.1);
+}
+ /*----------------------Section 3---------------------------*/
+.sec3{
+    grid-area: sec3;
+    background-color: var(--azulEscuro);
+    padding: 10px;
+    margin: 10px;
+}
+.sec3 h1{
+    color: var(--orange);
+    font-size: 40px;
+    margin: 10px;
+    font-family: inter-regular;
+}
+.sec3 h2{
+    color: white;
+    font-size: 25px;
+    margin: 40px 10px 10px;
+    cursor: pointer;
+    font-family: inter-regular;
+}
+.sec3 h2:hover{
+    color: var(--orange);
+}
+.sec3 p{
+    color: white;
+    padding: 10px;
+    color: var(--cinzaClaro);
+    font-size: 20px;
+    font-family: inter-regular;
+}
+hr{
+    margin: 20px 10px;
+    color: var(--cinzaClaro);
+}
+ /*----------------Section 4---------------------*/
+ 
+.pcsRetro{
+    display: flex;
+    grid-area: pcsRetro;
+    margin-top: 40px;
+}
+
+.pcsRetro h3:hover{
+    color: var(--vermelho);
+}
+ /*pcs retro */
+ .pcsRetro h1{
+    font-size: 30px;
+    width: 20px;
+    color: var(--cinzaClaro);
+    padding: 10px;
+    font-family: inter-extrabold;
+}
+.pcsRetro h3{
+    font-size: 18px;
+    margin: 10px;
+    color: var(--azulEscuro);
+    cursor: pointer;
+    font-family: inter-extrabold;
+}
+.pcsRetro p{
+    padding: 10px;
+    color: var(--cinzaClaro);
+    font-family: inter-regular;
+}
+/*--------------- LapTop ---------------- */
+
+.laptops{
+    display: flex;
+    grid-area: laptops;
+    margin-top: 40px;
+}
+.laptops h3:hover{
+    color: var(--vermelho);
+ }
+.laptops h1{
+    font-size: 30px;
+    color: var(--cinzaClaro);
+    padding: 10px;
+    font-family: inter-extrabold;
+}
+
+.laptops h3{
+    font-size: 18px;
+    margin: 10px;
+    color: var(--azulEscuro);
+    cursor: pointer;
+    font-family: inter-extrabold;
+}
+.laptops p{
+    padding: 10px;
+    color: var(--cinzaClaro);
+    font-family: inter-regular;
+}
+/*Games */
+.games{
+    display: flex;
+    grid-area: games;
+    margin-left: 10px;
+    margin-top: 40px;
+ }
+ .games h3:hover{
+    color: var(--vermelho);
+ }
+.games h1{
+    font-size: 30px;
+    color: var(--cinzaClaro);
+    font-family: inter-extrabold;;
+    padding: 10px;
+}
+.games h3{
+    font-size: 18px;
+    margin: 10px;
+    color: var(--azulEscuro);
+    cursor: pointer;
+    font-family: inter-extrabold;
+}
+.games p{
+    padding: 10px;
+    color: var(--cinzaClaro);
+    font-family: inter-regular;
+}
+
