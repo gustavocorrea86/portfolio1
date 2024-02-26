@@ -58,27 +58,27 @@
     <main>
         <div id="calculadora">
             <div id="tela"></div>
-                <button class="magicColors">Magic Colors</button>
-                <button class="porcetagem">%</button>
-                <button class="divisao">/</button>
-                <button class="limpar">CE</button>
-                <button class="um">1</button>
-                <button class="dois">2</button>
-                <button class="tres">3</button>
-                <button class="multiplicacao">X</button>
+                <button class="magicColors" onclick="magicColors()">Magic Colors</button>
+                <button class="porcetagem" onclick="porcentagem()">%</button>
+                <button class="divisao" onclick="divisao()">/</button>
+                <button class="limpar" onclick="limpar()">CE</button>
+                <button class="um" onclick="um()">1</button>
+                <button class="dois" onclick="dois()">2</button>
+                <button class="tres" onclick="tres()">3</button>
+                <button class="multiplicacao" onclick="multiplicacao()">X</button>
                 <button class="preto">Black</button>
-                <button class="quatro">4</button>
-                <button class="cinco">5</button>
-                <button class="seis">6</button>
-                <button class="subtracao">-</button>
+                <button class="quatro" onclick="quatro()">4</button>
+                <button class="cinco" onclick="cinco()">5</button>
+                <button class="seis" onclick="seis()">6</button>
+                <button class="subtracao" onclick="subtracao()">-</button>
                 <button class="branco">White</button>
-                <button class="sete">7</button>
-                <button class="oito">8</button>
-                <button class="nove">9</button>
-                <button class="igual">=</button>
-                <button class="adicao">+</button>
-                <button class="zero">0</button>
-                <button class="zerozero">00</button>
+                <button class="sete" onclick="sete()">7</button>
+                <button class="oito" onclick="oito()">8</button>
+                <button class="nove" onclick="nove()">9</button>
+                <button class="igual" onclick="igual()">=</button>
+                <button class="adicao" onclick="adicao()">+</button>
+                <button class="zero" onclick="zero()">0</button>
+                <button class="zerozero" onclick="zerozero()">00</button>
                 <button class="ponto">.</button>
         </div>
     </main>
@@ -88,53 +88,108 @@
     const magicColors = document.querySelector('.magicColors')
     const porcentagem = document.querySelector('.porcentagem')
     const divisao = document.querySelector('.divisao')
-    const limpar = document.querySelector('.limpar')
-    const um = document.querySelector('.um') 
-    const dois = document.querySelector('.dois') 
-    const tres = document.querySelector('.tres') 
+    
+   
     const multiplicacao = document.querySelector('.multiplicacao')
     const preto = document.querySelector('.preto')
-    const quatro = document.querySelector('.quatro')
-    const cinco = document.querySelector('.cinco')
-    const seis = document.querySelector('.seis')
-    const subtracao = document.querySelector('.subtracao')
+   
+    
+   
     const branco = document.querySelector('.branco')
-    const sete = document.querySelector('.sete')
-    const oito = document.querySelector('.oito')
-    const nove = document.querySelector('.nove')
-    const igual = document.querySelector('.igual')
-    const adicao = document.querySelector('.adicao')
-    const zero = document.querySelector('.zero')
-    const zerozero = document.querySelector('.zerozero')
     const ponto = document.querySelector('.ponto')
-    const one = 1; const two = 2; const mais = '+'; let soma = []
-    let resultado = 0
-    resultado = Number(resultado.value)
+    const one = 1; const two = 2; const three = 3; const four = 4; const five = 5; const six = 6; const seven = 7; const eight = 8; const nine = 9; const zer = 0; const zerzer = '00'; const mais = '+'; const sub = '-'
+    let operador = ''
     let guardaValor = []
-    limpar.addEventListener('click', () =>{
+    let aux1 = ''
+    
+    let aux2 = ''
+    let soma = ''
+    function limpar(){
         tela.innerHTML = ''
         guardaValor = []
-    })
-    um.addEventListener('click', (n1)=>{
-        tela.innerHTML += (one)
-        guardaValor.push(one)
-    })
-    dois.addEventListener('click', (n2)=>{
-        tela.innerHTML += (two)
-        guardaValor.push(two)
-    })
-    adicao.addEventListener('click', ()=>{
-        tela.innerHTML += (mais)
-        for(var s){
-            resultado = resultado + guardaValor[s]
-        }
-    })
-    igual.addEventListener('click', ()=>{
-        tela.innerHTML = (resultado)
-    })
-    function somar(){
-        
+        resultado = ''
+        operador = ''
+        aux1 = ''
+        aux2 = ''
     }
+    function um(){
+        tela.innerHTML += one 
+        aux1 += one
+    }function dois(){
+        tela.innerHTML += two
+        aux1 += two
+    }
+    function tres(){
+        tela.innerHTML += three
+        aux1 += three
+    }
+    function quatro(){
+        tela.innerHTML += four
+        aux1 += four
+    }
+    function cinco(){
+        tela.innerHTML += five
+        aux1 += five
+    }
+    function seis(){
+        tela.innerHTML += six
+        aux1 += six
+    }
+    function sete(){
+        tela.innerHTML += seven
+        aux1 += seven
+    }
+    function oito(){
+        tela.innerHTML += eight
+        aux1 += eight
+    }
+    function nove(){
+        tela.innerHTML += nine
+        aux1 += nine
+    }
+    function zero(){
+        tela.innerHTML += zer
+        aux1 += zer
+    }
+    function zerozero(){
+        tela.innerHTML += '00'
+        aux1 += parseInt(zerzer)
+    }
+    function adicao(){
+        tela.innerHTML += (mais)
+        operador = mais
+        aux2 = aux1
+        guardaValor.push(aux1)
+        aux1 = ''
+    }
+    function subtracao(){
+        tela.innerHTML += (sub)
+        operador = sub
+        aux2 = aux1
+        guardaValor.push(aux1)
+        aux1 = ''
+    }
+    function igual(){
+        let resultado = ''
+        guardaValor.push(aux1)
+        if (operador == '+'){
+            for(var s in guardaValor){
+                resultado = Number(resultado) + Number(guardaValor[s])
+            }
+            tela.innerHTML = parseInt(resultado)
+        }else if(operador == '+' && operador == '-'){
+            for(var s in guardaValor){
+                resultado = (Number(resultado) + Number(guardaValor[s])) - Number(aux2)
+            }
+        }
 
+        if (operador == '-'){
+            for(var s in guardaValor){
+                resultado = Number(aux2) - Number(guardaValor[s]) 
+            }
+            tela.innerHTML = parseInt(resultado)
+        }
+    }
+    
 </script>
 </html>
