@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #calculadora{
+            padding: 15px;
+            background-color: black;
+            width: 300px;
+            display: grid;
+            grid-template-columns: repeat(5, 55px);
+            grid-template-rows: repeat(8, 55px);
+            grid-gap:5px; 
+            justify-content: center;
+        }
+        .tela{
+            background-color:rgba(61, 96, 97, 0.925);
+            grid-column: 1 / 6;
+            grid-row: 1 / 4;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            color: white;
+            padding: 10px;
+        }
+        #tela{
+            font-size: 30px;
+        }
+        #calculadora > button:nth-child(2){
+            grid-column: 1 / 3;
+            grid-row: 4 / 5;
+        }
+        #calculadora > button:nth-child(19){
+            grid-row: 7 / 9;
+            grid-column: 5 / 6;
+        }
+        #calculadora > button:nth-child(20){
+            grid-row: 7 / 9;
+            grid-column: 4 / 5;
+        }
+        button{
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculadora">
+        <div class="tela">
+            <h1 id="tela"></h1>
+            <h2 class="res"></h2>
+        </div>
+            <button class="magicColors" onclick="magicColors()">Magic Colors</button>
+            <button class="porcetagem" onclick="porcentagem()">%</button>
+            <button class="divisao" onclick="divisao()">&divide;</button>
+            <button class="limpar" onclick="limpar()">CE</button>
+            <button class="um" onclick="um()">1</button>
+            <button class="dois" onclick="dois()">2</button>
+            <button class="tres" onclick="tres()">3</button>
+            <button class="multiplicacao" onclick="multiplicacao()">x</button>
+            <button class="preto">Black</button>
+            <button class="quatro" onclick="quatro()">4</button>
+            <button class="cinco" onclick="cinco()">5</button>
+            <button class="seis" onclick="seis()">6</button>
+            <button class="subtracao" onclick="subtracao()">-</button>
+            <button class="branco">White</button>
+            <button class="sete" onclick="sete()">7</button>
+            <button class="oito" onclick="oito()">8</button>
+            <button class="nove" onclick="nove()">9</button>
+            <button class="igual">=</button>
+            <button class="adicao" onclick="adicao()">+</button>
+            <button class="zero" onclick="zero()">0</button>
+            <button class="zerozero" onclick="zerozero()">00</button>
+            <button class="ponto">.</button>
+    </div>
+</body>
+<script>
+    const tela = document.querySelector('#tela')
+    const magicColors = document.querySelector('.magicColors')
+    const porcentagem = document.querySelector('.porcentagem')
+    const preto = document.querySelector('.preto')
+    const branco = document.querySelector('.branco')
+    const ponto = document.querySelector('.ponto')
+    let igual = document.querySelector('.igual')
+    let res = document.querySelector('.res')
+    const one = 1; const two = 2; const three = 3; const four = 4; const five = 5; const six = 6; const seven = 7; const eight = 8; const nine = 9; const zer = 0; const zerzer = '00'; const mais = '+'; const sub = '-'
+    let operador = ''
+    let guardaAdicao = []
+    let guardaSubtracao = []
+    let guardaAuxiliar = []
+    let aux1 = ''
+    let aux2 = ''
+    let soma = ''
+    let resultado = ''
+    let totAux
+    let multExp = ''
+
+    function limpar(){
+        tela.innerHTML = ''
+        guardaAdicao = []
+        guardaAuxiliar = []
+        guardaSubtracao = []
+        resultado = ''
+        operador = ''
+        res.innerHTML = ''
+        aux1 = ''
+        tela.style.fontSize = '40px'
+        res.style.fontSize = '20px'
+        aux3 = ''
+        totAux = ''
+    }
+    function um(){
+        tela.innerHTML += one 
+        aux1 += one
+        auxiliar(aux1)
+    }
+    function dois(){
+        tela.innerHTML += two
+        aux1 += two
+        auxiliar(aux1)
+    }
+    function tres(){
+        tela.innerHTML += three
+        aux1 += three
+        auxiliar(aux1)
+    }
+    function quatro(){
+        tela.innerHTML += four
+        aux1 += four
+    }
+    function cinco(){
+        tela.innerHTML += five
+        aux1 += five
+    }
+    function seis(){
+        tela.innerHTML += six
+        aux1 += six
+    }
+    function sete(){
+        tela.innerHTML += seven
+        aux1 += seven
+    }
+    function oito(){
+        tela.innerHTML += eight
+        aux1 += eight
+    }
+    function nove(){
+        tela.innerHTML += nine
+        aux1 += nine
+    }
+    function zero(){
+        tela.innerHTML += zer
+        aux1 += zer
+    }
+    function zerozero(){
+        tela.innerHTML += '00'
+        aux1 += parseInt(zerzer)
+    }
+    function adicao(){
+        tela.innerHTML += (mais)
+        operador = mais
+        //resultado = aux1
+        aux2 = aux1
+        guardaAuxiliar.push(aux1)
+        guardaAdicao.push(aux1)
+        aux1 = ''
+    }
+    function subtracao(){
+        tela.innerHTML += (sub)
+        operador = sub
+        resultado = aux1
+        aux1 = ''
+    }
+    function multiplicacao(){
+        tela.innerHTML += 'x'
+        operador = 'x'
+        resultado = aux1
+        aux1 = ''
+    }
+    function divisao(){
+        tela.innerHTML += '&divide;'
+        operador = '&divide;'
+        resultado = aux1
+        aux1 = ''
+    }
+    function auxiliar(num){ // aqui faz a soma sem apertar o igual
+        aux2 = num
+        if (operador == '+'){
+            for(var s in guardaAuxiliar){
+                totAux = Number(num) + Number(guardaAuxiliar[s]) 
+            }
+        }
+    }
+    igual.addEventListener('click', ()=>{
+        tela.style.fontSize = '15px'
+        res.style.fontSize = '40px'
+        guardaAdicao.push(aux1)
+       
+        if (operador == '+'){
+            for(var s in guardaAdicao){
+                resultado = Number(resultado) + Number(guardaAdicao[s])
+            }
+            res.innerHTML = parseInt(resultado)
+        }
+        if (operador == '-'){
+            guardaSubtracao.push(aux1)
+            for(var s in guardaSubtracao){
+                resultado = Number(resultado) - Number(guardaSubtracao[s]) 
+            }
+            res.innerHTML = parseInt(resultado)
+        }
+        if(operador == 'x') {
+            resultado = Number(resultado) * Number(aux1)
+            res.innerHTML = Number(resultado)
+        }
+        if(operador == '&divide;'){
+            resultado = Number(resultado) / Number(aux1)
+            res.innerHTML = Number(resultado)
+        }
+    })
+</script>
+</html>
