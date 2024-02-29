@@ -12,20 +12,22 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         body{
-            height: 80vh;
+            height: 90vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
         #calculadora{
+            width: 100%;
+            height: 100%;
             padding: 15px;
             background-color: rgb(149, 149, 149);
-            width: 280px;
             display: grid;
-            grid-template-columns: repeat(4, 55px);
-            grid-template-rows: repeat(7, 55px);
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(7, 1fr);
             grid-gap:2px; 
             justify-content: center;
+            margin-top:40px;
         }
         .tela{
             background-color:rgba(113, 124, 125, 0.925);
@@ -35,6 +37,7 @@
             color: white;
             padding: 10px;
             margin-bottom: 5px;
+            transform:matrix3d(1.2);
         }
         #tela{
             font-size: 30px;
@@ -59,7 +62,6 @@
             cursor: pointer;
             box-shadow: 2px 2px rgba(122, 122, 122, 0.474);
             border: none;
-           
         }
     </style>
 </head>
@@ -185,53 +187,5 @@
         resultado = eval(aux1)
         res.innerHTML = resultado
     })
-    
-    /*function subtracao(){
-        tela.innerHTML += (sub)
-        operador = sub
-        resultado = aux1
-        aux1 = ''
-    }
-    function multiplicacao(){
-        tela.innerHTML += 'x'
-        operador = 'x'
-        resultado = aux1
-        multExp = totAux
-        aux1 = ''
-    }
-    function auxiliar(num){ // aqui faz a soma sem apertar o igual
-        aux2 = num
-        if (operador == '+'){
-            for(var s in guardaAuxiliar){
-                totAux = Number(num) + Number(guardaAuxiliar[s]) 
-            }
-        }
-    }
-    igual.addEventListener('click', ()=>{
-        tela.style.fontSize = '15px'
-        res.style.fontSize = '40px'
-        guardaAdicao.push(aux1)
-        if (operador == '+'){
-            for(var s in guardaAdicao){
-                resultado = Number(resultado) + Number(guardaAdicao[s])
-            }
-            res.innerHTML = parseInt(resultado)
-        }
-        if (operador == '-'){
-            guardaSubtracao.push(aux1)
-            for(var s in guardaSubtracao){
-                resultado = Number(resultado) - Number(guardaSubtracao[s])
-            }
-            res.innerHTML = parseInt(resultado)
-        }
-        if (operador == 'x' && totAux != 0){
-            resultado = Number(multExp) * Number(aux1)
-            res.innerHTML = parseInt(resultado)
-        }
-        if(operador == 'x') {
-            resultado = Number(resultado) * Number(aux1)
-            res.innerHTML = Number(resultado)
-        }
-    })*/
 </script>
 </html>
