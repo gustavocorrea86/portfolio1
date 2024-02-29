@@ -19,15 +19,14 @@
             
         }
         #calculadora{
-           
-            
             padding: 15px;
             background-color: rgb(149, 149, 149);
             display: grid;
             grid-template-columns: repeat(5, 50px);
             grid-template-rows: repeat(7, 50px);
-            grid-gap:5px; 
+            grid-gap:10px; 
             justify-content: center;
+            box-shadow: 4px 4px rgba(0, 0, 0, 0.577);
         }
         .tela{
             background-color:#5b715d;
@@ -66,7 +65,8 @@
         button{
             border-radius: 4px;
             cursor: pointer;
-            box-shadow: 3px 3px rgba(0, 0, 0, 0.325);
+            border: 1px solid black;
+            box-shadow: 0 3px 0 3px rgba(0, 0, 0, 0.457);
         }
     </style>
 </head>
@@ -167,7 +167,7 @@
     }
     function zerozero(){
         tela.innerHTML += '00'
-        aux1 += parseInt(zerzer)
+        aux1 += '00'
     }
     function adicao(){
         tela.innerHTML += (mais)
