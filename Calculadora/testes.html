@@ -20,7 +20,7 @@
         #calculadora{
             width: 350px;
             padding: 15px;
-            background-color: rgb(149, 149, 149);
+            background-color: rgb(202, 128, 128);
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(7, 55px);
@@ -91,7 +91,7 @@
         <button class="cinco" onclick="cinco()">5</button>
         <button class="seis" onclick="seis()">6</button>
         <button class="subtracao" onclick="subtracao()">-</button>
-        <button class="branco">White</button>
+        <button class="branco" onclick="white()">White</button>
         <button class="sete" onclick="sete()">7</button>
         <button class="oito" onclick="oito()">8</button>
         <button class="nove" onclick="nove()">9</button>
@@ -107,6 +107,7 @@
     const magicColors = document.querySelector('.magicColors')
     const preto = document.querySelector('.preto')
     const branco = document.querySelector('.branco')
+    const calculadora = document.querySelector('#calculadora')
     let igual = document.querySelector('.igual')
     let res = document.querySelector('.res')
     const one = 1; const two = 2; const three = 3; const four = 4; const five = 5; const six = 6; const seven = 7; const eight = 8; const nine = 9; const zer = 0; const zerzer = '00'; const mais = '+'; const sub = '-'; const mult = 'x'; const div = '&divide;'
@@ -191,6 +192,9 @@
     function ponto(){
         tela.innerHTML += '.'
         aux1 += '.'
+    }
+    function white(){
+        calculadoraWhite.style.backgroundColors = 'white'
     }
     igual.addEventListener('click', ()=>{
         tela.style.fontSize = '15px'
