@@ -92,11 +92,23 @@ nav ul li{
     background-size: cover;
 }
 .carrinho{
-    
+    position: relative;
 }
 .consumo{
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 10px;
+    background-color: var(--Orange);
+    border-radius: 40%;
+    position: absolute;
+    top: 1.5%;
+    left: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.consumo p {
+    color: white;
+    font-size: 10px;
 }
 .imgProduct{
     width: 100%;
