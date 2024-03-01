@@ -109,6 +109,10 @@
     const branco = document.querySelector('.branco')
     let igual = document.querySelector('.igual')
     let res = document.querySelector('.res')
+    let calculadora = document.querySelector('#calculadora')
+    let white = document.querySelector('.branco')
+    let black = document.querySelector('.preto')
+    let btn = document.querySelector('button')
     const one = 1; const two = 2; const three = 3; const four = 4; const five = 5; const six = 6; const seven = 7; const eight = 8; const nine = 9; const zer = 0; const zerzer = '00'; const mais = '+'; const sub = '-'; const mult = 'x'; const div = '&divide;'
     let aux1 = ''
     let resultado = ''
@@ -197,6 +201,13 @@
         res.style.fontSize = '40px'
         resultado = eval(aux1)
         res.innerHTML = resultado
+    })
+    white.addEventListener('click', ()=>{
+        calculadora.style.backgroundColor = 'white'
+    })
+    black.addEventListener('click',()=>{
+        calculadora.style.backgroundColor = 'black'
+        btn.style.boxShadow = '0 3px 0 3px red'
     })
 </script>
 </html>
