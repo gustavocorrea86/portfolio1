@@ -1,4 +1,7 @@
 :root{
+    --Orange: hsl(26, 100%, 55%);
+    --Pale_orange: hsl(25, 100%, 94%);
+
     --Very_dark_blue: hsl(220, 13%, 13%);
     --Dark_grayish_blue: hsl(219, 9%, 45%);
     --Grayish_blue: hsl(220, 14%, 75%);
@@ -10,7 +13,9 @@
     padding: 0px;
     box-sizing: border-box;
     list-style: none;
+    font-family: "Kumbh Sans", sans-serif;
 }
+
 body{
     @media(min-width:600px){
         width: 1300px;
@@ -85,6 +90,13 @@ nav ul li{
     background-image: url(images/image-avatar.png);
     background-position: center;
     background-size: cover;
+}
+.carrinho{
+    
+}
+.consumo{
+    width: 20px;
+    height: 20px;
 }
 .imgProduct{
     width: 100%;
