@@ -55,16 +55,13 @@ body{
 }
 .btnMenuMobile.openMenu .linha:nth-child(1){
     transform: translateY(6px) rotate(38deg);
-    transition: 1s;
 }
 .btnMenuMobile.openMenu .linha:nth-child(2){
     width: 0px;
-    transition: 1s;
 }
 .btnMenuMobile.openMenu .linha:nth-child(3){
     transform: translateY(-10px) rotate(-38deg);
-    transition: 1s;
-}
+} 
 nav{
     @media(min-width:600px){
         width: 100%;
@@ -124,7 +121,7 @@ nav ul li{
     color: white;
     font-size: 10px;
 }
-.boxMenuMobile{
+ .boxMenuMobile{
     width: 250px;
     height: 700px;
     position: absolute;
@@ -132,17 +129,20 @@ nav ul li{
     @media(min-width:600px){
         display: none;
     }
-}
-.boxMenuMobile ul.hide{
+} 
+.boxMenuMobile ul{
     display: block;
     width: 250px;
     height: 700px;
     background-color: var(--White);
     margin: 0px;
     position: absolute;
-    left: 0%;
-    transition: .6s ease-in-out; 
-    opacity: 0.9;
+    left: -100%;
+    opacity: 0.9; 
+    transition: .6s ease-in-out;                                                      
+    @media(min-width:600px){
+        display: none;
+    }
 }
 .boxMenuMobile ul li{
     color: var(--Very_dark_blue);
