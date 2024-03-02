@@ -51,6 +51,19 @@ body{
     height: 3px;
     background-color: black;
     margin: 5px;
+    transition: 1s;
+}
+.btnMenuMobile.openMenu .linha:nth-child(1){
+    transform: translateY(6px) rotate(38deg);
+    transition: 1s;
+}
+.btnMenuMobile.openMenu .linha:nth-child(2){
+    width: 0px;
+    transition: 1s;
+}
+.btnMenuMobile.openMenu .linha:nth-child(3){
+    transform: translateY(-10px) rotate(-38deg);
+    transition: 1s;
 }
 nav{
     @media(min-width:600px){
@@ -130,12 +143,17 @@ nav ul li{
     position: absolute;
     left: -100%;
     transition: .6s ease-in-out;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 .boxMenuMobile ul li{
     color: var(--Very_dark_blue);
-    padding: 15px;
+    margin: 25px;
     font-weight: 700;
+    cursor: pointer;
+}
+.boxMenuMobile ul li:hover{
+    color: var(--Orange);
+    transform: scale(1.1);
 }
 .imgProduct{
     width: 100%;
