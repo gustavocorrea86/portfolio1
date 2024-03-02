@@ -36,6 +36,7 @@ body{
     justify-content: space-between;
     height: 60px;
     align-items: center;
+    position: relative;
     @media(min-width:600px){
         display: none;
     }
@@ -93,7 +94,7 @@ nav ul li{
         width: 120px;
     }
 }
-.cart{
+.carts{
     cursor: pointer;
 }
 .custumer{
@@ -153,6 +154,24 @@ nav ul li{
 .boxMenuMobile ul li:hover{
     color: var(--Orange);
     transform: scale(1.1);
+}
+/* .hide{
+    display: none;
+} */
+.descResum.hide{
+    position: absolute;
+    width: 98%;
+    height: 200px;
+    background-color: antiquewhite;
+    margin-top: 10px;
+    border-radius: 10px; 
+    
+}
+main{
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: center;
 }
 .imgProduct{
     width: 100%;
