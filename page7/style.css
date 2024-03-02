@@ -129,10 +129,13 @@ nav ul li{
     overflow: hidden;
     position: absolute;
     left: -100%;
-    transition: 1s;
+    transition: .6s ease-in-out;
+    opacity: 0.8;
 }
 .boxMenuMobile ul li{
     color: var(--Very_dark_blue);
+    padding: 15px;
+    font-weight: 700;
 }
 .imgProduct{
     width: 100%;
