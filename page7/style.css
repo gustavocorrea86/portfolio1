@@ -40,7 +40,7 @@ body{
         display: none;
     }
 }
-.menuMobile{
+.btnMenuMobile{
     padding: 10px;
     width: 50px;
     cursor: pointer;
@@ -83,6 +83,9 @@ nav ul li{
         width: 120px;
     }
 }
+.cart{
+    cursor: pointer;
+}
 .custumer{
     width: 30px;
     height: 30px;
@@ -108,6 +111,28 @@ nav ul li{
 .consumo p {
     color: white;
     font-size: 10px;
+}
+.boxMenuMobile{
+    width: 250px;
+    height: 700px;
+    position: absolute;
+    @media(min-width:600px){
+        display: none;
+    }
+}
+.boxMenuMobile ul{
+    display: block;
+    width: 250px;
+    height: 700px;
+    background-color: var(--White);
+    margin: 0px;
+    overflow: hidden;
+    position: absolute;
+    left: -100%;
+    transition: 1s;
+}
+.boxMenuMobile ul li{
+    color: var(--Very_dark_blue);
 }
 .imgProduct{
     width: 100%;
