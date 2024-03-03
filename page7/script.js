@@ -2,7 +2,7 @@ const menuMobile = document.querySelector('.menuMobile')
 const btnMenu = document.querySelector('.btnMenuMobile')
 const fundo = document.querySelector('main')
 const carts = document.querySelector('.carts')
-const descResum = document.querySelector('.descResum')
+const descResum = document.querySelector('.resumCart')
 
 btnMenu.addEventListener('click', ()=>{
     btnMenu.classList.toggle('openMenu')
