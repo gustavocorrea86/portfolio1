@@ -193,21 +193,40 @@ nav ul li{
     width: 100%;
     padding: 10px;
 }
+.descCart{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center; 
+    height: 180px; 
+}
+.descCart h3{
+   
+}
 hr{
     width: 100%;
 }
-.chekout{
+.cartShop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.checkout{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 0 20px 0;
+    padding: 10px ; 
 }
 .deleteCart{
     margin-left: 40px;
     cursor: pointer;
 }
-.subChekout{
+.subCheckout{
     padding: 10px;
     display: flex;
     align-items: center;
@@ -221,20 +240,14 @@ hr{
     background-repeat: no-repeat;
     background-size: cover; 
 }
-.descCart{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
-    justify-content: end;  
-}
+
 .descValue{
     display: flex;
 }
 .descValue p {
     padding: 3px 0 3px 0;
 }
-.descCart button{
+.btnCheckout{
     width: 80%;
     padding: 12px;
     border-radius: 5px;
@@ -468,7 +481,7 @@ main{
     cursor: pointer;
     z-index: 1;
 }
-button{
+.btnAddCart{
     width: 100%;
     padding: 10px;
     margin-top: 20px;
