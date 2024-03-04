@@ -239,31 +239,13 @@ hr{
 }
 main{ 
     @media(min-width:600px){
-      margin-top: 40px;
+        margin-top: 40px;
         padding: 10px;
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: center;
     }
 }
-/* main section:nth-child(1){
-    width: 100%;
-    height: 380px;
-    background-image: url(ecommerce-product-page-main/images/image-product-1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    @media(min-width:600px){
-        width: 500px;
-        height: 450px;
-        margin-right: 100px;
-        border-radius: 10px;
-        background-color: aqua;
-    }
-} */
 .displayImgProd{
     @media(min-width:600px){
         width: 500px;
@@ -283,7 +265,6 @@ main{
         width: 500px;
         height: 450px;
         border-radius: 10px;
-        
     }
 }
 .photoProd{
@@ -293,25 +274,72 @@ main{
 }
 .imagesProdSec{
     @media(min-width:600px){
-        background-color: aqua;
-        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
         height: 150px;
     }
 }
 .imageSec1{
     @media(min-width:600px){
+        background-image: url(ecommerce-product-page-main/images/image-product-1-thumbnail.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         border: 2px solid black;
         width:100px;
         height: 100px;
-        background-color: aqua;
+        margin: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        opacity: .4;
     }
 }
 .imageSec2{
     @media(min-width:600px){
+        background-image: url(ecommerce-product-page-main/images/image-product-2-thumbnail.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         border: 2px solid black;
         width:100px;
         height: 100px;
-        background-color: aqua;
+        margin: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        opacity: .4;
+    }
+}
+.imageSec3{
+    @media(min-width:600px){
+        background-image: url(ecommerce-product-page-main/images/image-product-3-thumbnail.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid black;
+        width:100px;
+        height: 100px;
+        margin: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        opacity: .4;
+    }
+}
+.imageSec4{
+    @media(min-width:600px){
+        background-image: url(ecommerce-product-page-main/images/image-product-4-thumbnail.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid black;
+        width:100px;
+        height: 100px;
+        margin: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        opacity: .4;
+        
     }
 }
 .back{
@@ -348,33 +376,21 @@ main{
     justify-content: center;
     @media(min-width:600px){
         width: 500px;
+        margin: 20px 0 0 100px;
     }
 }
-/* main section:nth-child(2){
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @media(min-width:600px){
-        width: 500px;
-    } */
-
-main section:nth-child(2) p:nth-child(1){
+.productDesc .sneakerCompany{
    color: var(--Orange);
    font-weight: 700;
    margin-bottom: 10px;
 }
-main section:nth-child(2) h1:nth-child(2){
+.productDesc h1{
     font-size: 40px;
     margin-bottom: 20px;
 }
-.presProd{
+.productDesc .presProd{
     color: var(--Grayish_blue);
     font-weight: 500;
-    /* main section:nth-child(2) p:nth-child(3){
-    color: var(--Grayish_blue);
-    font-weight: 500;
-} */
 }
 .resValue{
     display: flex;
@@ -403,7 +419,6 @@ main section:nth-child(2) h1:nth-child(2){
     background-color: var(--Pale_orange);
     color: var(--Orange);
     font-weight: 600;
-    
 }
 .divQtdAndBtn{
     @media(min-width:600px){
