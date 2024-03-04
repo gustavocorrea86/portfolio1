@@ -30,6 +30,7 @@ header{
     @media(min-width:600px){
         border-bottom: 2px solid var(--Grayish_blue);
         padding: 20px;
+        height: 80px;
     }
 }
 nav{
@@ -41,15 +42,21 @@ nav ul{ /*desktop*/
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 500px;
     padding: 10px;
     margin-left: 30px;
+    position: relative;
     @media(max-width:600px){
         display: none;
     } 
 }
 nav ul li{
     color:var(--Dark_grayish_blue);
+    cursor: pointer;
+    @media(min-width:600px){
+       
+    }
 }
 .resum{
     display: flex;
@@ -79,7 +86,7 @@ nav ul li{
         height: 50px;
     }
 }
-.consumo{
+.shop{
     width: 16px;
     height: 10px;
     background-color: var(--Orange);
@@ -90,11 +97,12 @@ nav ul li{
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
     @media(min-width:600px){
         left: 10%;
     }
 }
-.consumo p {
+.shop p {
     color: white;
     font-size: 10px;
 }
@@ -351,7 +359,6 @@ main{
     align-items: center;
     justify-content: center;
     cursor:pointer;
-    z-index: 1;
     @media(min-width:600px){
         display: none;
     }
@@ -385,8 +392,10 @@ main{
    margin-bottom: 10px;
 }
 .productDesc h1{
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 35px;
+    @media(min-width:600px){
+        font-size: 40px;
+    }
 }
 .productDesc .presProd{
     color: var(--Grayish_blue);
@@ -407,12 +416,6 @@ main{
     font-weight: 600;
     text-decoration: line-through;
 }
-.resValue div{
-    width: 150px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .resValue div p{
     padding: 2px 7px;
     border-radius: 5px;
@@ -425,6 +428,15 @@ main{
         display: flex;
     }
 }
+.valuePay{
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media(min-width:600px){
+        width: 200px;
+    }
+}
 .qtdProd{
     display: flex;
     justify-content: space-between;
@@ -435,7 +447,6 @@ main{
     width: 100%;
     background-color: var(--Light_grayish_blue);
     @media(min-width:600px){
-        align-items: center;
         width: 200px;
         height: 40px;
         padding: 10px;
