@@ -37,6 +37,9 @@ body{
     font-size: 30px;
     word-wrap: break-word;
 }
+.res{
+    word-wrap: break-word;
+}
 #calculadora > button:nth-child(2){
     background-color: rgb(240, 192, 0);
     color: white;
