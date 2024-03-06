@@ -46,7 +46,7 @@ nav ul{ /*desktop*/
     width: 500px;
     padding: 10px;
     margin-left: 30px;
-    position: relative;
+    /* position: relative; */
     @media(max-width:600px){
         display: none;
     } 
@@ -55,7 +55,6 @@ nav ul li{
     color:var(--Dark_grayish_blue);
     cursor: pointer;
     @media(min-width:600px){
-       
     }
 }
 .resum{
@@ -296,7 +295,89 @@ main{
     display: flex;
     justify-content: space-between;
 }
-.imagesProdSec{
+.imageProdSec{
+    @media(min-width:600px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+        height: 150px;
+        cursor: pointer;
+    }
+}
+dialog{
+    @media(min-width:600px){
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border: none;
+        outline: none;                                          
+        width: 600px; 
+        padding: 50px;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  */
+    }
+}
+.divBtnClose{
+   display: flex;
+   flex-direction: row-reverse;
+}
+dialog img{
+    cursor: pointer;
+    padding: 10px;
+}
+.imgMainModal{
+    @media(min-width:600px){
+        background-image: url(ecommerce-product-page-main/images/image-product-1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        width: 500px;
+        height: 450px;
+        border-radius: 10px;
+    }
+} 
+.photoProdModal{
+    @media(min-width:600px){
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+    }
+}
+.backModal{
+    @media(min-width:600px){
+        background-color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor:pointer;
+    }
+}
+.nextModal{
+    @media(min-width:600px){
+        background-color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor:pointer;
+    }
+} 
+.imgSec{
     @media(min-width:600px){
         display: flex;
         align-items: center;
@@ -311,13 +392,11 @@ main{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        border: 2px solid black;
         width:100px;
         height: 100px;
         margin: 10px;
         border-radius: 10px;
         cursor: pointer;
-        opacity: .4;
     }
 }
 .imageSec2{
@@ -326,13 +405,11 @@ main{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        border: 2px solid black;
         width:100px;
         height: 100px;
         margin: 10px;
         border-radius: 10px;
         cursor: pointer;
-        opacity: .4;
     }
 }
 .imageSec3{
@@ -341,13 +418,11 @@ main{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        border: 2px solid black;
         width:100px;
         height: 100px;
         margin: 10px;
         border-radius: 10px;
         cursor: pointer;
-        opacity: .4;
     }
 }
 .imageSec4{
@@ -356,14 +431,11 @@ main{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        border: 2px solid black;
         width:100px;
         height: 100px;
         margin: 10px;
         border-radius: 10px;
         cursor: pointer;
-        opacity: .4;
-        
     }
 }
 .back{

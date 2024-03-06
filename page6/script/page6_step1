@@ -19,7 +19,6 @@ const name = document.querySelector('#name');
             localStorage.phoneUser = phone.value
         }else{
             modal.showModal()
-            modal.style.zIndex = 1
             fundo.style.opacity = '0.5'
         } 
     })

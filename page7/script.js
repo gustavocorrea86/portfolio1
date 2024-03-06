@@ -1,6 +1,5 @@
 const menuMobile = document.querySelector('.menuMobile')
 const btnMenu = document.querySelector('.btnMenuMobile')
-const fundo = document.querySelector('main')
 const carts = document.querySelector('.carts')
 const resumCart = document.querySelector('.resumCart')
 const btnAddAndCart = document.querySelector('.btnAddAndCart')
@@ -16,18 +15,25 @@ const valueTot = document.querySelector('.valueTot')
 const cartShop = document.querySelector('.cartShop')
 const myCart = document.querySelector('.myCart')
 const deleteCart = document.querySelector('.deleteCart')
-const imageProdMain = document.querySelector('.imageProdMain')
-const imageSec1 = document.querySelector('.imageSec1')
-const imageSec2 = document.querySelector('.imageSec2')
-const imageSec3 = document.querySelector('.imageSec3')
-const imageSec4 = document.querySelector('.imageSec4')
-
+const btnAddCart = document.querySelector('.btnAddCart')
+const imgMainModal = document.querySelector('.imgMainModal')
+const imgSec = document.querySelector('.imageProdSec')
+const modal = document.querySelector('dialog')
+const btnClose = document.querySelector('.btnClose')
+const fundo = document.querySelector('body')
+const nextModal = document.querySelector('.nextModal')
+let imgAux = ""
+let images = [
+    'url(ecommerce-product-page-main/images/image-product-1.jpg)',
+    'url(ecommerce-product-page-main/images/image-product-2.jpg)',
+    'url(ecommerce-product-page-main/images/image-product-3.jpg)',
+    'url(ecommerce-product-page-main/images/image-product-4.jpg)'
+]
 let qtdAdd = 0
 let valueUn = 125
 let qtdProd = 0
 let totValue = 0
 let cartQtd = 0
-
 
 btnMenu.addEventListener('click', ()=>{
     btnMenu.classList.toggle('openMenu')
@@ -44,9 +50,7 @@ carts.addEventListener('click', ()=>{
     }else{
         resumCart.style.display ='block'
     }
-    // resumCart.classList.toggle('hide')
 })
-
 
 add.addEventListener('click', ()=>{
     valueUn = 125
@@ -89,31 +93,38 @@ deleteCart.addEventListener('click', ()=>{
     totValue = 0
     qtd.innerHTML = qtdAdd
 })
-imageSec1.addEventListener('click',()=>{
-    imageSec1.style.opacity = '1'
-    imageSec2.style.opacity = '.4'
-    imageSec3.style.opacity = '.4'
-    imageSec4.style.opacity = '.4'
-    imageProdMain.style.backgroundImage= 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
+
+imgSec.addEventListener('click',()=>{
+    modal.showModal()
+    fundo.style.opacity = '.4'
+    imgMainModal.style.backgroundImage = images[0]
 })
-imageSec2.addEventListener('click',()=>{
-    imageSec1.style.opacity = '.4'
-    imageSec2.style.opacity = '1'
-    imageSec3.style.opacity = '.4'
-    imageSec4.style.opacity = '.4'
-    imageProdMain.style.backgroundImage= 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
+btnClose.addEventListener('click', ()=>{
+    modal.close()
+    fundo.style.opacity = '1'
+    imgAux = ""
 })
-imageSec3.addEventListener('click',()=>{
-    imageSec1.style.opacity = '.4'
-    imageSec2.style.opacity = '.4'
-    imageSec3.style.opacity = '1'
-    imageSec4.style.opacity = '.4'
-    imageProdMain.style.backgroundImage= 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
+imgAux = images[0]
+nextModal.addEventListener('click', ()=>{
+   for(var c in images){
+        imgMainModal.style.backgroundImage = images[c]
+   }
 })
-imageSec4.addEventListener('click',()=>{
-    imageSec1.style.opacity = '.4'
-    imageSec2.style.opacity = '.4'
-    imageSec3.style.opacity = '.4'
-    imageSec4.style.opacity = '1'
-    imageProdMain.style.backgroundImage= 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
-})
+// if(imgAux= images[0]){
+//     imgAux= images[1]
+// }
+// else if(imgAux= images[1]){
+//     imgAux= images[2]
+// }else{
+//     imgAux= images[3]
+// }
+
+//    if(imgMainModal.style.backgroundImage = images[0]){
+//         imgMainModal.style.backgroundImage = images[1]
+//    }else if( imgMainModal.style.backgroundImage = images[1]){
+//         imgMainModal.style.backgroundImage = images[2]
+//    }else{
+//     imgMainModal.style.backgroundImage = images[3]
+//    }
+
+
