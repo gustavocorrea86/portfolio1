@@ -22,7 +22,7 @@ const modal = document.querySelector('dialog')
 const btnClose = document.querySelector('.btnClose')
 const fundo = document.querySelector('body')
 const nextModal = document.querySelector('.nextModal')
-let imgAux = ""
+let imgAux = []
 let images = [
     'url(ecommerce-product-page-main/images/image-product-1.jpg)',
     'url(ecommerce-product-page-main/images/image-product-2.jpg)',
@@ -97,23 +97,29 @@ deleteCart.addEventListener('click', ()=>{
 imgSec.addEventListener('click',()=>{
     modal.showModal()
     fundo.style.opacity = '.4'
-    imgMainModal.style.backgroundImage = images[0]
+    // imgMainModal.style.backgroundImage = images[0]
 })
 
 btnClose.addEventListener('click', ()=>{
     modal.close()
     fundo.style.opacity = '1'
-    imgAux = ""
+    imgAux = []
 })
-
+var aux = 0
 nextModal.addEventListener('click', ()=>{
-   for(var c = 0; c < 4; c++){
-
-    imgAux = images[c]
-
-   }
-
-   imgMainModal.style.backgroundImage = imgAux
+    aux += 1
+    if(aux == 0){
+        imgMainModal.style.backgroundImage = images[0]
+    }else if(aux == 1){
+        imgMainModal.style.backgroundImage = images[1]
+    }else if(aux == 2){
+        imgMainModal.style.backgroundImage = images[2]
+    }else if(aux == 3){
+        imgMainModal.style.backgroundImage = images[3]
+    }else{
+        aux = 0
+        imgMainModal.style.backgroundImage = images[0]
+    }
 })
 
 // if(imgAux= images[0]){
