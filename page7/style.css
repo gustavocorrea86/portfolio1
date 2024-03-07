@@ -312,7 +312,8 @@ dialog{
         transform: translate(-50%, -50%);
         background-color: transparent;
         border: none;
-        outline: none;                                          
+        outline:none;
+        overflow: hidden;        
         width: 600px; 
         padding: 50px;
         /* display: flex;
