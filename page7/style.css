@@ -315,9 +315,8 @@ dialog{
         outline:none;
         overflow: hidden;        
         width: 580px; 
-        height: 700px;
         padding: 50px;
-        
+        background-color: aquamarine;
         /* display: flex;
         flex-direction: column;
         align-items: center;
