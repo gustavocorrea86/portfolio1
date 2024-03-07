@@ -99,17 +99,23 @@ imgSec.addEventListener('click',()=>{
     fundo.style.opacity = '.4'
     imgMainModal.style.backgroundImage = images[0]
 })
+
 btnClose.addEventListener('click', ()=>{
     modal.close()
     fundo.style.opacity = '1'
     imgAux = ""
 })
-imgAux = images[0]
+
 nextModal.addEventListener('click', ()=>{
-   for(var c in images){
-        imgMainModal.style.backgroundImage = images[c]
+   for(var c = 0; c < 4; c++){
+
+    imgAux = images[c]
+
    }
+
+   imgMainModal.style.backgroundImage = imgAux
 })
+
 // if(imgAux= images[0]){
 //     imgAux= images[1]
 // }

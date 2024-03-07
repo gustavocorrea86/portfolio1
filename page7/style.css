@@ -313,7 +313,7 @@ dialog{
         background-color: transparent;
         border: none;
         outline:none;
-        /* overflow: hidden;   */
+        overflow: hidden;  
         padding: 10px 50px 0px 50px;
         background-color: aquamarine;
         /* display: flex;
