@@ -177,6 +177,7 @@ nav ul li{
     border-radius: 10px;
     display: none; 
     box-shadow: 2px 1px 8px 1px rgba(0, 0, 0, 0.493);
+    z-index: 1;
     @media(min-width:600px){
         position: absolute;
         left: 68%;
@@ -275,7 +276,7 @@ main{
 }
 .imageProdMain{
     width: 100%;
-    height: 380px;
+    height: 400px;
     background-image: url(ecommerce-product-page-main/images/image-product-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -289,11 +290,7 @@ main{
         border-radius: 10px;
     }
 }
-.photoProd{
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-}
+
 .imageProdSec{
     @media(min-width:600px){
         display: flex;
@@ -304,21 +301,26 @@ main{
         cursor: pointer;
     }
 }
+
 dialog{
-    @media(min-width:600px){
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background-color: transparent;
-        border: none;
-        outline:none;
-        overflow: hidden;  
-        padding: 10px 50px 0px 50px;
-        /* display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;  */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    outline:none;
+    overflow: hidden;  
+    padding: 10px 50px 0px 50px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  */
+    @media(max-width:600px){
+        position: static;
+        display: none;
+        
+        
     }
 }
 .divBtnClose{
@@ -437,7 +439,13 @@ dialog img{
         cursor: pointer;
     }
 }
-.back{
+.photoProd{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+.backMobile{
     background-color: white;
     width: 40px;
     height: 40px;
@@ -450,7 +458,7 @@ dialog img{
         display: none;
     }
 }
-.next{
+.nextMobile{
     background-color: white;
     width: 40px;
     height: 40px;
@@ -513,7 +521,7 @@ dialog img{
 .divQtdAndBtn{
     @media(min-width:600px){
         display: flex;
-    }
+    } 
 }
 .valuePay{
     width: 180px;

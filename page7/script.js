@@ -23,6 +23,11 @@ const btnClose = document.querySelector('.btnClose')
 const fundo = document.querySelector('body')
 const nextModal = document.querySelector('.nextModal')
 const backModal = document.querySelector('.backModal')
+const nextMobile = document.querySelector('.nextMobile')
+const backMobile = document.querySelector('.backMobile')
+const imageProdMain = document.querySelector('.imageProdMain')
+const photoProd = document.querySelector('.photoProd')
+
 let aux = 0
 let qtdAdd = 0
 let valueUn = 125
@@ -32,11 +37,12 @@ let cartQtd = 0
 
 btnMenu.addEventListener('click', ()=>{
     btnMenu.classList.toggle('openMenu')
+    photoProd.style.position = 'static' 
     if(menuMobile.style.left == '0%' ){
         menuMobile.style.left = '-100%' 
+        photoProd.style.position = 'absolute'
     }else{
-        menuMobile.style.left = '0%' 
-        menuMobile.style.zIndex = '1'
+        menuMobile.style.left = '0%'
     }
 })
 carts.addEventListener('click', ()=>{
@@ -101,6 +107,9 @@ btnClose.addEventListener('click', ()=>{
     fundo.style.opacity = '1'
 })
 
+function photoAfter(){
+    
+}
 nextModal.addEventListener('click', ()=>{
     aux += 1
     if(aux == 0){
@@ -116,7 +125,6 @@ nextModal.addEventListener('click', ()=>{
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
     }
 })
-
 backModal.addEventListener('click', ()=>{
     aux -=1
     if(aux == 2){
@@ -128,6 +136,35 @@ backModal.addEventListener('click', ()=>{
     }else{
         aux = 3
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
+    }
+})
+
+nextMobile.addEventListener('click', ()=>{
+    aux += 1
+    if(aux == 0){
+        imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
+    }else if(aux == 1){
+        imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
+    }else if(aux == 2){
+        imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
+    }else if(aux == 3){
+        imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
+    }else{
+        aux = 0
+        imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
+    }
+})
+backMobile.addEventListener('click', ()=>{
+    aux -=1
+    if(aux == 2){
+        imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
+    }else if(aux == 1){
+        imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
+    }else if(aux == 0){
+        imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
+    }else{
+        aux = 3
+        imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
     }
 })
 
