@@ -22,13 +22,8 @@ const modal = document.querySelector('dialog')
 const btnClose = document.querySelector('.btnClose')
 const fundo = document.querySelector('body')
 const nextModal = document.querySelector('.nextModal')
-let imgAux = []
-let images = [
-    'url(ecommerce-product-page-main/images/image-product-1.jpg)',
-    'url(ecommerce-product-page-main/images/image-product-2.jpg)',
-    'url(ecommerce-product-page-main/images/image-product-3.jpg)',
-    'url(ecommerce-product-page-main/images/image-product-4.jpg)'
-]
+const backModal = document.querySelector('.backModal')
+let aux = 0
 let qtdAdd = 0
 let valueUn = 125
 let qtdProd = 0
@@ -97,46 +92,44 @@ deleteCart.addEventListener('click', ()=>{
 imgSec.addEventListener('click',()=>{
     modal.showModal()
     fundo.style.opacity = '.4'
-    // imgMainModal.style.backgroundImage = images[0]
+    aux = 0
+    imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
 })
 
 btnClose.addEventListener('click', ()=>{
     modal.close()
     fundo.style.opacity = '1'
-    imgAux = []
 })
-var aux = 0
+
 nextModal.addEventListener('click', ()=>{
     aux += 1
     if(aux == 0){
-        imgMainModal.style.backgroundImage = images[0]
+        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
     }else if(aux == 1){
-        imgMainModal.style.backgroundImage = images[1]
+        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
     }else if(aux == 2){
-        imgMainModal.style.backgroundImage = images[2]
+        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
     }else if(aux == 3){
-        imgMainModal.style.backgroundImage = images[3]
+        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
     }else{
         aux = 0
-        imgMainModal.style.backgroundImage = images[0]
+        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
     }
 })
 
-// if(imgAux= images[0]){
-//     imgAux= images[1]
-// }
-// else if(imgAux= images[1]){
-//     imgAux= images[2]
-// }else{
-//     imgAux= images[3]
-// }
+backModal.addEventListener('click', ()=>{
+    aux -=1
+    if(aux == 2){
+        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
+    }else if(aux == 1){
+        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
+    }else if(aux == 0){
+        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
+    }else{
+        aux = 3
+        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
+    }
+})
 
-//    if(imgMainModal.style.backgroundImage = images[0]){
-//         imgMainModal.style.backgroundImage = images[1]
-//    }else if( imgMainModal.style.backgroundImage = images[1]){
-//         imgMainModal.style.backgroundImage = images[2]
-//    }else{
-//     imgMainModal.style.backgroundImage = images[3]
-//    }
 
 
