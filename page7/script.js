@@ -18,8 +18,9 @@ const deleteCart = document.querySelector('.deleteCart')
 const btnAddCart = document.querySelector('.btnAddCart')
 const imgMainModal = document.querySelector('.imgMainModal')
 const imgSec = document.querySelector('.imageProdSec')
-const modal = document.querySelector('dialog')
-const btnClose = document.querySelector('.btnClose')
+const modal = document.querySelector('.modalPhotosDesktop')
+const closeModalDesktop = document.querySelector('.closeModalDesktop')
+const closeModalMobile = document.querySelector('.closeModalMobile')
 const fundo = document.querySelector('body')
 const nextModal = document.querySelector('.nextModal')
 const backModal = document.querySelector('.backModal')
@@ -27,6 +28,7 @@ const nextMobile = document.querySelector('.nextMobile')
 const backMobile = document.querySelector('.backMobile')
 const imageProdMain = document.querySelector('.imageProdMain')
 const photoProd = document.querySelector('.photoProd')
+const modalBtnAddToCart = document.querySelector('.modalBtnAddToCart')
 
 let aux = 0
 let qtdAdd = 0
@@ -59,7 +61,6 @@ add.addEventListener('click', ()=>{
     qtdProd = qtdAdd
     cartQtd +=1
     totValue = valueUn*qtdProd
-    shop.style.display = 'flex'
     qtd.innerHTML = qtdAdd
     shopQtd.innerHTML = cartQtd
     qtdTot.innerHTML = qtdProd
@@ -83,6 +84,12 @@ sub.addEventListener('click',()=>{
     qtdTot.innerHTML = qtdProd
     valueTot.innerHTML = `$${totValue}.00`
 })
+btnAddCart.addEventListener('click', ()=>{
+    if(qtdAdd == 0){
+        modalBtnAddToCart.showModal()
+    }else
+    shop.style.display = 'flex'
+})
 deleteCart.addEventListener('click', ()=>{
     myCart.style.display = 'block'
     cartShop.style.display = 'none'
@@ -102,14 +109,16 @@ imgSec.addEventListener('click',()=>{
     imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
 })
 
-btnClose.addEventListener('click', ()=>{
+closeModalDesktop.addEventListener('click', ()=>{
     modal.close()
+    // modalBtnAddToCart.close()
+    fundo.style.opacity = '1'
+})
+closeModalMobile.addEventListener('click', ()=>{
+    modalBtnAddToCart.close()
     fundo.style.opacity = '1'
 })
 
-function photoAfter(){
-    
-}
 nextModal.addEventListener('click', ()=>{
     aux += 1
     if(aux == 0){
