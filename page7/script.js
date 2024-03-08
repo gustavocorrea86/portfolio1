@@ -87,6 +87,7 @@ sub.addEventListener('click',()=>{
 btnAddCart.addEventListener('click', ()=>{
     if(qtdAdd == 0){
         modalBtnAddToCart.showModal()
+        fundo.style.opacity = '.4'
     }else
     shop.style.display = 'flex'
 })
