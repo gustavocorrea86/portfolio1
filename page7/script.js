@@ -35,7 +35,8 @@ vetDivs = [...vetDivs]
 vetDivs.map((el, i)=>{ // coloquei o método map aqui para comecar a estuda-lo e ver suas posiveis manibulações
     // console.log(el,i)
 })
-let aux = 0
+let aux1 = 0
+let aux2 = 0
 let qtdAdd = 0
 let valueUn = 125
 let qtdProd = 0
@@ -108,58 +109,69 @@ deleteCart.addEventListener('click', ()=>{
     qtd.innerHTML = qtdAdd
 })
 imgSec.addEventListener('click',()=>{
+    vetDivs[26].classList.toggle('borderToggle-0')
     modal.showModal()
     fundo.style.opacity = '.4'
     aux = 0
     imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
-    vetDivs[26].classList.toggle('borderToggle-0')
 })
 closeModalDesktop.addEventListener('click', ()=>{
     modal.close()
     fundo.style.opacity = '1'
-    vetDivs[26,27,28,29].classList.remove('borderToggle-1')
+    vetDivs[26].classList.remove('borderToggle-0')
+    vetDivs[27].classList.remove('borderToggle-0')
+    vetDivs[28].classList.remove('borderToggle-0')
+    vetDivs[29].classList.remove('borderToggle-0')
 })
 closeModalMobile.addEventListener('click', ()=>{
     modalBtnAddToCart.close()
     fundo.style.opacity = '1'
 })
 nextModal.addEventListener('click', ()=>{
-    aux += 1
-    if(aux == 0){
+    aux1 += 1
+    if(aux1 == 0){
+        // vetDivs[26].classList.toggle('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
-    }else if(aux == 1){
+    }else if(aux1 == 1){
         vetDivs[27].classList.toggle('borderToggle-0')
         vetDivs[26].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
-    }else if(aux == 2){
+    }else if(aux1 == 2){
         vetDivs[28].classList.toggle('borderToggle-0')
         vetDivs[27].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
-    }else if(aux == 3){
+    }else if(aux1 == 3){
         vetDivs[29].classList.toggle('borderToggle-0')
         vetDivs[28].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
     }else{
         vetDivs[26].classList.toggle('borderToggle-0')
         vetDivs[29].classList.remove('borderToggle-0')
-        aux = 0
+        aux1 = 0
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
     }
 })
 backModal.addEventListener('click', ()=>{
-    aux -=1
-    if(aux == 2){
-        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
-    }else if(aux == 1){
-        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
-    }else if(aux == 0){
+    aux1 -=1
+    if(aux1 == 0){
+        vetDivs[26].classList.toggle('borderToggle-0')
+        vetDivs[27].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
+    }else if(aux1 == 1){
+        vetDivs[27].classList.toggle('borderToggle-0')
+        vetDivs[28].classList.remove('borderToggle-0')
+        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
+    }else if(aux1 == 2){
+        vetDivs[28].classList.toggle('borderToggle-0')
+        vetDivs[29].classList.remove('borderToggle-0')
+        imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
     }else{
-        aux = 3
+        vetDivs[29].classList.toggle('borderToggle-0')
+        vetDivs[26].classList.remove('borderToggle-0')
+        aux1 = 3
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
     }
 })
-
 nextMobile.addEventListener('click', ()=>{
     aux += 1
     if(aux == 0){

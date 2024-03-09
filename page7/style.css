@@ -213,9 +213,6 @@ nav ul li{
     justify-content: center; 
     height: 180px; 
 }
-.descCart h3{
-   /* display: none; */
-}
 hr{
     width: 100%;
 }
@@ -300,6 +297,7 @@ main{
         width: 500px;
         height: 450px;
         border-radius: 10px;
+       
     }
 }
 
@@ -311,6 +309,8 @@ main{
         width: 500px;
         height: 150px;
         cursor: pointer;
+        z-index: 1;
+        background-color: aqua;
     }
 }
 
@@ -350,14 +350,9 @@ dialog img{
         width: 500px;
         height: 450px;
         border-radius: 10px;
+        
     }
 } 
-.imageSec1{
-    @media(min-width:600px){
-        opacity: .4;
-        border: 2px solid orange;
-    }
-}
 .photoProdModal{
     @media(min-width:600px){
         width: 90%;
@@ -398,6 +393,12 @@ dialog img{
         justify-content: center;
         width: 500px;
         height: 150px;
+    }
+}
+.imageProdSec .imageSec1{
+    @media(min-width:600px){
+        opacity: .4;
+        border: 2px solid orange;
     }
 }
 .imageSec1{
