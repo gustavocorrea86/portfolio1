@@ -29,14 +29,14 @@ const backMobile = document.querySelector('.backMobile')
 const imageProdMain = document.querySelector('.imageProdMain')
 const photoProd = document.querySelector('.photoProd')
 const modalBtnAddToCart = document.querySelector('.modalBtnAddToCart')
-let vetDivs = document.querySelectorAll('div')
+let vetDivs = [... document.querySelectorAll('div')]
+const seta = [... document.querySelectorAll('path')]
 
-vetDivs = [...vetDivs]
+// vetDivs = [...vetDivs]
 vetDivs.map((el, i)=>{ // coloquei o método map aqui para comecar a estuda-lo e ver suas posiveis manibulações
     // console.log(el,i)
 })
-let aux1 = 0
-let aux2 = 0
+let aux = 0
 let qtdAdd = 0
 let valueUn = 125
 let qtdProd = 0
@@ -128,47 +128,46 @@ closeModalMobile.addEventListener('click', ()=>{
     fundo.style.opacity = '1'
 })
 nextModal.addEventListener('click', ()=>{
-    aux1 += 1
-    if(aux1 == 0){
-        // vetDivs[26].classList.toggle('borderToggle-0')
+    aux += 1
+    if(aux == 0){
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
-    }else if(aux1 == 1){
+    }else if(aux == 1){
         vetDivs[27].classList.toggle('borderToggle-0')
         vetDivs[26].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
-    }else if(aux1 == 2){
+    }else if(aux == 2){
         vetDivs[28].classList.toggle('borderToggle-0')
         vetDivs[27].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
-    }else if(aux1 == 3){
+    }else if(aux == 3){
         vetDivs[29].classList.toggle('borderToggle-0')
         vetDivs[28].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
     }else{
         vetDivs[26].classList.toggle('borderToggle-0')
         vetDivs[29].classList.remove('borderToggle-0')
-        aux1 = 0
+        aux = 0
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
     }
 })
 backModal.addEventListener('click', ()=>{
-    aux1 -=1
-    if(aux1 == 0){
+    aux -=1
+    if(aux == 0){
         vetDivs[26].classList.toggle('borderToggle-0')
         vetDivs[27].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
-    }else if(aux1 == 1){
+    }else if(aux == 1){
         vetDivs[27].classList.toggle('borderToggle-0')
         vetDivs[28].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
-    }else if(aux1 == 2){
+    }else if(aux == 2){
         vetDivs[28].classList.toggle('borderToggle-0')
         vetDivs[29].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
     }else{
         vetDivs[29].classList.toggle('borderToggle-0')
         vetDivs[26].classList.remove('borderToggle-0')
-        aux1 = 3
+        aux = 3
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
     }
 })
