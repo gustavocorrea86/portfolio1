@@ -18,7 +18,8 @@
 body{
     @media(min-width:600px){
         width: 1300px;
-        margin: auto;
+        height: 100vh;
+        margin: 0 auto;
     }
 }
 header{
@@ -274,7 +275,6 @@ main{
         display: flex;
         align-items: start;
         justify-content: center;
-        background-color: antiquewhite;
     }
 }
 .displayImgProd{
@@ -319,7 +319,7 @@ main{
     outline:none;
     overflow: hidden;  
     padding: 10px 50px 0px 50px;
-    height: 900px;
+   
     background-color: aqua;
     @media(max-width:600px){
         position: static;
