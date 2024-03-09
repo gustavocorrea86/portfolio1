@@ -15,7 +15,6 @@
     list-style: none;
     font-family: "Kumbh Sans", sans-serif;
 }
-
 body{
     @media(min-width:600px){
         width: 1300px;
@@ -275,6 +274,7 @@ main{
         display: flex;
         align-items: start;
         justify-content: center;
+        background-color: antiquewhite;
     }
 }
 .displayImgProd{
@@ -346,7 +346,6 @@ dialog img{
         width: 500px;
         height: 450px;
         border-radius: 10px;
-        
     }
 } 
 .photoProdModal{
