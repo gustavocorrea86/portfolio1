@@ -29,6 +29,17 @@ const backMobile = document.querySelector('.backMobile')
 const imageProdMain = document.querySelector('.imageProdMain')
 const photoProd = document.querySelector('.photoProd')
 const modalBtnAddToCart = document.querySelector('.modalBtnAddToCart')
+let vetDivs = document.querySelectorAll('div')
+
+vetDivs = [...vetDivs]
+vetDivs.map((el, i)=>{ // coloquei o método map aqui para comecar a estuda-lo e ver suas posiveis manibulações
+    // s                                                
+})
+let vetSec = document.querySelectorAll('section')
+vetSec = [...vetSec]
+vetSec.map((el, i)=>{
+    console.log(el, i)
+})
 
 let aux = 0
 let qtdAdd = 0
@@ -102,10 +113,14 @@ deleteCart.addEventListener('click', ()=>{
     totValue = 0
     qtd.innerHTML = qtdAdd
 })
-
+vetDivs[27].style.opacity = '.4'
+vetDivs[28].style.opacity = '.4'
+vetDivs[29].style.opacity = '.4'
 imgSec.addEventListener('click',()=>{
     modal.showModal()
     fundo.style.opacity = '.4'
+    vetDivs[26].style.opacity = '1'
+    vetDivs[26].style.border ='2px solid orange'
     aux = 0
     imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
 })
@@ -125,12 +140,28 @@ nextModal.addEventListener('click', ()=>{
     if(aux == 0){
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
     }else if(aux == 1){
+        vetDivs[27].style.opacity = '1'
+        vetDivs[27].style.border = '2px solid orange'
+        vetDivs[26].style.opacity = '.4'
+        vetDivs[26].style.border = 'none'
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
     }else if(aux == 2){
+        vetDivs[28].style.opacity = '1'
+        vetDivs[28].style.border = '2px solid orange'
+        vetDivs[27].style.opacity = '.4'
+        vetDivs[27].style.border = 'none'
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
     }else if(aux == 3){
+        vetDivs[29].style.opacity = '1'
+        vetDivs[29].style.border = '2px solid orange'
+        vetDivs[28].style.opacity = '.4'
+        vetDivs[28].style.border = 'none'
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
     }else{
+        vetDivs[26].style.opacity = '1'
+        vetDivs[26].style.border = '2px solid orange'
+        vetDivs[29].style.opacity = '.4'
+        vetDivs[29].style.border = 'none'
         aux = 0
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
     }
