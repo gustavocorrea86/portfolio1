@@ -189,6 +189,9 @@ nav ul li{
         border-radius: 10px; 
     }
 }  
+.closeModalDesktop{
+    user-select: none;
+}
 .closeModalMobile{
     padding: 5px 15px;
     border-radius: 5px;
@@ -350,8 +353,10 @@ dialog img{
     }
 } 
 .imageSec1{
-    opacity: .4;
-    border: 2px solid orange;
+    @media(min-width:600px){
+        opacity: .4;
+        border: 2px solid orange;
+    }
 }
 .photoProdModal{
     @media(min-width:600px){
