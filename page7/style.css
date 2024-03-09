@@ -214,7 +214,7 @@ nav ul li{
     height: 180px; 
 }
 hr{
-    width: 100%;
+    width: 98%;
 }
 .cartShop{
     display: flex;
@@ -223,7 +223,6 @@ hr{
     justify-content: center;
     display: none;
 }
-
 .checkout{
     width: 100%;
     display: flex;
@@ -299,7 +298,6 @@ main{
         border-radius: 10px;
     }
 }
-
 .imageProdSec{
     @media(min-width:600px){
         display: flex;
@@ -321,10 +319,11 @@ main{
     outline:none;
     overflow: hidden;  
     padding: 10px 50px 0px 50px;
+    height: 900px;
+    background-color: aqua;
     @media(max-width:600px){
         position: static;
         display: none;
-        
     }
 }
 .divBtnClose{
