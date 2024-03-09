@@ -599,7 +599,9 @@ dialog img{
     border-radius: 10px;
     
 }
-
-
+.borderToggle-0{
+    border: 2px solid orange;
+    opacity: 0.4;
+}
 
 

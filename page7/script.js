@@ -33,14 +33,8 @@ let vetDivs = document.querySelectorAll('div')
 
 vetDivs = [...vetDivs]
 vetDivs.map((el, i)=>{ // coloquei o método map aqui para comecar a estuda-lo e ver suas posiveis manibulações
-    // s                                                
+    // console.log(el,i)
 })
-let vetSec = document.querySelectorAll('section')
-vetSec = [...vetSec]
-vetSec.map((el, i)=>{
-    console.log(el, i)
-})
-
 let aux = 0
 let qtdAdd = 0
 let valueUn = 125
@@ -113,55 +107,41 @@ deleteCart.addEventListener('click', ()=>{
     totValue = 0
     qtd.innerHTML = qtdAdd
 })
-vetDivs[27].style.opacity = '.4'
-vetDivs[28].style.opacity = '.4'
-vetDivs[29].style.opacity = '.4'
 imgSec.addEventListener('click',()=>{
     modal.showModal()
     fundo.style.opacity = '.4'
-    vetDivs[26].style.opacity = '1'
-    vetDivs[26].style.border ='2px solid orange'
     aux = 0
     imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
+    vetDivs[26].classList.toggle('borderToggle-0')
 })
-
 closeModalDesktop.addEventListener('click', ()=>{
     modal.close()
-    // modalBtnAddToCart.close()
     fundo.style.opacity = '1'
+    vetDivs[26,27,28,29].classList.remove('borderToggle-1')
 })
 closeModalMobile.addEventListener('click', ()=>{
     modalBtnAddToCart.close()
     fundo.style.opacity = '1'
 })
-
 nextModal.addEventListener('click', ()=>{
     aux += 1
     if(aux == 0){
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
     }else if(aux == 1){
-        vetDivs[27].style.opacity = '1'
-        vetDivs[27].style.border = '2px solid orange'
-        vetDivs[26].style.opacity = '.4'
-        vetDivs[26].style.border = 'none'
+        vetDivs[27].classList.toggle('borderToggle-0')
+        vetDivs[26].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-2.jpg)'
     }else if(aux == 2){
-        vetDivs[28].style.opacity = '1'
-        vetDivs[28].style.border = '2px solid orange'
-        vetDivs[27].style.opacity = '.4'
-        vetDivs[27].style.border = 'none'
+        vetDivs[28].classList.toggle('borderToggle-0')
+        vetDivs[27].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
     }else if(aux == 3){
-        vetDivs[29].style.opacity = '1'
-        vetDivs[29].style.border = '2px solid orange'
-        vetDivs[28].style.opacity = '.4'
-        vetDivs[28].style.border = 'none'
+        vetDivs[29].classList.toggle('borderToggle-0')
+        vetDivs[28].classList.remove('borderToggle-0')
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
     }else{
-        vetDivs[26].style.opacity = '1'
-        vetDivs[26].style.border = '2px solid orange'
-        vetDivs[29].style.opacity = '.4'
-        vetDivs[29].style.border = 'none'
+        vetDivs[26].classList.toggle('borderToggle-0')
+        vetDivs[29].classList.remove('borderToggle-0')
         aux = 0
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
     }
