@@ -349,6 +349,10 @@ dialog img{
         border-radius: 10px;
     }
 } 
+.imageSec1{
+    opacity: .4;
+    border: 2px solid orange;
+}
 .photoProdModal{
     @media(min-width:600px){
         width: 90%;
