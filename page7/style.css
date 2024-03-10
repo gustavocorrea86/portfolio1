@@ -313,11 +313,12 @@ main{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -50%);
     background-color: transparent;
     border: none;
     outline:none;
-    /* overflow: hidden;   */
+    overflow: hidden;  
+    height: 900px;
     padding: 10px 50px 0px 50px;
     background-color: aquamarine;
     @media(max-width:600px){
