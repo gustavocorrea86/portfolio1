@@ -30,10 +30,16 @@ const imageProdMain = document.querySelector('.imageProdMain')
 const photoProd = document.querySelector('.photoProd')
 const modalBtnAddToCart = document.querySelector('.modalBtnAddToCart')
 let vetDivs = [... document.querySelectorAll('div')]
-const seta = [... document.querySelectorAll('path')]
+const seta = document.querySelector('path')
 
-// vetDivs = [...vetDivs]
-vetDivs.map((el, i)=>{ // coloquei o método map aqui para comecar a estuda-lo e ver suas posiveis manibulações
+
+
+// window.onresize = function() {
+//     if (window.innerWidth < 600) {
+//         closeMod()
+//     }
+//   }
+vetDivs.map((el, i)=>{ // coloquei o método map aqui para estuda-lo e ver suas possiveis manipulações
     // console.log(el,i)
 })
 let aux = 0
@@ -43,7 +49,7 @@ let qtdProd = 0
 let totValue = 0
 let cartQtd = 0
 
-btnMenu.addEventListener('click', ()=>{
+btnMenu.addEventListener('click', ()=>{ // abre o menu mobile
     btnMenu.classList.toggle('openMenu')
     photoProd.style.position = 'static' 
     if(menuMobile.style.left == '0%' ){
@@ -53,15 +59,14 @@ btnMenu.addEventListener('click', ()=>{
         menuMobile.style.left = '0%'
     }
 })
-carts.addEventListener('click', ()=>{
+carts.addEventListener('click', ()=>{ // aqui abre o carrinho se for clicado
     if(resumCart.style.display =='block'){
         resumCart.style.display ='none'
     }else{
         resumCart.style.display ='block'
     }
 })
-
-add.addEventListener('click', ()=>{
+add.addEventListener('click', ()=>{ // aqui add a quantidade
     valueUn = 125
     qtdAdd += 1
     qtdProd = qtdAdd
@@ -91,7 +96,7 @@ sub.addEventListener('click',()=>{
     qtdTot.innerHTML = qtdProd
     valueTot.innerHTML = `$${totValue}.00`
 })
-btnAddCart.addEventListener('click', ()=>{
+btnAddCart.addEventListener('click', ()=>{ // se o carrinho estiver vazio mostra a mensagem em tela
     if(qtdAdd == 0){
         modalBtnAddToCart.showModal()
         fundo.style.opacity = '.4'
@@ -99,7 +104,7 @@ btnAddCart.addEventListener('click', ()=>{
     shop.style.display = 'flex'
     cartShop.style.display = 'flex'
 })
-deleteCart.addEventListener('click', ()=>{
+deleteCart.addEventListener('click', ()=>{ // lixeira do carrinho
     myCart.style.display = 'block'
     cartShop.style.display = 'none'
     shop.style.display = 'none'
@@ -110,14 +115,26 @@ deleteCart.addEventListener('click', ()=>{
     totValue = 0
     qtd.innerHTML = qtdAdd
 })
-imgSec.addEventListener('click',()=>{
+imgSec.addEventListener('click',()=>{ // aqui abre o modal desktop clicando em qualquer lugar da div das fotos secundarias
     vetDivs[26].classList.toggle('borderToggle-0')
     modal.showModal()
     fundo.style.opacity = '.4'
     aux = 0
     imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
+    modalClose = 1
 })
-closeModalDesktop.addEventListener('click', ()=>{
+window.onresize = function() { // fecha modal se chegar em < 600px
+    if (window.innerWidth < 600) {
+        modal.close()
+        fundo.style.opacity = '1'
+        vetDivs[26].classList.remove('borderToggle-0')
+        vetDivs[27].classList.remove('borderToggle-0')
+        vetDivs[28].classList.remove('borderToggle-0')
+        vetDivs[29].classList.remove('borderToggle-0')
+        modalBtnAddToCart.close()
+    }
+}
+closeModalDesktop.addEventListener('click', ()=>{ // aqui fecha o modal desktop e retorna ao estado anterior
     modal.close()
     fundo.style.opacity = '1'
     vetDivs[26].classList.remove('borderToggle-0')
@@ -129,8 +146,9 @@ closeModalMobile.addEventListener('click', ()=>{
     modalBtnAddToCart.close()
     fundo.style.opacity = '1'
 })
-nextModal.addEventListener('click', ()=>{
+nextModal.addEventListener('click', ()=>{// aqui passa as fotos e deixa a foto secundaria que esta em tela opaca
     aux += 1
+    seta.style.color = 'orange'
     if(aux == 0){
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
     }else if(aux == 1){
@@ -173,7 +191,7 @@ backModal.addEventListener('click', ()=>{
         imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
     }
 })
-nextMobile.addEventListener('click', ()=>{
+nextMobile.addEventListener('click', ()=>{ // aqui passa as fotos no mobile
     aux += 1
     if(aux == 0){
         imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
@@ -188,7 +206,7 @@ nextMobile.addEventListener('click', ()=>{
         imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-1.jpg)'
     }
 })
-backMobile.addEventListener('click', ()=>{
+backMobile.addEventListener('click', ()=>{ // aqui volta as fotos no mobile
     aux -=1
     if(aux == 2){
         imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-3.jpg)'
