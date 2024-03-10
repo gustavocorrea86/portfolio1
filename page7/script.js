@@ -72,8 +72,7 @@ add.addEventListener('click', ()=>{
     qtdTot.innerHTML = qtdProd
     valueUnd.innerHTML = `$${valueUn}.00`
     valueTot.innerHTML = `$${totValue}.00`
-    myCart.style.display = 'none'
-    cartShop.style.display = 'flex'
+    myCart.style.display = 'flex'
 })
 sub.addEventListener('click',()=>{
     if(qtdAdd > 0 && cartQtd > 0){
@@ -83,6 +82,8 @@ sub.addEventListener('click',()=>{
         totValue -= 125
     }
     if(qtdAdd == 0){
+        cartShop.style.display = 'none'
+        myCart.style.display = 'flex'
         shop.style.display = 'none'
     }
     qtd.innerHTML = qtdAdd
@@ -96,6 +97,7 @@ btnAddCart.addEventListener('click', ()=>{
         fundo.style.opacity = '.4'
     }else
     shop.style.display = 'flex'
+    cartShop.style.display = 'flex'
 })
 deleteCart.addEventListener('click', ()=>{
     myCart.style.display = 'block'
