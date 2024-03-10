@@ -320,7 +320,7 @@ main{
     overflow: hidden;  
     height: 900px;
     padding: 10px 50px 0px 50px;
-    background-color: aquamarine;
+    background-color: blueviolet;
     @media(max-width:600px){
         position: static;
         display: none;
