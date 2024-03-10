@@ -38,7 +38,7 @@ nav{
         width: 100%;
     }
 }
-nav ul{ /*desktop*/
+.menuDesktop{ /*desktop*/
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -51,11 +51,9 @@ nav ul{ /*desktop*/
         display: none;
     } 
 }
-nav ul li{
+.menuDesktop li{
     color:var(--Dark_grayish_blue);
     cursor: pointer;
-    @media(min-width:600px){
-    }
 }
 .resum{
     display: flex;
@@ -214,7 +212,7 @@ nav ul li{
     height: 180px; 
 }
 hr{
-    width: 98%;
+    width: 100%;
 }
 .cartShop{
     display: flex;
@@ -310,10 +308,10 @@ main{
     }
 }
 .modalPhotosDesktop{  /*modal desktop*/
-    position: absolute;
+    /* position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     background-color: transparent;
     border: none;
     outline:none;
@@ -322,7 +320,7 @@ main{
     padding: 10px 50px 0px 50px;
     background-color: blueviolet;
     @media(max-width:600px){
-        position: static;
+        /* position: static; */
         display: none;
     }
 }
