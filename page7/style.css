@@ -272,8 +272,9 @@ main{
         margin-top: 40px;
         padding: 10px;
         display: flex;
-        align-items: start;
+        align-items: center;
         justify-content: center;
+        height: 100vh;
     }
 }
 .displayImgProd{
@@ -318,8 +319,6 @@ main{
     outline:none;
     overflow: hidden;  
     padding: 10px 50px 0px 50px;
-    box-shadow: 2px 1px 20px 1px rgba(0, 0, 0, 0.342);
-    border-radius: 5px;
     @media(max-width:600px){
         display: none;
     }
@@ -603,7 +602,7 @@ dialog img{
     
 }
 .borderToggle-0{
-    border: 3px solid orange;
+    border: 3px solid rgb(255, 166, 0);
     opacity: 0.4;
     transition: .7s;
 }
