@@ -14,6 +14,7 @@
     box-sizing: border-box;
     list-style: none;
     font-family: "Kumbh Sans", sans-serif;
+    text-decoration: none;
 }
 body{
     @media(min-width:600px){
@@ -52,12 +53,32 @@ nav{
         display: none;
     } 
 }
+.menuDesktop li:nth-child(1){
+    width: 90px;
+}
+.menuDesktop li:nth-child(2){
+    width: 40px;
+}
+.menuDesktop li:nth-child(3){
+    width: 60px;
+}
+.menuDesktop li:nth-child(4){
+    width: 50px;
+}
+.menuDesktop li:nth-child(5){
+    width: 60px;
+}
+li p {
+    cursor: pointer;
+}
 .menuDesktop li{
     color:var(--Dark_grayish_blue);
-    cursor: pointer;
-    background-color: aqua;
-    outline-style: outset;
-    
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.menuDesktop li:hover {
+    border-bottom: 4px solid orange;
 }
 .resum{
     display: flex;
@@ -361,9 +382,10 @@ dialog img{
         display: flex;
         justify-content: center;
         align-items: center; 
-        width: 500px;
-        height: 450px;
+        width: 450px;
+        height: 350px;
         border-radius: 10px;
+        background-color: antiquewhite;
     }
 } 
 .photoProdModal{
@@ -404,7 +426,7 @@ dialog img{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 500px;
+        width: 450px;
         height: 150px;
     }
 }
