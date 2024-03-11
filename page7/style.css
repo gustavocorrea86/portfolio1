@@ -354,9 +354,10 @@ main{
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
-    border: none; 
-    outline:none;
-    overflow: unset; 
+    border: none;  
+    outline: none ;
+    backdrop-filter: inherit;
+    overflow: unset;  
     padding: 10px 50px 0px 50px;
     @media(max-width:600px){
         display: none;
@@ -379,8 +380,8 @@ dialog img{
         display: flex;
         justify-content: center;
         align-items: center; 
-        width: 600px;
-        height: 550px;
+        width: 500px;
+        height: 450px;
         border-radius: 10px;
     }
 } 
@@ -422,7 +423,7 @@ dialog img{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 600px;
+        width: 500px;
         height: 150px;
     }
 }
