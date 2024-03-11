@@ -18,8 +18,9 @@
 body{
     @media(min-width:600px){
         width: 1300px;
-        height: 100vh;
         margin: 0 auto;
+       
+
     }
 }
 header{
@@ -316,8 +317,9 @@ main{
     border: none;
     outline:none;
     overflow: hidden;  
-    height: 900px;
     padding: 10px 50px 0px 50px;
+    box-shadow: 2px 1px 20px 1px rgba(0, 0, 0, 0.342);
+    border-radius: 5px;
     @media(max-width:600px){
         display: none;
     }
@@ -601,8 +603,9 @@ dialog img{
     
 }
 .borderToggle-0{
-    border: 2px solid orange;
+    border: 3px solid orange;
     opacity: 0.4;
+    transition: .7s;
 }
 
 
