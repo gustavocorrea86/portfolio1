@@ -272,9 +272,8 @@ main{
         margin-top: 40px;
         padding: 10px;
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: center;
-        height: 100vh;
     }
 }
 .displayImgProd{
@@ -484,7 +483,7 @@ dialog img{
     justify-content: center;
     @media(min-width:600px){
         width: 500px;
-        margin: 20px 0 0 100px;
+        margin: 50px 0 0 80px;
     }
 }
 .productDesc .sneakerCompany{
@@ -501,6 +500,7 @@ dialog img{
 .productDesc .presProd{
     color: var(--Grayish_blue);
     font-weight: 500;
+    margin-top: 20px;
 }
 .resValue{
     display: flex;
