@@ -42,12 +42,15 @@ let totValue = 0
 let cartQtd = 0
 btnMenu.addEventListener('click', ()=>{ // open the menu mobile
     btnMenu.classList.toggle('openMenu')
+   
     photoProd.style.position = 'static' 
     if(menuMobile.style.left == '0%' ){
         menuMobile.style.left = '-100%' 
         photoProd.style.position = 'absolute'
+        btnMenu.classList.remove('openMenu')
     }else{
         menuMobile.style.left = '0%'
+       
     }
 })
 carts.addEventListener('click', ()=>{ // here open the cart if click
