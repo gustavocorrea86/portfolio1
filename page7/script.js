@@ -42,7 +42,6 @@ let totValue = 0
 let cartQtd = 0
 btnMenu.addEventListener('click', ()=>{ // open the menu mobile
     btnMenu.classList.toggle('openMenu')
-   
     photoProd.style.position = 'static' 
     if(menuMobile.style.left == '0%' ){
         menuMobile.style.left = '-100%' 
@@ -50,7 +49,6 @@ btnMenu.addEventListener('click', ()=>{ // open the menu mobile
         btnMenu.classList.remove('openMenu')
     }else{
         menuMobile.style.left = '0%'
-       
     }
 })
 carts.addEventListener('click', ()=>{ // here open the cart if click
@@ -138,7 +136,6 @@ imgsSec[3].addEventListener('click',()=>{
     imgMainModal.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
     aux = 3
 })
-
 modalDesktop.addEventListener('click',()=>{ //  aqui abre o modal desktop clicando em qualquer lugar da div das fotos secundarias
     imgsSec[0].classList.toggle('borderToggle-0')
     modal.showModal()
