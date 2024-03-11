@@ -93,7 +93,7 @@ sub.addEventListener('click',()=>{ // subtrai a qtd
 btnAddCart.addEventListener('click', ()=>{ // if the cart is empty watch the message at the screen 
     if(qtdAdd == 0){
         modalBtnAddToCart.showModal()
-        fundo.style.opacity = '.4'
+        fundo.style.opacity = '.2'
     }else
     shop.style.display = 'flex'
     cartShop.style.display = 'flex'
