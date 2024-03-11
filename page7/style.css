@@ -353,13 +353,11 @@ main{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: transparent;
-    border: none;
+    /* border: none; */
     outline:none;
-    overflow: visible; 
+    overflow: unset; 
     padding: 10px 50px 0px 50px;
-    height: 700px;
-    background-color: antiquewhite;
+    backdrop-filter: none;
     @media(max-width:600px){
         display: none;
     }
