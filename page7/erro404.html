@@ -39,7 +39,6 @@
     border-bottom: 2px solid var(--Grayish_blue);
     @media(min-width:600px){
         border-bottom: 2px solid var(--Grayish_blue);
-        padding: 20px;
         height: 80px;
     }
     }
@@ -50,7 +49,16 @@
     }
     .btnMenuMobile{
         padding: 10px;
+        width: 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media(min-width:600px){
+            display: none;
+        }
     }
+    
     .linha{
         display: block;
         width: 30px;
@@ -65,17 +73,18 @@
     }
     .btnMenuMobile.openMenu .linha:nth-child(1){
     /* transform: translateY(4px) rotate(38deg); */
-    height: 2px;
-    margin: 0px;
-    transform: scale(1.3);
-    border-radius: 10px;
-    margin-bottom: 1px;
+        height: 2px;
+        margin: 0px;
+        transform: scale(1.3);
+        border-radius: 10px;
+        margin-bottom: 1px;
     }
     .btnMenuMobile.openMenu .linha:nth-child(2){
         width: 30px;
         height: 1px;
-        transform: scale(1.3);
+        transform: scale(1.2);
         border-radius: 10px;
+        margin: 0px;
     }
     .btnMenuMobile.openMenu .linha:nth-child(3){
         /* transform: translateY(-10px) rotate(-38deg); */
@@ -89,9 +98,11 @@
         width: 100%;
         height: 500px;
         position: absolute;
+        left: 0%;
         overflow: hidden;
         display: flex;
         justify-content: center;
+        z-index: 1;
         @media(min-width:600px){
             width: 1300px;
         }
@@ -105,7 +116,8 @@
         position: absolute;
         left: -100%;
         opacity: 0.9; 
-        transition:.6s ease-in-out;     
+        transition:.6s ease-in-out;
+        list-style: none;     
         @media(min-width:600px){
             display: none;
         } 
@@ -143,7 +155,7 @@
     }  
     
     .menuDesktop li:nth-child(1){
-    width: 90px;
+        width: 90px;
     }
     .menuDesktop li:nth-child(2){
         width: 40px;
@@ -165,6 +177,7 @@
         height: 80px; 
         display: flex;
         align-items: center;
+        font-size: 20px;
     }
 
     .menuDesktop li:hover {
@@ -341,6 +354,42 @@
             <div class="custumer"></div>
         </div>
     </header>
+    <nav class="boxMenuMobile">
+        <ul class="menuMobile">
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <div class="resumCart">
+            <h2>Cart</h2>
+            <hr>
+            <div class="descCart"> 
+                <h3 class="myCart">Your cart is empty</h3>
+                <div class="cartShop">
+                    <div class="checkout">
+                        <div class="descProdImg"></div>
+                        <div class="subCheckout">
+                            <div>
+                                <p>Fall Limited Edition Sneakers</p>
+                                <div class="descValue">
+                                    <p class="valueUnd"></p>
+                                    <p>x</p>
+                                    <p class="qtdTot"></p>
+                                    <p class="valueTot"></p>
+                                </div>
+                            </div>
+                            <div class="deleteCart">
+                                <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z" id="a"/></defs><use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btnCheckout">Ckekout</button>
+                </div>
+            </div>    
+        </div>
+    </nav>
     <main>
         <section class="msg">
             <img src="speech-bubble-145974_640.png" alt="">
@@ -363,4 +412,17 @@
         </section>
     </main>
 </body>
+<script>
+    const menuMobile = document.querySelector('.menuMobile')
+    const btnMenu = document.querySelector('.btnMenuMobile')
+    btnMenu.addEventListener('click', ()=>{ // open the menu mobile
+    btnMenu.classList.toggle('openMenu')
+    if(menuMobile.style.left == '0%' ){
+        menuMobile.style.left = '-100%' 
+        btnMenu.classList.remove('openMenu')
+    }else{
+        menuMobile.style.left = '0%'
+    }
+})
+</script>
 </html

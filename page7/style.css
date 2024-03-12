@@ -146,8 +146,6 @@ li p {
     transition: .5s;
     border-radius: 5px;
 }
-
-
 .btnMenuMobile.openMenu .linha:nth-child(1){
     /* transform: translateY(4px) rotate(38deg); */
     height: 2px;
