@@ -136,7 +136,9 @@
         font-family: "Kumbh Sans", sans-serif;
         height: 300px;
         width: 100%;
-        background-color: aqua;
+        @media(min-width:600px){
+            display: none;
+        }
     }
     .msg img{ 
         width:250px;
@@ -148,21 +150,29 @@
     }
     .msg h1{
         position: absolute;
-        top: 15%;
+        top: 10%;
         left: 20%;
-        font-size: 50px;
+        font-size: 100px;
+    }
+    .msg p {
+        position: absolute;
+        top: 34%;
+        left: 23%;
+        font-size: 15px;
     }
     .msg h2{
         position: absolute;
-        top: 27%;
-        left: 20%;
+        top: 38%;
+        left: 18%;
         font-size: 20px;
     }
     .erro404{
         display: flex;
         justify-content: center;
         align-items: end;
-        background-color: antiquewhite;
+        @media(min-width:600px){
+            display: none;
+        }
     }
     .erro404 img:nth-child(1){
         height: 300px;
@@ -170,17 +180,15 @@
             width: 80px;
             height: 80px;
             position: absolute;
-            top: 58%;
-            left: 14%;
+            top: 53%;
+            left: 17%;
             transform: rotate(-20deg);
         }
     }
     .erro404 img:nth-child(2){
+        width:250px;
         height: 300px;
-        @media(max-width:600px){
-            width:250px;
-            height: 300px;
-        }
+        
     }
     
 </style>
@@ -210,8 +218,9 @@
     <main>
         <section class="msg">
             <img src="speech-bubble-145974_640.png" alt="">
-            <h1>Sorry!</h1>
-            <h2>This page is not did done!</h2>
+            <h1>404</h1>
+            <p>Page not found. Opsss...</p>
+            <h2>Sorry!!! <br> This page is not did done!</h2>
         </section>
         <section class="erro404">
             <img src="comics-151341_640.png" alt="" >
