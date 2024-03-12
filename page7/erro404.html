@@ -31,21 +31,6 @@
             margin: 0 auto;
         }
     }
-    .btnMenuMobile{
-        padding: 10px;
-    }
-    .linha{
-        display: block;
-        width: 30px;
-        height: 3px;
-        background-color: black;
-        margin: 1.5px;
-        transition: .5s;
-        border-radius: 5px;
-        @media(min-width:600px){
-            display: none;
-        }
-    }
     header{
     display: flex;
     justify-content: space-between;
@@ -63,6 +48,100 @@
             width: 100%;
         }
     }
+    .btnMenuMobile{
+        padding: 10px;
+    }
+    .linha{
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin: 1.5px;
+        transition: .5s;
+        border-radius: 5px;
+        @media(min-width:600px){
+            display: none;
+        }
+    }
+    .btnMenuMobile.openMenu .linha:nth-child(1){
+    /* transform: translateY(4px) rotate(38deg); */
+    height: 2px;
+    margin: 0px;
+    transform: scale(1.3);
+    border-radius: 10px;
+    margin-bottom: 1px;
+    }
+    .btnMenuMobile.openMenu .linha:nth-child(2){
+        width: 30px;
+        height: 1px;
+        transform: scale(1.3);
+        border-radius: 10px;
+    }
+    .btnMenuMobile.openMenu .linha:nth-child(3){
+        /* transform: translateY(-10px) rotate(-38deg); */
+        height: 2px;
+        margin: 0px;
+        transform: scale(1.3);
+        border-radius: 10px;
+        margin-top: 1px;
+    } 
+    .boxMenuMobile{
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        @media(min-width:600px){
+            width: 1300px;
+        }
+    } 
+    .boxMenuMobile ul{
+        display: block;
+        width: 250px;
+        height: 700px;
+        background-color: var(--White);
+        margin: 0px;
+        position: absolute;
+        left: -100%;
+        opacity: 0.9; 
+        transition:.6s ease-in-out;     
+        @media(min-width:600px){
+            display: none;
+        } 
+    }
+    .boxMenuMobile ul li{
+        color: var(--Very_dark_blue);
+        margin: 25px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .boxMenuMobile ul li:hover{
+        color: var(--Orange);
+        transform: scale(1.1);
+    }
+    .resumCart{
+        width: 95%;
+        height: 250px;
+        background-color: white;
+        opacity: .9;
+        margin-top: 10px;
+        border-radius: 10px;
+        display: none; 
+        box-shadow: 2px 1px 8px 1px rgba(0, 0, 0, 0.493);
+        z-index: 1;
+        @media(min-width:600px){
+            position: absolute;
+            left: 68%;
+            width: 400px;
+            height: 250px;
+            background-color: white;
+            opacity: .9;
+            margin-top: 10px;
+            border-radius: 10px; 
+        }
+    }  
+    
     .menuDesktop li:nth-child(1){
     width: 90px;
     }
@@ -108,7 +187,7 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    width: 90px;
+    width: 80px;
     justify-content: space-between;
     position: relative;
     @media(min-width:600px){
@@ -193,9 +272,51 @@
     .erro404 img:nth-child(2){
         width:250px;
         height: 300px;
-        
     }
-    
+    main{
+        @media(min-width:600px){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .desktop404{
+        position: relative;
+        @media(max-width:600px){
+            display: none;
+        }
+    }
+    .desktop404 img:nth-child(1){
+        width: 200px;
+        position: absolute;
+        left: 15%;
+
+    }
+    .desktop404 .textDesktop404 h1{
+        position: absolute;
+        top: 26%;
+        left: 10%;
+        font-size: 50px;
+        font-family: "Kumbh Sans", sans-serif;
+    }
+    .desktop404 .textDesktop404 p{
+        position: absolute;
+        top: 27%;
+        left: 10%;
+        font-size: 17px;
+        font-family: "Kumbh Sans", sans-serif;
+    }
+    .desktop404 .textDesktop404 p a{
+        color: var(--Orange);
+    }
+    .desktop404 .textDesktop404 h2{
+        position: absolute;
+        top: 39%;
+        left: 10%;
+        font-size: 22px;
+        font-family: "Kumbh Sans", sans-serif;
+        color: brown;
+    }
 </style>
 <body>
     <header>
@@ -230,6 +351,15 @@
         <section class="erro404">
             <img src="comics-151341_640.png" alt="" >
             <img src="question-5663412_1280.png" alt="">
+        </section>
+        <section class="desktop404">
+            <img src="error-6482984_1280.png" alt="">
+            <img src="a-question-4017796_640.png" alt="">
+            <div class="textDesktop404">
+                <h1>Sorry!!!</h1>
+                <p>Page not found. <a href="">Click here</a> to back.</p>
+                <h2>This page is not did done!</h2>
+            </div>
         </section>
     </main>
 </body>
