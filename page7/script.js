@@ -33,6 +33,7 @@ const seta = document.querySelector('path')
 let imgsSec = [...document.querySelectorAll('.imgSecModal')]
 let selectToggle = [...document.querySelectorAll('.borderToggle-0')]
 
+
 let aux = 0
 let qtdAdd = 0
 let valueUn = 125
