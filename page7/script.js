@@ -232,5 +232,9 @@ const linkMenu = [...document.querySelectorAll('li')]
 
 linkMenu.map((el, i)=>{
     console.log(el)
+    el.addEventListener('click',()=>{
+        location.href = 'http://127.0.0.1:5501/page7/erro404.html'
+        location.href = 'http://gustavocorrea86.github.io/portifolio/page7/erro404'
+    })
 })
 
