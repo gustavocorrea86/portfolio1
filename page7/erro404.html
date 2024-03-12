@@ -26,9 +26,6 @@
         font-family: "Kumbh Sans", sans-serif;
     }
     body{
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
         @media(min-width:600px){
             width: 1300px;
             margin: 0 auto;
@@ -157,7 +154,7 @@
     }
     .msg h2{
         position: absolute;
-        top: 25%;
+        top: 27%;
         left: 20%;
         font-size: 20px;
     }
@@ -165,7 +162,7 @@
         display: flex;
         justify-content: center;
         align-items: end;
-        height: 390px;
+        background-color: antiquewhite;
     }
     .erro404 img:nth-child(1){
         height: 300px;
@@ -181,7 +178,7 @@
     .erro404 img:nth-child(2){
         height: 300px;
         @media(max-width:600px){
-            width: 300px;
+            width:250px;
             height: 300px;
         }
     }
@@ -210,13 +207,16 @@
             <div class="custumer"></div>
         </div>
     </header>
-    <section class="msg">
-        <img src="speech-bubble-145974_640.png" alt="">
-        <h1>Sorry!</h1>
-        <h2>This page is not did done</h2>
-    </section>
+    <main>
+        <section class="msg">
+            <img src="speech-bubble-145974_640.png" alt="">
+            <h1>Sorry!</h1>
+            <h2>This page is not did done!</h2>
+        </section>
         <section class="erro404">
             <img src="comics-151341_640.png" alt="" >
-            <img src="question-5663412_1280.png" alt=""></section>
+            <img src="question-5663412_1280.png" alt="">
+        </section>
+    </main>
 </body>
 </html
