@@ -29,7 +29,6 @@ const backMobile = document.querySelector('.backMobile')
 const imageProdMain = document.querySelector('.imageProdMain')
 const photoProd = document.querySelector('.photoProd')
 const modalBtnAddToCart = document.querySelector('.modalBtnAddToCart')
-// let vetDivs = [... document.querySelectorAll('div')]
 const seta = document.querySelector('path')
 let imgsSec = [...document.querySelectorAll('.imgSecModal')]
 let selectToggle = [...document.querySelectorAll('.borderToggle-0')]
