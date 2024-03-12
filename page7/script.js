@@ -32,8 +32,6 @@ const modalBtnAddToCart = document.querySelector('.modalBtnAddToCart')
 const seta = document.querySelector('path')
 let imgsSec = [...document.querySelectorAll('.imgSecModal')]
 let selectToggle = [...document.querySelectorAll('.borderToggle-0')]
-
-
 let aux = 0
 let qtdAdd = 0
 let valueUn = 125
@@ -230,6 +228,9 @@ backMobile.addEventListener('click', ()=>{ // back images mobile
         imageProdMain.style.backgroundImage = 'url(ecommerce-product-page-main/images/image-product-4.jpg)'
     }
 })
+const linkMenu = [...document.querySelectorAll('li')]
 
-
+linkMenu.map((el, i)=>{
+    console.log(el)
+})
 
