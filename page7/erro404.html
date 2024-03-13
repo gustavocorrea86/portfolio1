@@ -197,7 +197,6 @@
         width: 500px;
         padding: 10px;
         margin-left: 30px;
-        /* position: relative; */
         @media(max-width:600px){
             display: none;
         } 
@@ -431,6 +430,12 @@
     const btnCart = document.querySelector('.carts')
     btnCart.addEventListener('click',()=>{
         location.href='https://gustavocorrea86.github.io/portifolio/page7/page7'
+    })
+    const linkMainPage = [...document.querySelectorAll('li')]
+    linkMainPage.map((el)=>{
+        el.addEventListener('click',()=>{
+            location.href='https://gustavocorrea86.github.io/portifolio/page7/page7'
+        })
     })
 
 </script>
