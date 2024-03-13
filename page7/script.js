@@ -38,8 +38,10 @@ let valueUn = 125
 let qtdProd = 0
 let totValue = 0
 let cartQtd = 0
+const somBtn = new Audio('cartoon-splat-6086.mp3')
 btnMenu.addEventListener('click', ()=>{ // open the menu mobile
     btnMenu.classList.toggle('openMenu')
+    somBtn.play()
     photoProd.style.position = 'static' 
     if(menuMobile.style.left == '0%' ){
         menuMobile.style.left = '-100%' 
@@ -237,4 +239,5 @@ linkMenu.map((el, i)=>{
         location.href = 'http://gustavocorrea86.github.io/portifolio/page7/erro404'
     })
 })
+
 
