@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Tarefas</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    body{
+        background-color: cadetblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        @media(min-width:600px){
+            width: 1300px;
+            margin: 0 auto;
+        }
+    }
+    header{
+        width: 90%;
+        height: 50px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+    header h1{
+        text-transform: uppercase;
+        background-color: rgb(255, 255, 136);
+        width: 50px;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    main{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        z-index: 1;
+    }
+    main div{
+        height: 100px;
+        cursor: pointer;
+        box-shadow: 1px 2px 4px 2px black;
+        margin: 3px;
+    }
+    main div h2{
+        width: 20px;
+        font-size: 15px;
+    }
+    .mudaCor{
+        background-color: royalblue;
+    }
+    .hide{
+        display: none;
+    }
+    dialog{
+        width: 90%;
+        border: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .periodo{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+        @media(min-width:600px){
+            justify-content: space-around;
+        }
+    }
+    .periodo div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .periodo div p{
+        font-size: 10px;
+    }
+    .periodo img{
+        width: 80px;
+        cursor: pointer;
+        margin: 10px;
+        border: 1px solid black;
+        box-shadow: 1px 1px black;
+        border-radius: 5px;
+    }
+    .tarefas{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+    .btnCriaTarefa{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btnCriaTarefa img{
+        width: 80px;
+        cursor: pointer;
+        margin: 10px;
+        border: 1px solid black;
+        box-shadow: 1px 1px black;
+        border-radius: 5px;
+    }
+</style>
+<body>
+   <header>
+    <h1>s</h1>
+    <h1>t</h1>
+    <h1>q</h1>
+    <h1>q</h1>
+    <h1>s</h1>
+    <h1>s</h1>
+    <h1>d</h1>
+   </header>
+    <main>
+        <div><h2>1</h2></div>
+        <div><h2>2</h2></div>
+        <div><h2>3</h2></div>
+        <div><h2>4</h2></div>
+        <div><h2>5</h2></div>
+        <div><h2>6</h2></div>
+        <div><h2>7</h2></div>
+        <div><h2>8</h2></div>
+        <div><h2>9</h2></div>
+        <div><h2>10</h2></div>
+        <div><h2>11<h2></div>
+        <div><h2>12<h2></div>
+        <div><h2>13</h2></div>
+        <div><h2>14</h2></div>
+        <div><h2>15</h2></div>
+        <div><h2>16</h2></div>
+        <div><h2>17</h2></div>
+        <div><h2>18</h2></div>
+        <div><h2>19</h2></div>
+        <div><h2>20</h2></div>
+        <div><h2>21</h2></div>
+        <div><h2>22</h2></div>
+        <div><h2>23</h2></div>
+        <div><h2>24</h2></div>
+        <div><h2>25<h2></div>
+        <div><h2>26<h2></div>
+        <div><h2>27</h2></div>
+        <div><h2>28</h2></div>
+        <div><h2>29<h2></div>
+        <div><h2>30<h2></div>
+        <div><h2>31</h2></div>
+    </main>
+    <dialog>
+        <h1></h1>
+        <div class="periodo">
+            <div>
+                <img src="imagens/sol (2).png" alt="">
+                <p>Manha</p>
+            </div>
+            <div>
+                <img src="imagens/por-do-sol.png" alt="">
+                <p>Tarde</p>
+            </div>
+            <div>
+                <img src="imagens/noite-nublada.png" alt="">
+                <p>Noite</p>
+            </div>
+        </div>
+        <div class="btnCriaTarefa">
+            <img src="imagens/btnCriaTarefa.png" alt="">
+            <p>Criar Tarefa</p>
+        </div>
+        <form action="#" class="tarefas">
+           <label for="addTa">Tarefa1
+            <input type="text" class="addTarefa">
+            <button class="btnAddTarefa">Add</button>
+           </label>
+        </form>
+        <div class="resumoTarefas"></div>
+
+    </dialog>
+</body>
+<script>
+    const dia = [...document.querySelectorAll('div')]
+    const addTarefa = document.querySelector('.addTarefa')
+    const btnAddTarefa = document.querySelector('.btnAddTarefa')
+    const resumoTarefas = document.querySelector('.resumoTarefas')
+    const modal = document.querySelector('dialog')
+    const body = document.querySelector('body')
+    dia.map((el)=>{
+        el.addEventListener('click',()=>{
+            // removeToggle()
+            // el.classList.toggle('mudaCor')
+            modal.showModal()
+        })
+    })
+    // body.addEventListener('click', ()=>{
+    //     modal.close()
+    // })
+    btnAddTarefa.addEventListener('click',()=>{
+        tarefas.push(addTarefa.value)
+        resumoTarefas.innerHTML = tarefas
+    })
+    const diaSemana = [...document.querySelectorAll('h1')]
+    diaSemana.map((el,i)=>{
+        console.log(el ,i)
+    })
+    diaSemana[0].addEventListener('click',()=>{
+        diaSemana[7].innerHTML = 'Segunda-Feira'
+    })
+    diaSemana[1].addEventListener('click',()=>{
+        diaSemana[7].innerHTML = 'Terça-Feira'
+    })
+    diaSemana[2].addEventListener('click',()=>{
+        diaSemana[7].innerHTML = 'Quarta-Feira'
+    })
+    diaSemana[3].addEventListener('click',()=>{
+        diaSemana[7].innerHTML = 'Quinta-Feira'
+    })
+    diaSemana[4].addEventListener('click',()=>{
+        diaSemana[7].innerHTML = 'Sexta-Feira'
+    })
+    diaSemana[5].addEventListener('click',()=>{
+        diaSemana[7].innerHTML = 'Sábado'
+    })
+    diaSemana[6].addEventListener('click',()=>{
+        diaSemana[7].innerHTML = 'Domingo'
+    })
+    
+</script>
+</html>
