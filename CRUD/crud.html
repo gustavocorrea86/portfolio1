@@ -22,7 +22,6 @@
     <main class="box">
         <input type="text" class="text">
         <input type="button" value="add" class="btnAdd">
-        <input type="text" class="remove">
         <input type="button" value="remove" class="btnRemove">
         <div class="display"></div>
     </main>
@@ -31,22 +30,23 @@
     const input = document.querySelector('.text');
     const btnAdd = document.querySelector('.btnAdd');
     const main = document.querySelector('.box');
-    const remove = document.querySelector('.remove')
-    const btnRemove = document.querySelector('.btnRemove')
-    const array = []
-    const display = document.createElement('div')
-    main.appendChild(display)
-    display.style.width = '100%'
-    display.style.backgroundColor = 'white'
-
+    const btnRemove = document.querySelector('.btnRemove');
+    const array = [];
+    let arr = [];
+    const display = document.createElement('div');
+    main.appendChild(display);
+    display.style.width = '100%';
+    display.style.backgroundColor = 'white';
+    let resum = '';
     document.addEventListener('keypress',(e)=>{
-        if(e.key ==='Enter'){
-            // btnAdd.click();
-            var resum = document.createElement('h1')
-            array.push(input.value)
-            display.appendChild(resum)
-            resum.innerHTML = input.value
-            input.value= ''
+        if(e.key === 'Enter'){
+            array.push(input.value);
+            resum = document.createElement('h1')
+            display.appendChild(resum);
+            resum.style.margin = '5px';
+            resum.style.backgroundColor = 'royalBlue';
+            resum.innerHTML = input.value;
+            input.value = '';
         }
     })
     // btnAdd.addEventListener('click',()=>{
@@ -55,18 +55,23 @@
     //     display.appendChild(resum)
     //     resum.innerHTML = input.value
     // })
-    let getIndex = ''
+    
     btnRemove.addEventListener('click',()=>{
-        getIndex = array.findIndex()
-
-
-        // array.splice(0,1)
-        // console.log(arrRemovido)
-        // console.log(array)
+        console.log(array);
+        var newArray = array.filter(el => el === input.value);
+        var getIndex = array.findIndex(i => i === input.value);
+        array.splice(getIndex,1);
+        console.log(getIndex);
+        console.log(array);
+        newArray.filter((el)=>{
+            console.log(el)
+            if(document.createElement('h1') == el){
+                resum.style.backgroundColor = 'red';
+                resum.remove()
+            }
+        })
+        
     })
 
-
-
-    
 </script>
 </html>
