@@ -136,7 +136,7 @@
                 </div>
             </form>
                 <div class="btns">
-                    <button class="btn btnAdd">Adicionar Item </button>
+                    <button class="btn btnAdd">Adicionar</button>
                     <!-- <button class="btn btnRemove">Remover Lista</button> -->
                 </div>
         </div>
@@ -233,14 +233,23 @@
         
         const signo = document.createElement('p');
         list.appendChild(signo);
-        signo.style.width = '90px'
-        signo.innerText = 'Aquario'
+        signo.style.width = '50px'
+        signo.innerText = 'Capricórnio'
       
         const btnUpdAndRem = document.createElement('div');
         list.appendChild(btnUpdAndRem)
-        btnUpdAndRem.innerText = 'x x'
-        
+        btnUpdAndRem.style.width = '68px'
+        btnUpdAndRem.style.display = 'flex'
+        btnUpdAndRem.style.alignItems = 'center'
 
+        const imgUp = document.createElement('img');
+        btnUpdAndRem.appendChild(imgUp)
+        imgUp.src = 'imagens/btnAtualizar.png'
+
+        const imgRem = document.createElement('img');
+        btnUpdAndRem.appendChild(imgRem)
+        imgRem.src = 'imagens/btnRemover.png'
+        
         nameList.value = ''
         diaNascList.value = ''
         mesNascList.value = ''
