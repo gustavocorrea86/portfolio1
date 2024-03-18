@@ -13,7 +13,7 @@
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     main{
-        padding: 10px;
+        padding: 5px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -21,17 +21,27 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        @media(min-width:600px){
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(imagens/stars-1837306_1920.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
     }
     .addForm{
         background-color: rgba(135, 207, 235, 0.5);
         padding: 5px;
-        width: 90%;
+        width: 100%;
         border-radius: 10px 10px 0 0 ;
     }
     form{
         display: flex;
         flex-direction: column;
-        margin: 10px;
     }
     label{
         display: flex;
@@ -64,7 +74,6 @@
             display: flex;
             flex-direction: row;
         }
-        
     }
     .mesNasc{
         width: 200px;
@@ -93,7 +102,7 @@
     }
     .lista{
         border: 1px solid black;
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         background-color: lightgrey;
@@ -124,7 +133,7 @@
         <div class="addForm">
             <h1></h1>
             <form action="#">
-              <label for=""><p>Nome:</p><input type="text" class="nome"></label>
+              <label for=""><p>Nome:</p><input type="text" class="nome" autocomplete="no"></label>
                 <!-- <label for="#"><p>Nome:</p><input type="text" class="nome"></label> -->
                 <div class="dtNasc">
                     <label for="#"><p>Mês de Nasc.</p><input type="text" class="mesNasc"></label>
