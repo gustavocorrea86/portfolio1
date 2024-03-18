@@ -23,15 +23,7 @@
         background-size: cover;
         @media(min-width:600px){
             padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-image: url(imagens/stars-1837306_1920.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
         }
-        
     }
     .addForm{
         background-color: rgba(135, 207, 235, 0.5);
@@ -54,6 +46,9 @@
         font-weight: 700;
         color: black;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.137);
+    }
+    .nome{
+        width: 280px;
     }
     input{
         background-color: azure;
@@ -176,7 +171,7 @@
         const newList = document.createElement('div');
         main.appendChild(newList);
         newList.style.border = '1px solid black';
-        newList.style.width = '90%';
+        newList.style.width = '100%';
         newList.style.display = 'flex';
         newList.style.justifyContent = 'space-between';
         newList.style.backgroundColor = 'lightgrey';
@@ -185,7 +180,7 @@
         newList.appendChild(subList);
         subList.style.display = 'flex';
         subList.style.flexDirection = 'column'
-        subList.style.width = '90%'
+        subList.style.width = '100%'
         // itemsList.style.padding = '15px'
 
         const list = document.createElement('div')
