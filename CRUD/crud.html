@@ -198,6 +198,8 @@
         const id = document.createElement('p');
         list.appendChild(id);
         id.style.width = '25px';
+        id.style.display = 'flex'
+        id.style.alignItems = 'center'
         for(c in arrayList){
             id.innerText = c;
         }
@@ -225,7 +227,7 @@
         diaNasc.style.alignItems = 'center'
         diaNasc.style.width = '90px'
         diaNasc.style.display = 'flex';
-        diaNasc.style.alignItems = 'center';
+        // diaNasc.style.alignItems = 'center';
         diaNasc.style.justifyContent = 'center';
         newObj.diaNascOb = diaNascList.value;
         diaNasc.innerText = newObj.diaNascOb
@@ -233,15 +235,17 @@
         
         const signo = document.createElement('p');
         list.appendChild(signo);
-        signo.style.width = '50px'
+        signo.style.width = '70px'
         signo.innerText = 'Capricórnio'
+        signo.style.fontSize = '12px'
+        signo.style.display = 'flex'
+        signo.style.alignItems = 'center'
       
         const btnUpdAndRem = document.createElement('div');
         list.appendChild(btnUpdAndRem)
         btnUpdAndRem.style.width = '68px'
         btnUpdAndRem.style.display = 'flex'
         btnUpdAndRem.style.alignItems = 'center'
-
         const imgUp = document.createElement('img');
         btnUpdAndRem.appendChild(imgUp)
         imgUp.src = 'imagens/btnAtualizar.png'
