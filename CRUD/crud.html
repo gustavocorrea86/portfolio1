@@ -24,7 +24,7 @@
     }
     .addForm{
         background-color: rgba(135, 207, 235, 0.5);
-        padding: 10px;
+        padding: 5px;
         width: 90%;
         border-radius: 10px 10px 0 0 ;
     }
@@ -38,9 +38,9 @@
         align-items: center;
         margin: 5px;
     }
-    p{
+    label p{
         width: 130px;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 700;
         color: black;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.137);
@@ -56,11 +56,21 @@
         font-weight: 600;
         padding: 5px;
     }
+    
     .dtNasc{
         display: flex;
+        flex-direction: column;
+        @media(min-width:600px){
+            display: flex;
+            flex-direction: row;
+        }
+        
     }
     .mesNasc{
-        width: 150px;
+        width: 200px;
+        @mdia(min-width:600px){
+
+        }
     }
     .diaNasc{
         width: 50px;
@@ -81,7 +91,7 @@
         font-size: 18px;
         font-weight: 600;
     }
-    .lista {
+    .lista{
         border: 1px solid black;
         width: 90%;
         display: flex;
@@ -114,7 +124,8 @@
         <div class="addForm">
             <h1></h1>
             <form action="#">
-                <label for="#"><p>Nome:</p><input type="text" class="nome"></label>
+              <label for=""><p>Nome:</p><input type="text" class="nome"></label>
+                <!-- <label for="#"><p>Nome:</p><input type="text" class="nome"></label> -->
                 <div class="dtNasc">
                     <label for="#"><p>Mês de Nasc.</p><input type="text" class="mesNasc"></label>
                     <label for="#"><p>Dia de Nasc.</p><input type="text" class="diaNasc"></label>
