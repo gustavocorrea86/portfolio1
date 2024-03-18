@@ -41,14 +41,14 @@
         margin: 5px;
     }
     label p{
-        width: 130px;
+        width: 150px;
         font-size: 18px;
         font-weight: 700;
         color: black;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.137);
     }
     .nome{
-        width: 280px;
+        width: 200px;
     }
     input{
         background-color: azure;
@@ -128,7 +128,7 @@
         <div class="addForm">
             <h1></h1>
             <form action="#">
-              <label for=""><p>Nome:</p><input type="text" class="nome" autocomplete="no"></label>
+              <label for=""><p>Primeiro Nome:</p><input type="text" class="nome" autocomplete="no"></label>
                 <!-- <label for="#"><p>Nome:</p><input type="text" class="nome"></label> -->
                 <div class="dtNasc">
                     <label for="#"><p>Mês de Nasc.</p><input type="text" class="mesNasc"></label>
@@ -165,9 +165,15 @@
     const diaNascList = document.querySelector('.diaNasc');
     const btnAdd = document.querySelector('.btnAdd');
     const main = document.querySelector('main');
-    const itemsList = {id: [], nomeOb: [], mesNascOb: [], diaNascOb: []}
-    var aux = 0
+    // const itemsList = {id: [], nomeOb: [], mesNascOb: [], diaNascOb: []}
+    // const itemsList = [Id = 1, nomeOb = 'd', mesNascOb = 'f', diaNascOb = 2];
+    const itemsList = {nomeOb: '', mesNascOb:'', diaNascOb: ''};
+    let newObj = '';
+    let arrayList = [];
+    var aux = 0;
     function createList(){
+        newObj = Object.create(itemsList);
+        arrayList.push(newObj);
         const newList = document.createElement('div');
         main.appendChild(newList);
         newList.style.border = '1px solid black';
@@ -187,15 +193,13 @@
         subList.appendChild(list)
         list.style.display = 'flex';
         list.style.justifyContent = 'space-between';
-        list.style.padding = '5px'
+        list.style.padding = '5px';
 
         const id = document.createElement('p');
         list.appendChild(id);
-        id.style.width = '25px'
-        id.style.marginRight = '60px'
-        itemsList.id.push(aux++)
-        for(c in itemsList.id){
-            id.innerText = itemsList.id[c];
+        id.style.width = '25px';
+        for(c in arrayList){
+            id.innerText = c;
         }
 
         const nome = document.createElement('p');
@@ -203,52 +207,39 @@
         nome.style.display = 'flex';
         nome.style.alignItems = 'center'
         nome.style.justifyContent = 'center'
-        nome.style.marginRight = '20px'
-        nome.style.width = '100px'
-        itemsList.nomeOb.push(nameList.value)
-        for(c in itemsList.nomeOb){
-            nome.innerText = itemsList.nomeOb[c]
-        }
-
+        nome.style.width = '90px'
+        newObj.nomeOb = nameList.value;
+        nome.innerText = newObj.nomeOb
+       
         const mesNasc = document.createElement('p');
         list.appendChild(mesNasc);
-        mesNasc.style.width = '100px'
+        mesNasc.style.width = '90px'
         mesNasc.style.display = 'flex';
-        mesNasc.style.alignItems = 'center'
-        mesNasc.style.justifyContent = 'center'
-        itemsList.mesNascOb.push(mesNascList.value)
-        for(c in itemsList.mesNascOb){
-            mesNasc.innerText = itemsList.mesNascOb[c]
-        }
+        mesNasc.style.alignItems = 'center';
+        mesNasc.style.justifyContent = 'center';
+        newObj.mesNascOb = mesNascList.value;
+        mesNasc.innerText = newObj.mesNascOb
 
         const diaNasc = document.createElement('p');
         list.appendChild(diaNasc);
         diaNasc.style.alignItems = 'center'
-        diaNasc.style.width = '100px'
+        diaNasc.style.width = '90px'
         diaNasc.style.display = 'flex';
-        diaNasc.style.alignItems = 'center'
-        diaNasc.style.justifyContent = 'center'
-        itemsList.diaNascOb.push(diaNascList.value)
-        for(c in itemsList.diaNascOb){
-            diaNasc.innerText = itemsList.diaNascOb[c]
-        }
+        diaNasc.style.alignItems = 'center';
+        diaNasc.style.justifyContent = 'center';
+        newObj.diaNascOb = diaNascList.value;
+        diaNasc.innerText = newObj.diaNascOb
+
+        
         const signo = document.createElement('p');
         list.appendChild(signo);
-        signo.style.width = '100px'
-        signo.style.backgroundColor = 'blue'
-        // width: 80px;
-        // display: flex;
-        // align-items: center;
-
-
+        signo.style.width = '90px'
+        signo.innerText = 'Aquario'
+      
         const btnUpdAndRem = document.createElement('div');
         list.appendChild(btnUpdAndRem)
-        btnUpdAndRem.innerText = 'oi'
-        // btnUpdAndRem.style.width = '80px';
-        // btnUpdAndRem.style.display = 'flex';
-        // btnUpdAndRem.style.alignItems = 'center'
-        // btnUpdAndRem.style.backgroundColor = 'red'
-
+        btnUpdAndRem.innerText = 'x x'
+        
 
         nameList.value = ''
         diaNascList.value = ''
