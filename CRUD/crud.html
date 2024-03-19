@@ -165,12 +165,11 @@
     const diaNascList = document.querySelector('.diaNasc');
     const btnAdd = document.querySelector('.btnAdd');
     const main = document.querySelector('main');
-    // const itemsList = {id: [], nomeOb: [], mesNascOb: [], diaNascOb: []}
-    // const itemsList = [Id = 1, nomeOb = 'd', mesNascOb = 'f', diaNascOb = 2];
     const itemsList = {nomeOb: '', mesNascOb:'', diaNascOb: ''};
     let newObj = '';
     let arrayList = [];
     var aux = 0;
+    let imgUpd = ''
     function createList(){
         newObj = Object.create(itemsList);
         arrayList.push(newObj);
@@ -249,6 +248,10 @@
         const imgUp = document.createElement('img');
         btnUpdAndRem.appendChild(imgUp)
         imgUp.src = 'imagens/btnAtualizar.png'
+        
+        imgUp.addEventListener('click', ()=>{
+            diaNascList.style.backgroundColor = 'red'
+        })
 
         const imgRem = document.createElement('img');
         btnUpdAndRem.appendChild(imgRem)
