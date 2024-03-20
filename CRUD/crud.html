@@ -151,10 +151,10 @@
                     <p>Signo</p>
                 </div>
             </div>
-            <div class="btnsAddRemUp">
+            <!-- <div class="btnsAddRemUp">
                 <img src="imagens/btnAtualizar.png" alt="">
                 <img src="imagens/btnRemover.png" alt="">
-            </div>
+            </div> -->
         </div>
 
     </main>
@@ -168,12 +168,14 @@
     const itemsList = {nomeOb: '', mesNascOb:'', diaNascOb: ''};
     let newObj = '';
     let arrayList = [];
-    var aux = 0;
-    let imgUpd = ''
+    let auxMes = ''
+    let auxDia = ''
+    
+
     function createList(){
         newObj = Object.create(itemsList);
         arrayList.push(newObj);
-        const newList = document.createElement('div');
+        newList = document.createElement('div');
         main.appendChild(newList);
         newList.style.border = '1px solid black';
         newList.style.width = '100%';
@@ -186,7 +188,6 @@
         subList.style.display = 'flex';
         subList.style.flexDirection = 'column'
         subList.style.width = '100%'
-        // itemsList.style.padding = '15px'
 
         const list = document.createElement('div')
         subList.appendChild(list)
@@ -218,45 +219,59 @@
         mesNasc.style.display = 'flex';
         mesNasc.style.alignItems = 'center';
         mesNasc.style.justifyContent = 'center';
-        newObj.mesNascOb = mesNascList.value;
-        mesNasc.innerText = newObj.mesNascOb
+        auxMes = mesNascList.value
+        console.log(auxMes)
+        mesNasc.innerHTML = auxMes
+        // newObj.mesNascOb = mesNascList.value;
+        // mesNasc.innerText = newObj.mesNascOb
 
         const diaNasc = document.createElement('p');
         list.appendChild(diaNasc);
         diaNasc.style.alignItems = 'center'
         diaNasc.style.width = '90px'
         diaNasc.style.display = 'flex';
-        // diaNasc.style.alignItems = 'center';
         diaNasc.style.justifyContent = 'center';
-        newObj.diaNascOb = diaNascList.value;
-        diaNasc.innerText = newObj.diaNascOb
+        auxDia = diaNascList.value;
+        diaNasc.innerHTML = auxDia
 
+        // newObj.diaNascOb = diaNascList.value;
+        // diaNasc.innerText = newObj.diaNascOb
         
         const signo = document.createElement('p');
         list.appendChild(signo);
         signo.style.width = '70px'
-        signo.innerText = 'Capricórnio'
         signo.style.fontSize = '12px'
         signo.style.display = 'flex'
         signo.style.alignItems = 'center'
-      
-        const btnUpdAndRem = document.createElement('div');
-        list.appendChild(btnUpdAndRem)
-        btnUpdAndRem.style.width = '68px'
-        btnUpdAndRem.style.display = 'flex'
-        btnUpdAndRem.style.alignItems = 'center'
-        const imgUp = document.createElement('img');
-        btnUpdAndRem.appendChild(imgUp)
-        imgUp.src = 'imagens/btnAtualizar.png'
-        
-        imgUp.addEventListener('click', ()=>{
-            diaNascList.style.backgroundColor = 'red'
-        })
 
-        const imgRem = document.createElement('img');
-        btnUpdAndRem.appendChild(imgRem)
-        imgRem.src = 'imagens/btnRemover.png'
+        if(auxMes == 'Março'|| auxMes == 'março' && auxDia >= '21' && auxDia < '30'){
+            signo.innerText = 'Àries'
+        }else if(auxMes == 'Abril' || auxMes == 'abril' && auxDia >= '01' && auxDia <= '20'){
+            signo.innerText = 'Àries'
+        }else if(auxMes == 'Abril' || auxMes == 'Abril' && auxDia >= '21' && auxDia ){
+            
+        }
+        // const btnUpdAndRem = document.createElement('div');
+        // list.appendChild(btnUpdAndRem)
+        // btnUpdAndRem.style.width = '68px'
+        // btnUpdAndRem.style.display = 'flex'
+        // btnUpdAndRem.style.alignItems = 'center'
+        // const imgUp = document.createElement('img');
+        // btnUpdAndRem.appendChild(imgUp)
+        // imgUp.src = 'imagens/btnAtualizar.png'
         
+        // imgUp.addEventListener('click', ()=>{
+        //     diaNascList.style.backgroundColor = 'red'
+        // })
+
+        // const imgRem = document.createElement('img');
+        // btnUpdAndRem.appendChild(imgRem)
+        // imgRem.src = 'imagens/btnRemover.png'
+        
+        // imgRem.addEventListener('click',()=>{
+        //     newList.remove()
+        // })
+
         nameList.value = ''
         diaNascList.value = ''
         mesNascList.value = ''
