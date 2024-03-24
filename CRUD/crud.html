@@ -243,73 +243,67 @@
         signo.style.display = 'flex'
         signo.style.alignItems = 'center'
 
+
+        
         if(auxMes == 'Março'|| auxMes == 'março' && auxDia >= '21' && auxDia <= '31'){
             signo.innerText = 'Àries';
         }else if(auxMes == 'Abril' || auxMes == 'abril' && auxDia >= '01' && auxDia <= '20'){
             signo.innerText = 'Àries';
         }
-        
+
         else if(auxMes == 'Abril' || auxMes == 'abril' && auxDia >= '21' && auxDia <= '30'){
-            signo.innerText = 'Touro';
+            signo.innerText = 'Touro'
         }else if (auxMes == 'maio' || auxMes =='Maio' && auxDia >= '01' && auxDia <= '20'){
-            signo.innerText = 'Touro';
+            signo.innerText = 'Touro'
         }
-        
+
         else if (auxMes == 'maio' || auxMes =='Maio' && auxDia >= '21' && auxDia <= '31'){
             signo.innerText = 'Gêmeos';
         }else if (auxMes == 'junho' || auxMes =='Junho' && auxDia >= '01' && auxDia <= '20'){
             signo.innerText = 'Gêmeos';
         }
-        
+
         else if (auxMes == 'junho' || auxMes =='Junho' && auxDia >= '21' && auxDia <= '30'){
             signo.innerText = 'Câncer';
         }else if (auxMes == 'julho' || auxMes =='Julho' && auxDia >= '01' && auxDia <= '22'){
             signo.innerText = 'Câncer';
         }
-        
-        else if (auxMes == 'julho' || auxMes =='Julho' && auxDia >= '23' && auxDia <= '31'){
-            signo.innerText = 'Leão';
-        }else if (auxMes == 'agosto' || auxMes =='Agosto' && auxDia >= '01' && auxDia <= '22'){
-            signo.innerText = 'Leão';
-        }
-        
-        else if (auxMes == 'agosto' || auxMes =='Agosto' && auxDia >= '23' && auxDia <= '30'){
-            signo.innerText = 'Virgem';
-        }else if (auxMes == 'setembro' || auxMes == 'Setembro' && auxDia >= '01' && auxDia <= '22'){ 
-            signo.innerText = 'Virgem';
-        }
-        
-        else if (auxMes == 'setembro' || auxMes == 'Setembro' && auxDia >= '23' && auxDia <= '31'){
-            signo.innerText = 'Libra';
-        }else if (auxMes == 'outubro' || auxMes == 'Outubro' && auxDia >= '01' && auxDia <= '22'){
-            signo.innerText = 'Libra';
-        }
-        
-        else if (auxMes == 'outubro' || auxMes == 'Outubro' && auxDia >= '23' && auxDia <= '31'){
-            signo.innerText = 'Escorpião';
 
-        }else if (auxMes == 'Novembro' || auxMes == 'novembro' && auxDia >= '01' && auxDia <= '21'){
-            signo.innerText = 'Escorpião';
-        }
-        
+        else if (auxMes == 'julho' || auxMes =='Julho' && auxDia >= '23' && auxDia <= '31'){
+                signo.innerText = 'Leão';}
+        else if (auxMes == 'agosto' || auxMes =='Agosto' && auxDia >= '01' && auxDia <= '22'){
+            signo.innerText = 'Leão';}
+
+        else if (auxMes == 'agosto' || auxMes =='Agosto' && auxDia >= '23' && auxDia <= '30'){
+            signo.innerText = 'Virgem';}
+        else if (auxMes == 'setembro' || auxMes == 'Setembro' && auxDia >= '01' && auxDia <= '22'){ 
+            signo.innerText = 'Virgem';}
+
+        else if (auxMes == 'setembro' || auxMes == 'Setembro' && auxDia >= '23' && auxDia <= '31'){
+            signo.innerText = 'Libra';}
+        else if (auxMes == 'outubro' || auxMes == 'Outubro' && auxDia >= '01' && auxDia <= '22'){
+            signo.innerText = 'Libra';}
+
+        else if(auxMes === 'outubro' || auxMes == 'Outubro' && auxDia >= '23' && auxDia <= '31'){
+            signo.innerText = 'Escorpião';}
+        else if (auxMes == 'Novembro' || auxMes == 'novembro' && auxDia >= '01' && auxDia <= '21'){
+            signo.innerText = 'Escorpião';}
+
         else if (auxMes == 'Novembro' || auxMes == 'novembro' && auxDia >= '22' && auxDia <= '30'){
-            signo.innerText = 'Sagitário';
-        }else if (auxMes == 'Dezembro' || auxMes == 'dezembro' && auxDia >= '01' && auxDia <= '21'){
-            signo.innerText = 'Sagitário';
-        }
-        
+            signo.innerText = 'Sagitário';}
+        else if (auxMes == 'Dezembro' || auxMes == 'dezembro' && auxDia >= '01' && auxDia <= '21'){
+            signo.innerText = 'Sagitário';}
+
         else if (auxMes == 'Dezembro' || auxMes == 'dezembro' && auxDia >= '22' && auxDia <= '31'){
-            signo.innerText = 'Capricórnio';
-        }else if (auxMes == 'Janeiro' || auxMes == 'janeiro' && auxDia >= '01' && auxDia <= '20'){
+            signo.innerText = 'Capricórnio';}
+        else if (auxMes == 'Janeiro' || auxMes == 'janeiro' && auxDia >= '01' && auxDia <= '20'){
             signo.innerText = 'Capricórnio';
         }
-        
         else if (auxMes == 'Janeiro' || auxMes == 'janeiro' && auxDia >= '21' && auxDia <= '30'){
             signo.innerText = 'Aquário';
         }else if (auxMes == 'Fevereiro' || auxMes == 'fevereiro' && auxDia >= '01' && auxDia <= '18'){
             signo.innerText = 'Aquário';
         }
-        
         else if (auxMes == 'Fevereiro' || auxMes == 'Fevereiro' && auxDia >= '19' && auxDia <= '29'){
             signo.innerText = 'Peixes';
         }else if (auxMes == 'Março' || auxMes == 'março' && auxDia >= '01' && auxDia <= '20'){
@@ -317,6 +311,8 @@
         }else{
             signo.innerText = 'Não existente';
         }
+           
+        
         
 
         // const btnUpdAndRem = document.createElement('div');
