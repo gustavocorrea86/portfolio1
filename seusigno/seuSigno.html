@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
+    <title>Seu Signo</title>
 </head>
 <style>
     *{
@@ -155,27 +155,53 @@
 <script>
     
     const mesNascList = document.querySelector('.mesNasc');
-    const diaNascList = document.querySelector('.diaNasc')
+    let diaNascList = document.querySelector('.diaNasc')
     const btnAdd = document.querySelector('.btnAdd');
     const main = document.querySelector('main');
     let auxMes = ''
     let auxDia = ''
     
-   
     btnAdd.addEventListener('click',()=>{
-        if(auxDia > 31){
-            alert('Digite uma dia válido')
+        auxDia = Number(diaNascList.value);
+        auxMes = mesNascList.value;
+        if((auxDia < 1) || (auxDia > 31)){
+            alert('Digite um dia válido')
+        }else if((auxMes == 'fevereiro' || auxMes == 'Fevereiro') && (auxDia > 29)){
+            alert('Fevereiro vai até dia 29')
+        }else if((auxMes == 'abril' || auxMes == 'Abril') && (auxDia > 30)){
+            alert('Abril vai até dia 30')
+        }else if((auxMes == 'junho' || auxMes == 'Junho') && (auxDia > 30)){
+            alert('Junho vai até dia 30')
+        }else if((auxMes == 'setembro' || auxMes == 'Setembro') && (auxDia > 30)){
+            alert('Setembro vai até dia 30')
+        }else if((auxMes == 'novembro' || auxMes == 'Novembro') && (auxDia > 30)){
+            alert('Novembro vai até dia 30')
         }else{
             createList()
         }
-       
+        
     })
     document.addEventListener('keypress', (e)=>{
         if(e.key === 'Enter'){
-            createList()
+            auxDia = Number(diaNascList.value);
+            auxMes = mesNascList.value;
+            if((auxDia < 1) || (auxDia > 31)){
+                alert('Digite um dia válido')
+            }else if((auxMes == 'fevereiro' || auxMes == 'Fevereiro') && (auxDia > 29)){
+                alert('Fevereiro vai até dia 29')
+            }else if((auxMes == 'abril' || auxMes == 'Abril') && (auxDia > 30)){
+                alert('Abril vai até dia 30')
+            }else if((auxMes == 'junho' || auxMes == 'Junho') && (auxDia > 30)){
+                alert('Junho vai até dia 30')
+            }else if((auxMes == 'setembro' || auxMes == 'Setembro') && (auxDia > 30)){
+                alert('Setembro vai até dia 30')
+            }else if((auxMes == 'novembro' || auxMes == 'Novembro') && (auxDia > 30)){
+                alert('Novembro vai até dia 30')
+            }else{
+                createList()
+            }
         }
     })
-
     function createList(){
         newList = document.createElement('div');
         main.appendChild(newList);
@@ -212,7 +238,7 @@
         diaNasc.style.width = '50px';
         diaNasc.style.display = 'flex';
         diaNasc.style.justifyContent = 'center';
-        auxDia = diaNascList.value;
+        auxDia = Number(diaNascList.value);
         diaNasc.innerHTML = auxDia;
 
         const signo = document.createElement('p');
@@ -262,7 +288,7 @@
         else if((auxMes == 'Novembro' || auxMes == 'novembro') && (auxDia >= 1 && auxDia <= 21)){
             signo.innerText = 'Escorpião'}
 
-        else if ((auxMes == 'Novembro' || auxMes == 'novembro') && (auxDia >= 22 && auxDia <= 22)){
+        else if ((auxMes == 'Novembro' || auxMes == 'novembro') && (auxDia >= 22 && auxDia <= 30)){
             signo.innerText = 'Sagitário'}
         else if ((auxMes == 'Dezembro' || auxMes == 'dezembro') && (auxDia >= 1 && auxDia <= 21)){
             signo.innerText = 'Sagitário'}
@@ -287,10 +313,5 @@
         diaNascList.value = '';
         mesNascList.value = '';
         }
-        
-    
-    
-        
-
 </script>
 </html>
