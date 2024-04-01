@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Controle de Tarefas</title>
 </head>
 <style>
@@ -19,11 +20,16 @@
         align-items: center;
         padding: 10px;
         @media(min-width:600px){
-            width: 1300px;
+            width: 1000px;
             margin: 0 auto;
         }
     }
     header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .diasSemana{
         width: 90%;
         height: 50px;
         display: grid;
@@ -31,9 +37,9 @@
         align-items: center;
         justify-items: center;
     }
-    header h1{
+    .diasSemana h1{
         text-transform: uppercase;
-        background-color: rgb(255, 255, 136);
+        /* background-color: rgb(255, 255, 136); */
         width: 50px;
         text-align: center;
         border-radius: 50%;
@@ -46,15 +52,12 @@
         grid-template-rows: repeat(5, 1fr);
         z-index: 1;
     }
-    main div{
+    main h2{
         height: 100px;
         cursor: pointer;
         box-shadow: 1px 2px 4px 2px black;
         margin: 3px;
-    }
-    main div h2{
-        width: 20px;
-        font-size: 15px;
+        color: yellow;
     }
     .mudaCor{
         background-color: royalblue;
@@ -115,9 +118,16 @@
         box-shadow: 1px 1px black;
         border-radius: 5px;
     }
+    .horario{
+        display: none;
+    }
 </style>
 <body>
-   <header>
+   <header class="container-fluid p-3 bg-dark text-white h3 row rounded">
+    <div class="cabeçalho col"></div>
+    <div class="hora col"></div>
+   </header>
+   <div class="diasSemana">
     <h1>s</h1>
     <h1>t</h1>
     <h1>q</h1>
@@ -125,42 +135,10 @@
     <h1>s</h1>
     <h1>s</h1>
     <h1>d</h1>
-   </header>
-    <main>
-        <div><h2>1</h2></div>
-        <div><h2>2</h2></div>
-        <div><h2>3</h2></div>
-        <div><h2>4</h2></div>
-        <div><h2>5</h2></div>
-        <div><h2>6</h2></div>
-        <div><h2>7</h2></div>
-        <div><h2>8</h2></div>
-        <div><h2>9</h2></div>
-        <div><h2>10</h2></div>
-        <div><h2>11<h2></div>
-        <div><h2>12<h2></div>
-        <div><h2>13</h2></div>
-        <div><h2>14</h2></div>
-        <div><h2>15</h2></div>
-        <div><h2>16</h2></div>
-        <div><h2>17</h2></div>
-        <div><h2>18</h2></div>
-        <div><h2>19</h2></div>
-        <div><h2>20</h2></div>
-        <div><h2>21</h2></div>
-        <div><h2>22</h2></div>
-        <div><h2>23</h2></div>
-        <div><h2>24</h2></div>
-        <div><h2>25<h2></div>
-        <div><h2>26<h2></div>
-        <div><h2>27</h2></div>
-        <div><h2>28</h2></div>
-        <div><h2>29<h2></div>
-        <div><h2>30<h2></div>
-        <div><h2>31</h2></div>
-    </main>
+   </div>
+    <main></main>
     <dialog>
-        <h1></h1>
+        <h3></h3>
         <div class="periodo">
             <div>
                 <img src="imagens/sol (2).png" alt="">
@@ -175,67 +153,24 @@
                 <p>Noite</p>
             </div>
         </div>
-        <!-- <div class="btnCriaTarefa">
-            <img src="imagens/btnCriaTarefa.png" alt="">
-            <p>Criar Tarefa</p>
-        </div> -->
-        <!-- <form action="#" class="tarefas">
-           <label for="addTa">Tarefa1
-            <input type="text" class="addTarefa">
-            <button class="btnAddTarefa">Add</button>
-           </label>
-        </form>
-        <div class="resumoTarefas"></div> -->
-
-    </dialog>
+        <label for="" class="d-none">Escolha um Horário</label>
+        <select name="hora" id="hora" class="horario container w-25">
+            <option value="2">08:00</option>
+            <option value="2">09:00</option>
+            <option value="2">10:00</option>
+            <option value="2">11:00</option>
+            <option value="2">12:00</option>
+        </select>
+        </dialog>
+    <!-- <label for="">Escolha um Horário</label>
+    <select name="hora" id="hora" class=" horario container">
+        <option value="2">08:00</option>
+        <option value="2">09:00</option>
+        <option value="2">10:00</option>
+        <option value="2">11:00</option>
+        <option value="2">12:00</option>
+    </select> -->
+    
 </body>
-<script>
-    const dia = [...document.querySelectorAll('div')]
-    const addTarefa = document.querySelector('.addTarefa')
-    const btnAddTarefa = document.querySelector('.btnAddTarefa')
-    const resumoTarefas = document.querySelector('.resumoTarefas')
-    const modal = document.querySelector('dialog')
-    const body = document.querySelector('body')
-    dia.map((el)=>{
-        el.addEventListener('click',()=>{
-            // removeToggle()
-            // el.classList.toggle('mudaCor')
-            modal.showModal()
-        })
-    })
-    // body.addEventListener('click', ()=>{
-    //     modal.close()
-    // })
-    btnAddTarefa.addEventListener('click',()=>{
-        tarefas.push(addTarefa.value)
-        resumoTarefas.innerHTML = tarefas
-    })
-    
-    // const diaSemana = [...document.querySelectorAll('h1')]
-    // diaSemana.map((el,i)=>{
-    //     console.log(el ,i)
-    // })
-    // diaSemana[0].addEventListener('click',()=>{
-    //     diaSemana[7].innerHTML = 'Segunda-Feira'
-    // })
-    // diaSemana[1].addEventListener('click',()=>{
-    //     diaSemana[7].innerHTML = 'Terça-Feira'
-    // })
-    // diaSemana[2].addEventListener('click',()=>{
-    //     diaSemana[7].innerHTML = 'Quarta-Feira'
-    // })
-    // diaSemana[3].addEventListener('click',()=>{
-    //     diaSemana[7].innerHTML = 'Quinta-Feira'
-    // })
-    // diaSemana[4].addEventListener('click',()=>{
-    //     diaSemana[7].innerHTML = 'Sexta-Feira'
-    // })
-    // diaSemana[5].addEventListener('click',()=>{
-    //     diaSemana[7].innerHTML = 'Sábado'
-    // })
-    // diaSemana[6].addEventListener('click',()=>{
-    //     diaSemana[7].innerHTML = 'Domingo'
-    // })
-    
-</script>
+<script src="script.js"></script>
 </html>
