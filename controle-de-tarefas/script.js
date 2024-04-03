@@ -64,11 +64,13 @@ img.map((el,i)=>{
 
 function horario(){
     const data = new Date();
+    let horas = data.getHours()
+    if(horas < 10){horas = '0'+ horas}
     let minuto = data.getMinutes()
     if(minuto < 10){minuto = '0'+ minuto}
     let segundos = data.getSeconds()
     if(segundos < 10){segundos = '0'+ segundos}
-    hora.innerHTML = `Hora: ${data.getHours()} : ${minuto} : ${segundos}`
+    hora.innerHTML = `Hora: ${horas} : ${minuto} : ${segundos}`
 }
 let horaAtual = setInterval(horario,1000);
 
