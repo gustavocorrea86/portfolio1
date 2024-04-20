@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>CRUD</title>
+    <style>
+    .abrirCampo{
+        display: block;
+    }
+    .fecharCampo{
+        display: none;
+    }
+    </style>
+</head>
+<body>
+<main class="container-fluid bg-dark p-2">
+    <header class="container-fluid border border-primary bg-secondary text-center text-white"><h1>Create, Read, Update, Delete - CRUD</h1></header>
+    <section class="d-flex p-2">
+        <section class="container border my-2 bg-dark text-white p-3 border-primary">
+            <h2 class="text-center">Cadastro de Pessoas</h2>
+            <form action="" class="d-flex flex-column">
+                <div class="d-flex align-items-center ">
+                    <div class="w-75">
+                        <label>Primeiro Nome:</label>
+                        <input type="text" class=" nome form-control" autocomplete="no">
+                    </div>
+                    <div class="w-75">
+                        <label class="ml-3">Sobrenome:</label>
+                        <input type="text" class=" sobrenome form-control ml-3" autocomplete="no">
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center" >
+                        <label>Idade:</label>
+                        <input type="number" class="idade form-control w-50">
+                    </div>
+                </div>
+                <div class="form-group d-flex my-4">
+                    <div>
+                        <label>Profissão</label>
+                        <input type="text" class="profissao form-control w-100">
+                    </div>
+                    <div>
+                        <label class="ml-3">Cidade</label>
+                        <input type="text" class="cidade form-control w-100 ml-3">
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <label>Estado</label>
+                        <input type="text" class="estado form-control w-50">
+                    </div>
+                </div>
+                <button type="button" type="submit" class="mostrar btn btn-primary">Mostrar</button>
+            </form>
+        </section>
+        <section class="container border my-2 bg-info p-2 w-50 d-flex flex-column border-primary">
+            <h4 class="text-white">Dados digitados:</h4>
+            <div class="espelho">
+                <div class="d-flex">
+                    <h4>Nome:</h4> 
+                    <p class="h4"></p>
+                </div>
+                <div class="d-flex">
+                    <h4>Sobrenome:</h4>
+                    <p class="h4"></p>
+                </div>
+                <div class="d-flex">
+                    <h4>Idade:</h4>
+                    <p class="h4"></p>
+                </div>
+                <div class="d-flex">
+                    <h4>Profissão:</h4>
+                    <p class="h4"></p>
+                </div>
+                <div class="d-flex">
+                    <h4>Cidade:</h4>
+                    <p class="h4"></p>
+                </div>
+                <div class="d-flex">
+                    <h4>Estado:</h4>
+                    <p class="h4"></p>
+                </div>
+            <div class="w-100 d-flex align-items-center justify-content-center mt-4"><button type="button" type="submit" class="btnEnviar btn btn-danger w-75 ">Enviar</button></div>
+        </section>
+    </section>
+    
+    <section class="lista container-fluid bg-secondary text-white border rounded border-primary">
+        <h2 class="text-center">Lista de Cadastrados</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr class="bg-dark">
+                    
+                    <th scope="col"class="bg-primary">Id</th>
+                    <th scope="col" class="w-50 text-center">Nome</th>
+                    <th scope="col">Idade</th>
+                    <th scope="col" class="w-25 text-center">Profissão</th>
+                    <th scope="col" class="w-25 text-center">Cidade</th>
+                    <th scope="col">Estado</th>
+                
+                    <th scope="col" class="bg-success">Atualizar</th>
+                    <th scope="col" class="bg-danger">Deletar</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </section>
+    <section class="lista container-fluid bg-secondary text-white border rounded border-primary mt-3 d-block">
+        
+        <h2 class="text-center">Atualização de Cadastro</h2>
+        
+        <div class="atulizarDados container-fluid bg-primary mb-2 p-2 d-flex">
+          
+            <div class="container-fluid border w-50 d-flex flex-column">
+                <p class="h4 text-center w-100">Selecione para Atualizar</p>
+                <div class="d-flex">
+                    <div class="abrirAtualizarLista w-100" style="display: none;">
+                       
+                        <div class="form-check">
+                            <input class="btnAbrir primeiroNome_check form-check-input" type="radio" id="pn" value="opçao1" name="exampleRadios" >
+                            <label class="form-check-label" for="pn">
+                            Nome
+                            </label>
+                            <div class="campoAtualizar fecharCampo">
+                                <div class="d-flex">
+                                    <input type="text" class="atualizarPn">
+                                    <button type="button" class="btnPn btn btn-secundary btn-sm ml-2">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="btnAbrir sobrenome_check form-check-input" type="radio" id="sn" value="opcao2" name="exampleRadios">
+                            <label class="form-check-label" for="sn">
+                              Sobrenome
+                            </label>
+                            <div class="campoAtualizar fecharCampo">
+                                <div class="d-flex">
+                                    <input type="text" class="atualizarSobrenome">
+                                    <button type="button" class="btnSobrenome btn btn-secundary btn-sm ml-2">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="btnAbrir idade_check form-check-input" type="radio" id="idade" value="opcao3" name="exampleRadios">
+                            <label class="form-check-label" for="idade">
+                             Idade
+                            </label>
+                            <div class="campoAtualizar fecharCampo">
+                                <div class="d-flex">
+                                    <input type="number" class="atualizarIdade">
+                                    <button type="button" class="btnIdade btn btn-secundary btn-sm ml-2">Salvar</button>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="form-check">
+                            <input class="btnAbrir profissao_check form-check-input" type="radio" id="pro" value="opcao4" name="exampleRadios">
+                            <label class="form-check-label" for="pro">
+                             Profissão
+                            </label>
+                            <div class="campoAtualizar fecharCampo">
+                                <div class="d-flex">
+                                    <input type="text" class="atualizarProfissao">
+                                    <button type="button" class="btnProfissao btn btn-secundary btn-sm ml-2">Salvar</button>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="form-check">
+                            <input class="btnAbrir cidade_check form-check-input" type="radio" id="cid" value="opcao5" name="exampleRadios">
+                            <label class="form-check-label" for="cid">
+                             Cidade
+                            </label>
+                            <div class="campoAtualizar fecharCampo">
+                                <div class="d-flex">
+                                    <input type="text" class="atualizarCidade">
+                                    <button type="button" class="btnCidade btn btn-secundary btn-sm ml-2">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="btnAbrir estado_check form-check-input" type="radio" id="est" value="opcao5" name="exampleRadios">
+                            <label class="form-check-label" for="est">
+                             Estado
+                            </label>
+                            <div class = "campoAtualizar fecharCampo">
+                                <div class=" d-flex">
+                                    <input type="text" class="atualizarEstado">
+                                    <button type="button" class="btnEstado btn btn-secundary btn-sm ml-2">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="listagem container border bg-dark text-white w-50 text-center">
+                <p class="containe-fluid w-100 h4">Cadastro</p>
+                <div class="text-left">
+                    <h5 class="h6"></h5>
+                    <h5 class="h6"></h5>
+                    <h5 class="h6"></h5>
+                    <h5 class="h6"></h5>
+                    <h5 class="h6"></h5>
+                    <h5 class="h6"></h5>
+                    <h5 class="h6"></h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+<script src="crud-1.js"></script>
+</html>
