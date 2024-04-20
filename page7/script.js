@@ -108,8 +108,7 @@ deleteCart.addEventListener('click', ()=>{ // delete cart
     qtd.innerHTML = qtdAdd
 })
 
-imgsSec.map((el, i)=>{
-    console.log(el,i)
+imgsSec.map((el)=>{
    el.addEventListener('click',()=>{
     removeSelect()
     el.classList.toggle('borderToggle-0')
