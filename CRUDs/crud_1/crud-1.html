@@ -14,11 +14,11 @@
     }
     </style>
 </head>
-<body>
+<body class="w- 75">
 <main class="container-fluid bg-dark p-2">
     <header class="container-fluid border border-primary bg-secondary text-center text-white"><h1>Create, Read, Update, Delete - CRUD</h1></header>
-    <section class="d-flex flex-column p-2">
-        <section class="container border my-2 bg-dark text-white p-3 border-primary">
+    <section class="d-flex p-2 row">
+        <section class="col-sm-6 border my-2 bg-dark text-white p-3 border-primary">
             <h2 class="text-center">Cadastro de Pessoas</h2>
             <form action="" class="d-flex flex-column">
                 <div class="d-flex align-items-center ">
@@ -52,7 +52,7 @@
                 <button type="button" type="submit" class="mostrar btn btn-primary">Mostrar</button>
             </form>
         </section>
-        <section class="container border my-2 bg-info p-2 w-50 d-flex flex-column border-primary">
+        <section class="col-sm-6 border my-2 bg-info p-2 d-flex flex-column border-primary">
             <h4 class="text-white">Dados digitados:</h4>
             <div class="espelho">
                 <div class="d-flex">
@@ -106,101 +106,97 @@
             </tbody>
         </table>
     </section>
-    <section class="lista container-fluid bg-secondary text-white border rounded border-primary mt-3 d-block">
+    <section class="lista container-fluid bg-secondary text-white border rounded border-primary mt-3">
         
         <h2 class="text-center">Atualização de Cadastro</h2>
         
-        <div class="atulizarDados container-fluid bg-primary mb-2 p-2 d-flex">
+        <div class="atulizarDados bg-primary mb-2 p-2 row">
           
-            <div class="container-fluid border w-50 d-flex flex-column">
+            <div class="border col-sm-6">
                 <p class="h4 text-center w-100">Selecione para Atualizar</p>
-                <div class="d-flex">
-                    <div class="abrirAtualizarLista w-100" style="display: none;">
-                       
-                        <div class="form-check">
-                            <input class="btnAbrir primeiroNome_check form-check-input" type="radio" id="pn" value="opçao1" name="exampleRadios" >
-                            <label class="form-check-label" for="pn">
-                            Nome
-                            </label>
-                            <div class="campoAtualizar fecharCampo">
-                                <div class="d-flex">
-                                    <input type="text" class="atualizarPn">
-                                    <button type="button" class="btnPn btn btn-secundary btn-sm ml-2">Salvar</button>
-                                </div>
+                <div class="abrirAtualizarLista" style="display: none;">
+                    <div class="form-check">
+                        <input class="btnAbrir primeiroNome_check form-check-input" type="radio" id="pn" value="opçao1" name="exampleRadios" >
+                        <label class="form-check-label" for="pn">
+                        Nome
+                        </label>
+                        <div class="campoAtualizar fecharCampo">
+                            <div class="d-flex">
+                                <input type="text" class="atualizarPn">
+                                <button type="button" class="btnPn btn btn-secundary btn-sm ml-2">Salvar</button>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="form-check">
-                            <input class="btnAbrir sobrenome_check form-check-input" type="radio" id="sn" value="opcao2" name="exampleRadios">
-                            <label class="form-check-label" for="sn">
-                              Sobrenome
-                            </label>
-                            <div class="campoAtualizar fecharCampo">
-                                <div class="d-flex">
-                                    <input type="text" class="atualizarSobrenome">
-                                    <button type="button" class="btnSobrenome btn btn-secundary btn-sm ml-2">Salvar</button>
-                                </div>
+                    <div class="form-check">
+                        <input class="btnAbrir sobrenome_check form-check-input" type="radio" id="sn" value="opcao2" name="exampleRadios">
+                        <label class="form-check-label" for="sn">
+                            Sobrenome
+                        </label>
+                        <div class="campoAtualizar fecharCampo">
+                            <div class="d-flex">
+                                <input type="text" class="atualizarSobrenome">
+                                <button type="button" class="btnSobrenome btn btn-secundary btn-sm ml-2">Salvar</button>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="form-check">
-                            <input class="btnAbrir idade_check form-check-input" type="radio" id="idade" value="opcao3" name="exampleRadios">
-                            <label class="form-check-label" for="idade">
-                             Idade
-                            </label>
-                            <div class="campoAtualizar fecharCampo">
-                                <div class="d-flex">
-                                    <input type="number" class="atualizarIdade">
-                                    <button type="button" class="btnIdade btn btn-secundary btn-sm ml-2">Salvar</button>
-                                </div>
-                            </div>
-                        </div> 
-
-                        <div class="form-check">
-                            <input class="btnAbrir profissao_check form-check-input" type="radio" id="pro" value="opcao4" name="exampleRadios">
-                            <label class="form-check-label" for="pro">
-                             Profissão
-                            </label>
-                            <div class="campoAtualizar fecharCampo">
-                                <div class="d-flex">
-                                    <input type="text" class="atualizarProfissao">
-                                    <button type="button" class="btnProfissao btn btn-secundary btn-sm ml-2">Salvar</button>
-                                </div>
-                            </div>
-                        </div> 
-
-                        <div class="form-check">
-                            <input class="btnAbrir cidade_check form-check-input" type="radio" id="cid" value="opcao5" name="exampleRadios">
-                            <label class="form-check-label" for="cid">
-                             Cidade
-                            </label>
-                            <div class="campoAtualizar fecharCampo">
-                                <div class="d-flex">
-                                    <input type="text" class="atualizarCidade">
-                                    <button type="button" class="btnCidade btn btn-secundary btn-sm ml-2">Salvar</button>
-                                </div>
+                    <div class="form-check">
+                        <input class="btnAbrir idade_check form-check-input" type="radio" id="idade" value="opcao3" name="exampleRadios">
+                        <label class="form-check-label" for="idade">
+                            Idade
+                        </label>
+                        <div class="campoAtualizar fecharCampo">
+                            <div class="d-flex">
+                                <input type="number" class="atualizarIdade">
+                                <button type="button" class="btnIdade btn btn-secundary btn-sm ml-2">Salvar</button>
                             </div>
                         </div>
+                    </div> 
 
-                        <div class="form-check">
-                            <input class="btnAbrir estado_check form-check-input" type="radio" id="est" value="opcao5" name="exampleRadios">
-                            <label class="form-check-label" for="est">
-                             Estado
-                            </label>
-                            <div class = "campoAtualizar fecharCampo">
-                                <div class=" d-flex">
-                                    <input type="text" class="atualizarEstado">
-                                    <button type="button" class="btnEstado btn btn-secundary btn-sm ml-2">Salvar</button>
-                                </div>
+                    <div class="form-check">
+                        <input class="btnAbrir profissao_check form-check-input" type="radio" id="pro" value="opcao4" name="exampleRadios">
+                        <label class="form-check-label" for="pro">
+                            Profissão
+                        </label>
+                        <div class="campoAtualizar fecharCampo">
+                            <div class="d-flex">
+                                <input type="text" class="atualizarProfissao">
+                                <button type="button" class="btnProfissao btn btn-secundary btn-sm ml-2">Salvar</button>
                             </div>
                         </div>
+                    </div> 
 
+                    <div class="form-check">
+                        <input class="btnAbrir cidade_check form-check-input" type="radio" id="cid" value="opcao5" name="exampleRadios">
+                        <label class="form-check-label" for="cid">
+                            Cidade
+                        </label>
+                        <div class="campoAtualizar fecharCampo">
+                            <div class="d-flex">
+                                <input type="text" class="atualizarCidade">
+                                <button type="button" class="btnCidade btn btn-secundary btn-sm ml-2">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="btnAbrir estado_check form-check-input" type="radio" id="est" value="opcao5" name="exampleRadios">
+                        <label class="form-check-label" for="est">
+                            Estado
+                        </label>
+                        <div class = "campoAtualizar fecharCampo">
+                            <div class=" d-flex">
+                                <input type="text" class="atualizarEstado">
+                                <button type="button" class="btnEstado btn btn-secundary btn-sm ml-2">Salvar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="listagem container border bg-dark text-white w-50 text-center">
-                <p class="containe-fluid w-100 h4">Cadastro</p>
+            <div class="listagem border bg-dark text-whitetext-center col-sm-6">
+                <p class="containe-fluid h4 text-center">Cadastro</p>
                 <div class="text-left">
                     <h5 class="h6"></h5>
                     <h5 class="h6"></h5>
