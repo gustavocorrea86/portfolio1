@@ -54,32 +54,33 @@
         </section>
         <section class="col-sm-6 border my-2 bg-info p-2 d-flex flex-column border-primary">
             <h4 class="text-white">Dados digitados:</h4>
-            <div class="espelho">
+            <div>
                 <div class="d-flex">
-                    <h4>Nome:</h4> 
+                    <h4 class="mx-1">Nome:</h4> 
+                    <p class="h4 text-white"></p>
+                </div>
+                <div class="d-flex">
+                    <h4 class="mx-1">Sobrenome:</h4>
                     <p class="h4"></p>
                 </div>
                 <div class="d-flex">
-                    <h4>Sobrenome:</h4>
+                    <h4 class="mx-1">Idade:</h4>
                     <p class="h4"></p>
                 </div>
                 <div class="d-flex">
-                    <h4>Idade:</h4>
+                    <h4 class="mx-1">Profissão:</h4>
                     <p class="h4"></p>
                 </div>
                 <div class="d-flex">
-                    <h4>Profissão:</h4>
+                    <h4 class="mx-1">Cidade:</h4>
                     <p class="h4"></p>
                 </div>
                 <div class="d-flex">
-                    <h4>Cidade:</h4>
+                    <h4 class="mx-1">Estado:</h4>
                     <p class="h4"></p>
                 </div>
-                <div class="d-flex">
-                    <h4>Estado:</h4>
-                    <p class="h4"></p>
-                </div>
-            <div class="w-100 d-flex align-items-center justify-content-center mt-4"><button type="button" type="submit" class="btnEnviar btn btn-danger w-75 ">Enviar</button></div>
+            <div>
+            <button type="button" type="submit" class="btnEnviar btn btn-danger col-11 d-block m-auto">Enviar</button></div>
         </section>
     </section>
     
@@ -111,10 +112,12 @@
         
         <h2 class="text-center">Atualização de Cadastro</h2>
         <div class="atulizarDados bg-primary mb-2 p-2 row">
-            <div class="border col-sm-6">
+            
+            <div class="border col-sm-6 pt-1">
+                <h1 class=" h5 text-dark text-center">Selecione para Atualizar</h1>
                 <div class="form-check">
                     <input class="btnAbrir primeiroNome_check form-check-input" type="radio" id="pn" value="opçao1" name="exampleRadios" >
-                    <label class="form-check-label" for="pn">
+                    <label class="form-check-label h5" for="pn">
                     Nome
                     </label>
                     <div class="campoAtualizar fecharCampo">
@@ -127,7 +130,7 @@
 
                 <div class="form-check">
                     <input class="btnAbrir sobrenome_check form-check-input" type="radio" id="sn" value="opcao2" name="exampleRadios">
-                    <label class="form-check-label" for="sn">
+                    <label class="form-check-label h5" for="sn">
                         Sobrenome
                     </label>
                     <div class="campoAtualizar fecharCampo">
@@ -140,7 +143,7 @@
 
                 <div class="form-check">
                     <input class="btnAbrir idade_check form-check-input" type="radio" id="idade" value="opcao3" name="exampleRadios">
-                    <label class="form-check-label" for="idade">
+                    <label class="form-check-label h5" for="idade">
                         Idade
                     </label>
                     <div class="campoAtualizar fecharCampo">
@@ -153,7 +156,7 @@
 
                 <div class="form-check">
                     <input class="btnAbrir profissao_check form-check-input" type="radio" id="pro" value="opcao4" name="exampleRadios">
-                    <label class="form-check-label" for="pro">
+                    <label class="form-check-label h5" for="pro">
                         Profissão
                     </label>
                     <div class="campoAtualizar fecharCampo">
@@ -166,7 +169,7 @@
 
                 <div class="form-check">
                     <input class="btnAbrir cidade_check form-check-input" type="radio" id="cid" value="opcao5" name="exampleRadios">
-                    <label class="form-check-label" for="cid">
+                    <label class="form-check-label h5" for="cid">
                         Cidade
                     </label>
                     <div class="campoAtualizar fecharCampo">
@@ -179,7 +182,7 @@
 
                 <div class="form-check">
                     <input class="btnAbrir estado_check form-check-input" type="radio" id="est" value="opcao5" name="exampleRadios">
-                    <label class="form-check-label" for="est">
+                    <label class="form-check-label h5" for="est">
                         Estado
                     </label>
                     <div class = "campoAtualizar fecharCampo">
@@ -191,7 +194,7 @@
                 </div>
             </div>
             
-            <div class="border bg-dark text-whitetext-center col-sm-6">
+            <div class="border bg-dark text-white text-center col-sm-6">
                 <p class="containe-fluid h4 text-center">Cadastro</p>
                 <div class="text-left">
                     <h5 class="h6"></h5>

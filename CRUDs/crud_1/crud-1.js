@@ -1,10 +1,9 @@
 
-const espelho = document.querySelector('.espelho')
 const lista = document.querySelector('.lista')
 const btnMostrar = document.querySelector('.mostrar')
 const btnEnviar = document.querySelector('.btnEnviar')
 const body = document.querySelector('body')
-let tbody = document.querySelector('tbody')
+const tbody = document.querySelector('tbody')
 const input = [...document.querySelectorAll('input')]
 const dadosDigitados = [...document.querySelectorAll('p')]
 const atualizarDados = document.querySelector('.atualizarDados')
@@ -26,22 +25,13 @@ let cadastrado;
 let arrBtnAtualizar = []
 let arrBtnDeletar = []
 let imgAtualizar;
-let arrTeste = []
-let arrTeste2 = []
 let contIdAux;
+let arrTdNomeSobrenome = []
+let arrTdIdade = []
+let arrTdProfissao = []
+let arrTdCidade = []
+let arrTdEstado = []
 
-
-
-// const array = [1, 2, 3, 4, 5];
-// const index = array.indexOf(4);
-// if (index > -1) {
-//   array.splice(index, 1);
-// }
-// console.log(array);
-// console.log(index)
-
-
-   
 function limpaDadosDigitados(){
     dadosDigitados.forEach(element => {
         element.innerText = ''
@@ -53,6 +43,16 @@ function limparInputs(){
         el.value = ''
     })
 }
+function limpaDadosAtualizar(){
+    listaAtualizaCadastro[0].innerHTML = 'Id:'
+    listaAtualizaCadastro[1].innerHTML = 'Nome:'
+    listaAtualizaCadastro[2].innerHTML = 'Sobrenome:'
+    listaAtualizaCadastro[3].innerHTML = 'Idade:'
+    listaAtualizaCadastro[4].innerHTML = 'Profissão:'
+    listaAtualizaCadastro[5].innerHTML = 'Cidade:'
+    listaAtualizaCadastro[6].innerHTML = 'Estado:'
+}
+
 btnMostrar.addEventListener('click',()=>{
 const nome = document.querySelector('.nome')
 const sobrenome = document.querySelector('.sobrenome')
@@ -73,7 +73,7 @@ console.log(contId)
         Cidade: cidade.value,
         Estado: estado.value
     }
-    dadosDigitados[0].innerHTML = cadastrado.Nome
+    dadosDigitados[0].innerText = cadastrado.Nome
     dadosDigitados[1].innerText = cadastrado.Sobrenome
     dadosDigitados[2].innerText = cadastrado.Idade
     dadosDigitados[3].innerText = cadastrado.Profissao
@@ -82,12 +82,6 @@ console.log(contId)
     limparInputs()
     
 })
-let arrTdNomeSobrenome = []
-let arrTdIdade = []
-let arrTdProfissao = []
-let arrTdCidade = []
-let arrTdEstado = []
-
 
 function criarLista(){
     cadastro.push(cadastrado)
@@ -146,76 +140,49 @@ function criarLista(){
         estadoLista.textContent = cadastro[c].Estado
     }
 
-    // cadastro.push(cadastrado)
-    // let tr = document.createElement('tr')
-    // tbody.appendChild(tr)
-    // arrTeste2.push(tr)
-    //     for(var c= 0; c<=5; c++){
-    //         let td = document.createElement('td')
-    //         tr.appendChild(td)
-    //         td.style.textAlign = 'center'
-    //         arrTeste.push(td)
-    //     }
-        
-    //       for(var c in cadastro){
-    //         arrTeste[0].innerText = cadastro[c].Id
-    //         arrTeste[1].innerText = `${cadastro[c].Nome} ` + `${cadastro[c].Sobrenome}`
-    //         arrTeste[2].innerText = cadastro[c].Idade
-    //         arrTeste[3].innerText = cadastro[c].Profissao
-    //         arrTeste[4].innerText = cadastro[c].Cidade
-    //         arrTeste[5].innerText = cadastro[c].Estado
-            
-    //       }
-            
-    //     for(var c in cadastrado){
-    //         console.log(cadastrado[c].value)
-    //     }
-        
-        const atualizar = document.createElement('td')
-        tr.appendChild(atualizar)
-        atualizar.style.textAlign = 'center'
-        imgAtualizar = document.createElement('img')
-        atualizar.appendChild(imgAtualizar)
-        imgAtualizar.style.width = '25px'
-        imgAtualizar.style.cursor = 'pointer'
-        arrBtnAtualizar.push(imgAtualizar)
-        arrBtnAtualizar.map((el,i)=>{
-            el.src = 'imagens/ios-8-System-Update-icon_43809.png'
-            el.addEventListener('click',()=>{
-                indiceDeAtualização = i
-                console.log(indiceDeAtualização)
-                abrirAtualizarLista.style.display = 'block'
-                listaAtualizaCadastro[0].innerHTML = `Id: ${cadastro[i].Id}`
-                listaAtualizaCadastro[1].innerHTML = `Nome: ${cadastro[i].Nome}`
-                listaAtualizaCadastro[2].innerHTML = `Sobrenome: ${cadastro[i].Sobrenome}`
-                listaAtualizaCadastro[3].innerHTML = `Idade: ${cadastro[i].Idade}`
-                listaAtualizaCadastro[4].innerHTML = `Profissao: ${cadastro[i].Profissao}`
-                listaAtualizaCadastro[5].innerHTML = `Cidade: ${cadastro[i].Cidade}`
-                listaAtualizaCadastro[6].innerHTML = `Estado: ${cadastro[i].Estado}`
-            })
+    const atualizar = document.createElement('td')
+    tr.appendChild(atualizar)
+    atualizar.style.textAlign = 'center'
+    imgAtualizar = document.createElement('img')
+    atualizar.appendChild(imgAtualizar)
+    imgAtualizar.style.width = '25px'
+    imgAtualizar.style.cursor = 'pointer'
+    arrBtnAtualizar.push(imgAtualizar)
+    arrBtnAtualizar.map((el,i)=>{
+        el.src = 'imagens/ios-8-System-Update-icon_43809.png'
+        el.addEventListener('click',()=>{
+            indiceDeAtualização = i
+            console.log(indiceDeAtualização)
+            abrirAtualizarLista.style.display = 'block'
+            listaAtualizaCadastro[0].innerHTML = `Id: ${cadastro[i].Id}`
+            listaAtualizaCadastro[1].innerHTML = `Nome: ${cadastro[i].Nome}`
+            listaAtualizaCadastro[2].innerHTML = `Sobrenome: ${cadastro[i].Sobrenome}`
+            listaAtualizaCadastro[3].innerHTML = `Idade: ${cadastro[i].Idade}`
+            listaAtualizaCadastro[4].innerHTML = `Profissao: ${cadastro[i].Profissao}`
+            listaAtualizaCadastro[5].innerHTML = `Cidade: ${cadastro[i].Cidade}`
+            listaAtualizaCadastro[6].innerHTML = `Estado: ${cadastro[i].Estado}`
             
         })
-        const deletar = document.createElement('td')
-        tr.appendChild(deletar)
-        const imgDeletar = document.createElement('img')
-        deletar.appendChild(imgDeletar)
-        deletar.style.textAlign = 'center'
-        imgDeletar.style.width = '25px'
-        imgDeletar.style.cursor = 'pointer'
-        arrBtnDeletar.push(imgDeletar)
-        arrBtnDeletar.map((el,ind)=>{
-            el.src = "imagens/delete_delete_exit_1577.png"
-            el.addEventListener('click', ()=>{
-                delete cadastro[ind]
-                indiceDeRemocao[ind].remove()
-                console.log(ind)
-                console.log(cadastro)
-            })
+        
+    })
+    const deletar = document.createElement('td')
+    tr.appendChild(deletar)
+    const imgDeletar = document.createElement('img')
+    deletar.appendChild(imgDeletar)
+    deletar.style.textAlign = 'center'
+    imgDeletar.style.width = '25px'
+    imgDeletar.style.cursor = 'pointer'
+    arrBtnDeletar.push(imgDeletar)
+    arrBtnDeletar.map((el,ind)=>{
+        el.src = "imagens/delete_delete_exit_1577.png"
+        el.addEventListener('click', ()=>{
+            delete cadastro[ind]
+            indiceDeRemocao[ind].remove()
+            limpaDadosAtualizar()
+            
         })
+    })
 }
-// var teste = [1, 2, 3, 4];
-// teste.splice(0,2);
-// console.log(teste)
 
 btnEnviar.addEventListener('click',(i)=>{
     contIdAux = contId
@@ -226,32 +193,8 @@ btnEnviar.addEventListener('click',(i)=>{
         criarLista()
         limpaDadosDigitados()
     }
-    
 })
 
-var teste = [1, 2, 3, 4];
-teste.splice(0,2);
-console.log(teste)
-
-var teste1 = [{n0:1}, {n1:2}, {n2:3}]
-teste1.slice(0,2)
-
-teste1.slice(delete teste1[0])
-
-console.log(teste1)
-
-
-
-let teste3 = {
-    nome: 'xx',
-    idade:29
-}
-delete teste3.nome
-console.log(teste3)
-
-
-
-    
 const campoAtualizar = [...document.querySelectorAll('.campoAtualizar')]
 const btnAbrir = [...document.querySelectorAll('.btnAbrir')]
 
