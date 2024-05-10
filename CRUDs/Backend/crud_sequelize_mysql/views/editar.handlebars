@@ -1,0 +1,21 @@
+
+<div class="card m-3">
+  
+  <div class="card-body form-group ">
+    <h2>Editar</h2>
+    <form action="/editado" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+      
+        <input type="hidden" name="id" value="{{id}}">
+        <label for="Input1">Nome: </label>
+        <input type="text" name="nome" value="{{nome}}" class="form-control" id="Input1" required >
+
+        <label for="Input2">Preço: </label>
+        <input type="number" value="{{preco}}" name="preco" class="form-control" id="Input2" required >
+
+        <input type="file" name="file" class="form-control-file mt-3" id="File1" required>
+         <input type="submit" value="Salvar" class="btn btn-primary mt-3">
+      </div>
+    </form>
+  </div>
+</div>
