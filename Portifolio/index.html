@@ -28,7 +28,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 10px;
+        padding-: 0 10px;
     }
     header img{
         width: 50px;
@@ -68,7 +68,6 @@
         overflow: hidden;
         background-color: black;
         opacity: .4;
-        z-index: 1;
     }
 
    .menuMobile a{
@@ -88,10 +87,9 @@
    .menuDesktop{
         width: 100%;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 500px;
-      
+        justify-content: end;
+        width: 100%;
+        padding-right: 20px;
         @media(max-width: 600px){
             display: none;
         }
@@ -100,12 +98,13 @@
     text-decoration: none;
     color: white;
     font-size: 20px;
-    padding: 10px 0;
+    padding: 20px;
     font-family: "Zen Dots", sans-serif;
     font-weight: 400;
     font-style: normal;
-    
+    margin: 10px;
    }
+   
    .menuDesktop a:hover{
         color:#854BD0;
         transform: scale(1.4);
