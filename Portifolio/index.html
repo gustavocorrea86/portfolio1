@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
     <title>Portifolio</title>
 </head>
 <style>
@@ -73,15 +76,42 @@
     color: white;
     font-size: 20px;
     padding: 10px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
    }
 
    .menuMobile a:hover{
         color:#854BD0;
     }
  
-   .imgSmartphones{
+   .menuDesktop{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
         width: 500px;
+      
+        @media(max-width: 600px){
+            display: none;
+        }
    }
+   .menuDesktop a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 0;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+   }
+   .menuDesktop a:hover{
+        color:#854BD0;
+        transform: scale(1.4);
+        transition: all .5s ease-in-out;
+        
+    }
 </style>
 <body>
     <header>
@@ -91,6 +121,12 @@
                <img src="imagens/iconMenu2.png" alt="" class="iconMenu">
             </div>
         </nav>
+        <div class="menuDesktop">
+            <a href="">Sobre</a>
+            <a href="">Contato</a>
+            <a href="">Portifolio</a>
+            <a href="">Serviços</a>
+        </div>
     </header>
     <div class="boxMenu">
         <div class="menuMobile">
