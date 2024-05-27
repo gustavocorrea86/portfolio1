@@ -107,7 +107,7 @@ margin: 10px;
 }
 
 .section1{
-    width: 100%;
+   
     background-image: url(imagens/bacSec1.png);
     background-repeat: no-repeat;
     background-position: top;
@@ -117,16 +117,19 @@ margin: 10px;
 .subSection1{
     display: flex;
     flex-direction: row-reverse;
+    width: 100%;
+    overflow: hidden;
     
 }
 .apresentacao{
     /* height: 300px; */
-    /* width: 100%; */
+    width: 100%;
     font-family: "Zen Dots", sans-serif;
     font-weight: 400;
     font-style: normal;
     text-align: start;
     color: white;
+    padding-left: 10px;
     border: 1px solid white;
 }
 .apresentacao h1{
