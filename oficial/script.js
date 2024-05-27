@@ -11,8 +11,9 @@ btnMenu.addEventListener('click', ()=>{
 })
 
 const servicos = document.querySelector('.servicos')
-const img5 = document.querySelector('.img1')
-img5.classList.add('animate__animated', 'animate__fadeInRight');
+const img5 = document.querySelector('.img5')
+
+
 
 
 servicos.addEventListener('click', ()=>{
@@ -21,32 +22,34 @@ servicos.addEventListener('click', ()=>{
 
 window.sr = ScrollReveal({reset: true})
 
-ScrollReveal().reveal('.img1')
-ScrollReveal().reveal('.img2')
-
-ScrollReveal().reveal('.img3',{
-    rotate:{
-        x:0,
-        y:200
-    }
-       
-    // delay: 700,
-    // scale: 0.5,
-    //distance:'500px'
-    // duration: 2000
-
+ScrollReveal().reveal('.img1',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
 })
 
-ScrollReveal().reveal('.img4')
+ScrollReveal().reveal('.img2',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'left'
+})
+
+ScrollReveal().reveal('.img3',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+
+ScrollReveal().reveal('.img4',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'left'
+})
+ScrollReveal().reveal('.img5',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
 
 
-function carregar(){
-    ScrollReveal().reveal('.img5')
-    img1.classList.add('animate__animated', 'animate__fadeInRight');
-}
-carregar()
-
-img1.addEventListener('animationend', () => {
-    carregar()
-});
 

@@ -53,7 +53,7 @@ header img{
     left: 61%;
     overflow: hidden;
     border-radius: 10px;
-   border: 1px solid white;
+   
     @media(min-width: 600px) {
         display: none; 
     }
@@ -136,8 +136,8 @@ section .apresentacao h1{
     }
 }
 
-section .fotoAvatar{
-    /* width: 100%; */
+/* section .fotoAvatar{
+    width: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,11 +147,12 @@ section .fotoAvatar{
     background-size: cover;
     margin-left: 10px;
     overflow: hidden;
-}
-section .fotoAvatar img{
-    width: 240px;
+} */
+/* section .fotoAvatar img{
+    width: 240px; 
     
-}
+}  */
+
 hr{
     margin-top: 40px;
     width: 100%;
@@ -159,6 +160,10 @@ hr{
     background-color: #bea9d8;
 }
 .sites{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: hidden;
 }
 .sites img{
