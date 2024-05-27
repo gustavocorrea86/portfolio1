@@ -107,7 +107,8 @@ margin: 10px;
 }
 
 .section1{
-    background-image: url(imagens/EZZE\ Design\ Image.png);
+    width: 100%;
+    background-image: url(imagens/bacSec1.png);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -125,8 +126,8 @@ margin: 10px;
     font-weight: 400;
     font-style: normal;
     text-align: start;
-    padding: 20px;
     color: white;
+    border: 1px solid white;
 }
 .apresentacao h1{
     line-height: 45px;
