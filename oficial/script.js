@@ -11,8 +11,9 @@ btnMenu.addEventListener('click', ()=>{
 })
 
 const servicos = document.querySelector('.servicos')
-const img1 = document.querySelector('.img1')
-img1.classList.add('animate__animated', 'animate__fadeInRight');
+const img5 = document.querySelector('.img1')
+img5.classList.add('animate__animated', 'animate__fadeInRight');
+
 
 servicos.addEventListener('click', ()=>{
    img5.scrollIntoView({behavior:'smooth'})
@@ -41,8 +42,9 @@ ScrollReveal().reveal('.img4')
 
 function carregar(){
     ScrollReveal().reveal('.img5')
+    img1.classList.add('animate__animated', 'animate__fadeInRight');
 }
-
+carregar()
 
 img1.addEventListener('animationend', () => {
     carregar()
