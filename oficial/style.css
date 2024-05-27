@@ -47,39 +47,20 @@ header img{
 }
 .boxMenu{
     display: flex;
-    width: 150px;
-    height: 300px;
+    width: 170px;
+    height:150px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    border-radius: 10px;
+    justify-content: center;
+    
+    /*   */
+    border-radius: 10px 0px 0 10px;
     background-color: white;
-    opacity: 0.5;
-    background-image: url();
     @media(min-width: 600px) {
         display: none; 
     }
 }
-video{
-
-object-fit: cover;
-width: 100%;
-}
-/* .menuMobile{
-    width: 150px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    padding: 10px;
-    position: absolute;
-    left: 100%;
-    background-color: white;
-    opacity: .4;
-    z-index: 1;
-} */
 
 .boxMenu a{
 text-decoration: none;
@@ -87,11 +68,14 @@ color: black;
 font-size: 20px;
 font-family: "Zen Dots", sans-serif;
 font-weight: 400;
+padding: 2px;
+/* margin: 10 0 10 0px; */
 font-style: normal;
 }
 
 .boxMenu a:hover{
     color:#261570;
+    transform: scale(1.2);
 }
 
 .menuDesktop{
@@ -112,7 +96,7 @@ padding: 20px;
 font-family: "Zen Dots", sans-serif;
 font-weight: 400;
 font-style: normal;
-margin: 10px;
+margin: 10px; 
 }
 
 .menuDesktop a:hover{
@@ -120,10 +104,17 @@ margin: 10px;
     transform: scale(1.2);
     transition: all .5s ease-in-out;
 }
+
+.section1{
+    background-image: url(imagens/EZZE\ Design\ Image.png);
+    background: no repeat center;
+    background-size: cover;
+    height: 400px;
+}
 .subSection1{
     display: flex;
     flex-direction: row-reverse;
-    padding: 20px;
+    
 }
 .apresentacao{
     height: 300px;
