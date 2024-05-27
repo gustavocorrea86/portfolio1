@@ -71,6 +71,7 @@ header img{
     overflow: hidden;
     background-color: white;
     opacity: .4;
+    z-index: 1;
 }
 
 .menuMobile a{
@@ -129,6 +130,7 @@ section .apresentacao{
 }
 section .apresentacao h1{
     line-height: 45px;
+    overflow: hidden;
     @media(max-width:600px){
         font-size: 30px;
     }
@@ -143,7 +145,28 @@ section .fotoAvatar{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: 10px;
+    overflow: hidden;
 }
 section .fotoAvatar img{
     width: 240px;
+    
+}
+hr{
+    margin-top: 40px;
+    width: 100%;
+    height: 2px;
+    background-color: #bea9d8;
+}
+.sites{
+    overflow: hidden;
+}
+.sites img{
+    margin-top: 20px;
+    padding: 10px;
+    width: 250px;
+    
+}
+.img1, .img2, .img3, .img4, .img5{
+    visibility: hidden;
 }
