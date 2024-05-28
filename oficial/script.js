@@ -66,5 +66,22 @@ ScrollReveal().reveal('.img5',{
     origin: 'rigth'
 })
 
+ScrollReveal().reveal('.h3quemsou',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'left'
+})
+
+ScrollReveal().reveal('.h3apresentacao',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+ScrollReveal().reveal('.imgTecnologias',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'left'
+})
+
 
 
