@@ -92,7 +92,7 @@ font-style: normal;
     flex-direction: row-reverse;
     width: 100%;
     overflow: hidden;
-    margin: 10px;
+    margin: 10px 0;
 }
 .apresentacao{
     /* height: 300px; */
