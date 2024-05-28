@@ -1,0 +1,23 @@
+hr{
+    margin-top: 40px;
+    width: 100%;
+    height: 2px;
+    background-color: #bea9d8;
+}
+
+.sites{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.sites img{
+    margin-top: 20px;
+    padding: 10px;
+    width: 250px;
+    
+}
+.img1, .img2, .img3, .img4, .img5{
+    visibility: hidden;
+}
