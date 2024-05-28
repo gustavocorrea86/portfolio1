@@ -131,10 +131,10 @@ margin: 10px;
    
 }
 .apresentacao h2{
-    line-height: 45px;
+    line-height: 35px;
     
     @media(max-width:600px){
-        font-size: 25px;
+        font-size: 30px;
        
     }
 }
