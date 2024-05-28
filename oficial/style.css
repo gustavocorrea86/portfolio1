@@ -8,9 +8,6 @@ body{
     display: block;
     margin: 0 auto;
     height: 100vh;
-    /* background-image: url(imagens/Background.png);
-    background-repeat: no-repeat;
-    background-size: cover; */
     background-image: linear-gradient(to left,#854BD0,rgb(46, 46, 46) );
     @media(min-width:600px){
         width: 1400px;
@@ -54,7 +51,7 @@ header img{
     align-items: end;
     justify-content: center;
     /* margin-top: 30px; */
-    border: 1 px solid black;
+    visibility: hidden;
     @media(min-width: 600px) {
         display: none; 
     }
@@ -101,14 +98,13 @@ font-style: normal;
     font-weight: 400;
     font-style: normal;
     text-align: start;
-    font-weight: 400;
     color: white;
-    margin: 10px;
+    padding: 10px 0 0 10px;
+    margin-top: 10px;
    
 }
 .apresentacao h2{
     line-height: 35px;
-    
     @media(max-width:600px){
         font-size: 30px;
        

@@ -1,24 +1,39 @@
 const btnMenu = document.querySelector('.iconMenu')
-const menuMobile = document.querySelector('.menuMobile')
-btnMenu.addEventListener('click', ()=>{
-    btnMenu.classList.toggle('openMenu')
-    menuMobile.style.transition = "1s ease";
-    if( menuMobile.style.left == '0%'){
-        menuMobile.style.left = '100%'
-    }else{
-        menuMobile.style.left = '0%'
-    }
-})
+const boxMenu = document.querySelector('.boxMenu')
+
+// btnMenu.addEventListener('click', ()=>{
+//     btnMenu.classList.toggle('openMenu')
+//     menuMobile.style.transition = "1s ease";
+//     if( menuMobile.style.left == '0%'){
+//         menuMobile.style.left = '100%'
+//     }else{
+//         menuMobile.style.left = '0%'
+//     }
+// })
 
 const servicos = document.querySelector('.servicos')
 const img5 = document.querySelector('.img5')
 
-
-
-
-servicos.addEventListener('click', ()=>{
-   img5.scrollIntoView({behavior:'smooth'})
+btnMenu.addEventListener('click',()=>{
+    if(boxMenu.style.visibility === 'hidden'){
+        boxMenu.style.visibility = 'hidden'
+        
+    }else{
+       
+        ScrollReveal().reveal('.boxMenu',{
+            duration: 1500,
+            distance:'500px',
+            origin: 'rigth'
+        })
+    }
+    
 })
+
+
+
+// servicos.addEventListener('click', ()=>{
+//    img5.scrollIntoView({behavior:'smooth'})
+// })
 
 window.sr = ScrollReveal({reset: true})
 
