@@ -51,7 +51,7 @@ header img{
     align-items: end;
     justify-content: center;
     /* margin-top: 30px; */
-    visibility: hidden;
+    /* visibility: hidden; */
     @media(min-width: 600px) {
         display: none; 
     }
@@ -92,9 +92,7 @@ font-style: normal;
     flex-direction: row-reverse;
     width: 100%;
     overflow: hidden;
-    margin: 10px;;
-    border: 2px solid white;
-    
+    margin: 10px;
 }
 .apresentacao{
     /* height: 300px; */
