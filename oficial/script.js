@@ -2,6 +2,7 @@ const btnMenu = document.querySelector('.iconMenu')
 const boxMenu = document.querySelector('.boxMenu')
 
 const servicos = document.querySelector('.servicos')
+const sobre = document.querySelector('.sobre')
 const img5 = document.querySelector('.img5')
 
 
