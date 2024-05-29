@@ -42,16 +42,23 @@ ScrollReveal().reveal('.h3quemsou',{
     origin: 'left'
 })
 
-ScrollReveal().reveal('.h3apresentacao',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
 ScrollReveal().reveal('.imgTecnologias',{
     duration: 1500,
     distance:'500px',
     origin: 'left'
 })
+
+const texto = document.querySelector('.h3apresentacao')
+function typeWriter(elemento){
+    const textoArray = elemento.innerHTML.split('')
+    elemento.innerHTML = ''
+    textoArray.forEach(function(letra, i){
+        setTimeout(function(){
+            elemento.innerHTML += letra
+        }, 75 * i)
+    })
+   }
+   typeWriter(texto)
 
 
 
