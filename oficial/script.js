@@ -3,10 +3,15 @@ const boxMenu = document.querySelector('.boxMenu')
 
 const servicos = document.querySelector('.servicos')
 const sobre = document.querySelector('.sobre')
+const section2 = document.querySelector('.section2')
 const img5 = document.querySelector('.img5')
 
 
 window.sr = ScrollReveal({reset: true})
+
+sobre.addEventListener('click', ()=>{
+    section2.scrollIntoView({behavior:'smooth'})
+ })
 
 ScrollReveal().reveal('.img1',{
     duration: 1500,
