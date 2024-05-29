@@ -134,39 +134,59 @@ font-style: normal;
     background-position: center;
     background-size: cover;
     padding: 10px;
+    height: 300px;
     overflow: hidden;
-    
 }
+
 .subSection2{
     width: 100%;
     height: 450px;
-   
 }
-.section2 h3{
+.h3quemsou{
     color: white;
-    /* text-align: center; */
+    text-align: center;
     font-family: "Zen Dots", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 25px;
+    /* font-size: 20px; */
+}
+
+.section2 h3{
+    color: white;
+    text-align: center;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
     visibility: hidden;
 }
-.imgTecnologias{
-    visibility: hidden;
+.section3{
+    width: 100%;
+   
 }
-/* @keyframes seta {
-    0%{
-        
-        transform: translateY(-600px);
-        break-after: avoid;
+
+.tecnologias{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media(max-width:600px){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1f;
+        border: 1px solid white;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
     }
-    50%{
-        transform: translateY(18px);
-    }
-    100%{
-        transform: translateY(30px);
-        }
-    } */
+}
+.tec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.section3 img{
+    width: 50px;
+}
 
 
 
