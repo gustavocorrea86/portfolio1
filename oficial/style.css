@@ -165,6 +165,7 @@ font-style: normal;
 }
 .section3{
     width: 100%;
+    padding: 10px;
    
 }
 
@@ -175,7 +176,6 @@ font-style: normal;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1f;
-        border: 1px solid white;
         padding: 10px;
         align-items: center;
         justify-content: center;
@@ -191,6 +191,22 @@ font-style: normal;
     width: 50px;
 }
 
+.tec{
+    height: 110px;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.315);
+    border-radius: 10px;
+}
+.tec:hover{
+    transform: scale(1.1);
+}
 
+.tec h3{
+    color: white;
+    font-size: 20px;
+}
+.img1, .img2, .img3, .img4, .img5{
+    visibility: hidden;
+}
 
 

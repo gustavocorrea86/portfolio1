@@ -1,6 +1,6 @@
 .hr2{
     width: 100%;
-    height: 5px;
+    height: 2px;
     background-image: linear-gradient(to left,#c52be4, #944ee9,#3c34b1,#64ade9, #893be7,#893be7,#e73ba5,#1bb9e9 );
     margin: 0;
 }
@@ -16,8 +16,5 @@
     margin-top: 20px;
     padding: 10px;
     width: 250px;
-    
 }
-.img1, .img2, .img3, .img4, .img5{
-    visibility: hidden;
-}
+
