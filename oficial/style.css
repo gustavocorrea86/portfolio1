@@ -53,14 +53,13 @@ header img{
 }
 .boxMenu{
     display: flex;
-    /* width: 170px; */
     height:350px;
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: center;
     margin-top: 120px;
-    /* visibility: hidden; */
+    visibility: hidden;
     @media(min-width: 600px) {
         display: none; 
     }
@@ -128,7 +127,6 @@ font-style: normal;
     width: 25px;
     top: 90%;
     left: 50%;
-   
     animation: seta 1s infinite ease-in-out;
 }
 .section2{
@@ -163,50 +161,6 @@ font-style: normal;
     font-size: 20px;
     visibility: hidden;
 }
-.section3{
-    width: 100%;
-    padding: 10px;
-   
-}
 
-.tecnologias{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    @media(max-width:600px){
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1f;
-        padding: 10px;
-        align-items: center;
-        justify-content: center;
-    }
-}
-.tec{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-}
-.section3 img{
-    width: 50px;
-}
-
-.tec{
-    height: 110px;
-    margin: 5px;
-    background-color: rgba(0, 0, 0, 0.315);
-    border-radius: 10px;
-}
-.tec:hover{
-    transform: scale(1.1);
-}
-
-.tec h3{
-    color: white;
-    font-size: 20px;
-}
-.img1, .img2, .img3, .img4, .img5{
-    visibility: hidden;
-}
 
 

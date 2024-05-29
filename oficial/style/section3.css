@@ -1,0 +1,56 @@
+.section3{
+    width: 100%;
+    padding: 10px;
+   
+}
+
+.tecnologias{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media(max-width:600px){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1f;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.tec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.section3 img{
+    width: 50px;
+}
+
+.mysql img{
+    width: 100px;
+}
+
+.figma img{
+    width: 40px;
+}
+.mongo img{
+    width: 30px;
+}
+
+.tec{
+    height: 110px;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.315);
+    border-radius: 10px;
+}
+.tec:hover{
+    transform: scale(1.1);
+}
+
+.tec h3{
+    color: white;
+    font-size: 20px;
+}
+.img1, .img2, .img3, .img4, .img5{
+    visibility: hidden;
+}
