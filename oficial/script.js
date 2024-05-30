@@ -5,13 +5,18 @@ const servicos = document.querySelector('.servicos')
 const sobre = document.querySelector('.sobre')
 const section2 = document.querySelector('.section2')
 const img5 = document.querySelector('.img5')
-
+// import scrollView from "./scrollView.mjs"
 
 window.sr = ScrollReveal({reset: true})
 
-sobre.addEventListener('click', ()=>{
-    section2.scrollIntoView({behavior:'smooth'})
- })
+function scrollView(door, element){
+    door.addEventListener('click', ()=>{
+    element.scrollIntoView({behavior:'smooth'})
+    
+     })
+}
+
+scrollView(sobre, section2)
 
 ScrollReveal().reveal('.img1',{
     duration: 1500,
@@ -48,7 +53,7 @@ ScrollReveal().reveal('.h3quemsou',{
     origin: 'left'
 })
 
-ScrollReveal().reveal('.imgTecnologias',{
+ScrollReveal().reveal('.h3apresentacao',{
     duration: 1500,
     distance:'500px',
     origin: 'left'
