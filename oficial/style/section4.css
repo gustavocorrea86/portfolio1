@@ -18,6 +18,24 @@
 
 .subSection4{
     width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    @media(min-width:600px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    @media(min-width:800px){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1f 1fr;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    }
 }
 .section4 a{
     padding: 10px;
@@ -92,4 +110,8 @@
 .proj5 img{
     height: 140px;
     padding-top: 5px;
+}
+
+.proj8 img{
+    width: 200px;
 }
