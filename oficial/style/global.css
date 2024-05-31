@@ -7,11 +7,11 @@
 body{
     display: block;
     margin:auto;
-    background-image: url(../imagens/48\ 1.png);
+    /* background-image: url(../imagens/48\ 1.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    /* background-image: linear-gradient(195deg, rgb(194, 121, 204), white, blue); */
+    background-size: cover; */
+    background-image: linear-gradient(110deg, black,rgb(59, 30, 63), black, rgb(92, 33, 100));
     @media(min-width:600px){
         display: block;
         margin:auto;
