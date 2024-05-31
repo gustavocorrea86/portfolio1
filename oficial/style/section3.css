@@ -6,10 +6,10 @@
 
 .tecnologias{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     @media(max-width:600px){
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns:;
         grid-template-rows: 1f;
         padding: 10px;
         align-items: center;
@@ -22,7 +22,7 @@
 }
 
 .mysql img{
-    width: 100px;
+    width: 120px;
 }
 
 .figma img{
@@ -30,6 +30,9 @@
 }
 .mongo img{
     width: 30px;
+}
+.bootstrap img{
+    width: 70px;
 }
 
 .tec{

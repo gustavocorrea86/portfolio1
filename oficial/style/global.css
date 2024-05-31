@@ -6,15 +6,17 @@
 
 body{
     display: block;
-    margin: 0 auto;
-    height: 100%;
-    background-image: url(/imagens/Background.png);
+    margin:auto;
+    /* background-image: url(/imagens/Background.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    /* background-color: antiquewhite; */
+    background-size: cover; */
+    background-image: linear-gradient(195deg, rgb(194, 121, 204), white, blue);
     @media(min-width:600px){
+        display: block;
+        margin:auto;
         width: 1400px;
+        border: 1px solid black;
     }
 }
 header{
