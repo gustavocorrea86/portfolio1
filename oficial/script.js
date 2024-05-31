@@ -5,16 +5,9 @@ const servicos = document.querySelector('.servicos')
 const sobre = document.querySelector('.sobre')
 const section2 = document.querySelector('.section2')
 const img5 = document.querySelector('.img5')
-// import scrollView from "./scrollView.mjs"
+import scrollView from "./scrollView.mjs"
 
 window.sr = ScrollReveal({reset: true})
-
-function scrollView(door, element){
-    door.addEventListener('click', ()=>{
-    element.scrollIntoView({behavior:'smooth'})
-    
-     })
-}
 
 scrollView(sobre, section2)
 
@@ -59,17 +52,17 @@ ScrollReveal().reveal('.h3apresentacao',{
     origin: 'left'
 })
 
-const texto = document.querySelector('.h3apresentacao')
-function typeWriter(elemento){
-    const textoArray = elemento.innerHTML.split('')
-    elemento.innerHTML = ''
-    textoArray.forEach(function(letra, i){
-        setTimeout(function(){
-            elemento.innerHTML += letra
-        }, 75 * i)
-    })
-   }
-   typeWriter(texto)
+// const texto = document.querySelector('.h3apresentacao')
+// function typeWriter(elemento){
+//     const textoArray = elemento.innerHTML.split('')
+//     elemento.innerHTML = ''
+//     textoArray.forEach(function(letra, i){
+//         setTimeout(function(){
+//             elemento.innerHTML += letra
+//         }, 75 * i)
+//     })
+//    }
+//    typeWriter(texto)
 
 
 
