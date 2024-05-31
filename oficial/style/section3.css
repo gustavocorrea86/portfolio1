@@ -2,7 +2,10 @@
     width: 100%;
     padding: 10px;
     margin-top: 70px;
-   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .section3 h3{
@@ -13,22 +16,20 @@
     font-style: normal;
 }
 
-.tecnologias{
-    width: 100%;
+.subSection3{
     display: grid;
     grid-template-columns: repeat(3, minmax(50px, auto));
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     margin-top: 40px;
-    @media(min-width:500px){
-        grid-template-columns: repeat(3, minmax(50px, 200px));
-    }
+    /* @media(min-width:600px){
+        grid-template-columns: repeat(2, minmax(50px, 200px));
+    } */
     @media(min-width:800px){
-        grid-template-columns: repeat(4, minmax(50px, 300px));
+        grid-template-columns: repeat(4, minmax(100px, 200px));
+       
     }
-
 }
-
 .section3 img{
     width: 50px;
 }
@@ -53,10 +54,10 @@
     width: 110px;
     margin: 5px;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.315);
+    background-color: rgba(255, 255, 255, 0.180);
     border-radius: 10px;
     @media(min-width: 500px){
-        width: 170px;
+        width: 150px;
     }
 }
 .tec:hover{
