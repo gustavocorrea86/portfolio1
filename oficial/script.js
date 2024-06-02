@@ -53,8 +53,6 @@ ScrollReveal().reveal('footer',{
 })
 
 
-
-
 // ScrollReveal().reveal('.html',{
 //     duration: 1500,
 //     distance:'500px',
@@ -158,6 +156,66 @@ ScrollReveal().reveal('.proj6',{
 })
 
 ScrollReveal().reveal('.proj7',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+
+ScrollReveal().reveal('.etapa1',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+
+ScrollReveal().reveal('.etapa2',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+
+ScrollReveal().reveal('.etapa3',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+
+ScrollReveal().reveal('.etapa4',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+
+ScrollReveal().reveal('.etapa5',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+
+ScrollReveal().reveal('.etapa6',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+
+ScrollReveal().reveal('.etapa7',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+
+ScrollReveal().reveal('.etapa8',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+
+ScrollReveal().reveal('.etapa9',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
+
+ScrollReveal().reveal('.etapa10',{
     duration: 1500,
     distance:'500px',
     origin: 'rigth'
