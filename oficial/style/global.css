@@ -9,6 +9,7 @@ body{
     display: block;
     margin:auto;
     background: linear-gradient(130deg, black,rgb(59, 30, 63),black, rgb(92, 33, 100));
+    
     @media(min-width:600px){
         width: 1400px;
     }
@@ -38,7 +39,7 @@ header img{
     cursor: pointer;
     width: 50px;
     margin: 10px;
-    animation: rotacionar 5s linear infinite;
+    animation: rotacionar 12s linear infinite;
     @media(min-width: 600px){
         display: none;
     }
