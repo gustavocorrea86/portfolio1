@@ -30,6 +30,7 @@
     font-size: 30px;
     margin-top: 20px;
     line-height: 30px;
+    
     @media(min-width: 600px){
         font-size: 60px;
     }

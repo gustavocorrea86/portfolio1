@@ -87,5 +87,9 @@ font-style: normal;
 
 .boxMenu a:hover{
     color:#9f1bb9;
-    
 }
+
+main{
+    overflow: hidden;
+}
+
