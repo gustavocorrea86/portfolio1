@@ -29,7 +29,7 @@ ScrollReveal().reveal('.section2',{
 })
 
 ScrollReveal().reveal('.section3',{
-    duration: 1500,
+    duration: 1000,
     distance:'500px',
     origin: 'rigth'
 })
@@ -170,7 +170,7 @@ ScrollReveal().reveal('.etapa1',{
 ScrollReveal().reveal('.etapa2',{
     duration: 1500,
     distance:'500px',
-    origin: 'rigth'
+    origin: 'left'
 })
 
 ScrollReveal().reveal('.etapa3',{
@@ -182,7 +182,7 @@ ScrollReveal().reveal('.etapa3',{
 ScrollReveal().reveal('.etapa4',{
     duration: 1500,
     distance:'500px',
-    origin: 'rigth'
+    origin: 'left'
 })
 
 ScrollReveal().reveal('.etapa5',{
@@ -194,7 +194,7 @@ ScrollReveal().reveal('.etapa5',{
 ScrollReveal().reveal('.etapa6',{
     duration: 1500,
     distance:'500px',
-    origin: 'rigth'
+    origin: 'left'
 })
 
 ScrollReveal().reveal('.etapa7',{
@@ -206,7 +206,7 @@ ScrollReveal().reveal('.etapa7',{
 ScrollReveal().reveal('.etapa8',{
     duration: 1500,
     distance:'500px',
-    origin: 'rigth'
+    origin: 'left'
 })
 
 ScrollReveal().reveal('.etapa9',{
@@ -218,7 +218,7 @@ ScrollReveal().reveal('.etapa9',{
 ScrollReveal().reveal('.etapa10',{
     duration: 1500,
     distance:'500px',
-    origin: 'rigth'
+    origin: 'left'
 })
 
 

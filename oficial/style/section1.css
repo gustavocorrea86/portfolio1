@@ -15,10 +15,10 @@
 }
 .apresentacao{
     width: 100%;
-    font-family: "Zen Maru Gothic", serif;
+    /* font-family: "Zen Maru Gothic", serif;
     font-weight: 400;
-    font-style: bold;
-    
+    font-style: bold; */
+    font-family: "Oswald", sans-serif;
     text-align: start;
     color: white;
     /* padding: 20px; */
