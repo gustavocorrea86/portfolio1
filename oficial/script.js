@@ -1,22 +1,32 @@
 const btnMenu = document.querySelector('.iconMenu')
 const boxMenu = document.querySelector('.boxMenu')
 
-const servicos = document.querySelector('.servicos')
-const sobre = document.querySelector('.sobre')
-const section2 = document.querySelector('.section2')
-const img5 = document.querySelector('.img5')
 import scrollView from "./scrollView.mjs"
 
-window.sr = ScrollReveal({reset: true})
+const sobre = document.querySelector('.sobre')
+const section2 = document.querySelector('.section2')
+
+const portfolio = document.querySelector('.portfolio')
+const section4 = document.querySelector('.section4')
+
+const servicos = document.querySelector('.servicos')
+const section5 = document.querySelector('.section5')
+
+const contato = document.querySelector('.contato')
+const footer = document.querySelector('footer')
 
 scrollView(sobre, section2)
+scrollView(portfolio, section4)
+scrollView(servicos, section5)
+scrollView(contato, footer)
+
+window.sr = ScrollReveal({reset: true})
 
 ScrollReveal().reveal('.section2',{
     duration: 1500,
     distance:'500px',
     origin: 'left'
 })
-
 
 ScrollReveal().reveal('.section3',{
     duration: 1500,
@@ -30,10 +40,16 @@ ScrollReveal().reveal('.section4',{
     origin: 'left'
 })
 
-ScrollReveal().reveal('.section5',{
+// ScrollReveal().reveal('.section5',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'rigth'
+// })
+
+ScrollReveal().reveal('footer',{
     duration: 1500,
     distance:'500px',
-    origin: 'rigth'
+    origin: 'left'
 })
 
 
@@ -93,59 +109,59 @@ ScrollReveal().reveal('.section5',{
 //     origin: 'rigth'
 // })
 
-// ScrollReveal().reveal('.secProjRealizados',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'rigth'
-// })
+ScrollReveal().reveal('.secProjRealizados',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
 
-// ScrollReveal().reveal('.proj1',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'left'
-// })
+ScrollReveal().reveal('.proj1',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'left'
+})
 
-// ScrollReveal().reveal('.proj1Mobile',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'rigth'
-// })
+ScrollReveal().reveal('.proj1Mobile',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
 
-// ScrollReveal().reveal('.proj2',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'left'
-// })
+ScrollReveal().reveal('.proj2',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'left'
+})
 
-// ScrollReveal().reveal('.proj3',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'rigth'
-// })
+ScrollReveal().reveal('.proj3',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
 
-// ScrollReveal().reveal('.proj4',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'left'
-// })
+ScrollReveal().reveal('.proj4',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'left'
+})
 
-// ScrollReveal().reveal('.proj5',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'rigth'
-// })
+ScrollReveal().reveal('.proj5',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
 
-// ScrollReveal().reveal('.proj6',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'left'
-// })
+ScrollReveal().reveal('.proj6',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'left'
+})
 
-// ScrollReveal().reveal('.proj7',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'rigth'
-// })
+ScrollReveal().reveal('.proj7',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'rigth'
+})
 
 
 
