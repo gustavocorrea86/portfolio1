@@ -11,160 +11,141 @@ window.sr = ScrollReveal({reset: true})
 
 scrollView(sobre, section2)
 
-ScrollReveal().reveal('.img1',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
-
-ScrollReveal().reveal('.img2',{
+ScrollReveal().reveal('.section2',{
     duration: 1500,
     distance:'500px',
     origin: 'left'
 })
 
-ScrollReveal().reveal('.img3',{
+
+ScrollReveal().reveal('.section3',{
     duration: 1500,
     distance:'500px',
     origin: 'rigth'
 })
 
-ScrollReveal().reveal('.img4',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'left'
-})
-ScrollReveal().reveal('.img5',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
-
-ScrollReveal().reveal('.h3quemsou',{
+ScrollReveal().reveal('.section4',{
     duration: 1500,
     distance:'500px',
     origin: 'left'
 })
 
-ScrollReveal().reveal('.h3apresentacao',{
+ScrollReveal().reveal('.section5',{
     duration: 1500,
     distance:'500px',
     origin: 'rigth'
 })
 
-ScrollReveal().reveal('.secHabilidades',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
 
-ScrollReveal().reveal('.html',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'left'
-})
 
-ScrollReveal().reveal('.js',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
 
-ScrollReveal().reveal('.css',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'top'
-})
+// ScrollReveal().reveal('.html',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'left'
+// })
 
-ScrollReveal().reveal('.node',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'left'
-})
+// ScrollReveal().reveal('.js',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'rigth'
+// })
 
-ScrollReveal().reveal('.mysql',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'top'
-})
+// ScrollReveal().reveal('.css',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'top'
+// })
 
-ScrollReveal().reveal('.mongo',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
+// ScrollReveal().reveal('.node',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'left'
+// })
 
-ScrollReveal().reveal('.bootstrap',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'left'
-})
+// ScrollReveal().reveal('.mysql',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'top'
+// })
 
-ScrollReveal().reveal('.figma',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'top'
-})
+// ScrollReveal().reveal('.mongo',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'rigth'
+// })
 
-ScrollReveal().reveal('.ilustrator',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
+// ScrollReveal().reveal('.bootstrap',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'left'
+// })
 
-ScrollReveal().reveal('.secProjRealizados',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
+// ScrollReveal().reveal('.figma',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'top'
+// })
 
-ScrollReveal().reveal('.proj1',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'left'
-})
+// ScrollReveal().reveal('.ilustrator',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'rigth'
+// })
 
-ScrollReveal().reveal('.proj1Mobile',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
+// ScrollReveal().reveal('.secProjRealizados',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'rigth'
+// })
 
-ScrollReveal().reveal('.proj2',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'left'
-})
+// ScrollReveal().reveal('.proj1',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'left'
+// })
 
-ScrollReveal().reveal('.proj3',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
+// ScrollReveal().reveal('.proj1Mobile',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'rigth'
+// })
 
-ScrollReveal().reveal('.proj4',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'left'
-})
+// ScrollReveal().reveal('.proj2',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'left'
+// })
 
-ScrollReveal().reveal('.proj5',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
+// ScrollReveal().reveal('.proj3',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'rigth'
+// })
 
-ScrollReveal().reveal('.proj6',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'left'
-})
+// ScrollReveal().reveal('.proj4',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'left'
+// })
 
-ScrollReveal().reveal('.proj7',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'rigth'
-})
+// ScrollReveal().reveal('.proj5',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'rigth'
+// })
+
+// ScrollReveal().reveal('.proj6',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'left'
+// })
+
+// ScrollReveal().reveal('.proj7',{
+//     duration: 1500,
+//     distance:'500px',
+//     origin: 'rigth'
+// })
 
 
 
