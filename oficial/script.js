@@ -20,7 +20,7 @@ scrollView(portfolio, section4)
 scrollView(servicos, section5)
 scrollView(contato, footer)
 
-window.sr = ScrollReveal({reset: true})
+// window.sr = ScrollReveal({reset: true})
 
 ScrollReveal().reveal('.section2',{
     duration: 1500,
