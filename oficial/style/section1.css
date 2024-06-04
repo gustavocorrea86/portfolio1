@@ -7,11 +7,16 @@
 }
 .subSection1{
     display: flex;
-    flex-direction: row-reverse;
     width: 100%;
     overflow: hidden;
-    /* margin: 10px; */
-    /* padding: 10px; */
+    /* @media(min-width: 600px){
+        flex-direction: row;
+    } */
+}
+.subSection1 img{
+    @media(max-width:600px){
+        display: none;
+    }
 }
 .apresentacao{
     width: 100%;
@@ -24,6 +29,9 @@
     /* padding: 20px; */
     margin: 10px;
    
+}
+.apresentacao p{
+    line-height: 70px;
 }
 .dwd{
     color: yellow;
