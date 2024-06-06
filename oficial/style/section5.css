@@ -42,7 +42,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.288);
-    width: 40px;
+    width: 50px;
     margin: 5px;
     padding: 10px;
     border-radius: 50%;
@@ -53,7 +53,7 @@
 
 .textoDaEtapa{
     width: 300px;
-    height: 120px;
+   
     background-color: rgba(255, 255, 255, 0.151);
     padding: 10px;
     display: flex;
