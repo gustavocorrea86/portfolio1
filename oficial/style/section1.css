@@ -13,7 +13,21 @@
         flex-direction: row;
     } */
 }
+.divLinkWhatsApp{
+    position: absolute;
+    left: 92%;
+    top: 55%;
+    
+}
 
+.btnWhatsApp img{
+    padding: 5px;
+    width: 40px;
+    position: fixed;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+    
+}
 .subSection1 .slideProjs{
     @media(max-width:700px){
         display:none;
