@@ -9,8 +9,8 @@ const section2 = document.querySelector('.section2')
 const portfolio = document.querySelector('.portfolio')
 const section4 = document.querySelector('.section4')
 
-const servicos = document.querySelector('.servicos')
-const section5 = document.querySelector('.section5')
+const servicos = [...document.querySelectorAll('.servicos')]
+const section5 = [...document.querySelectorAll('.section5')]
 
 const contato = document.querySelector('.contato')
 const footer = document.querySelector('footer')
