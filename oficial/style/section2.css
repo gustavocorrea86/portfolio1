@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
 }
-.h3apresentaccao{
+.h3apresentacao{
     color: #000000;
     text-align: center;
     font-family: "Zen Dots", sans-serif;
@@ -18,12 +18,14 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.164);
     border-radius: 10px;
     margin: 20px;
-    /* width: 500px; */
     padding: 10px;
+    @media(min-width: 600px){
+        width: 700px;
+    }
 }
 .h3quemsou{
     color: #d86228;
@@ -41,7 +43,7 @@
     @media(min-width: 600px){
     width: 700px;
     padding: 50px;
-    background-color: rgba(0, 0, 0, 0.11);
+    /* background-color: rgba(0, 0, 0, 0.11); */
     border-radius: 10px;
     }
 }
