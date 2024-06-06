@@ -37,10 +37,12 @@
 } */
 .dwd{
     color:yellow;
-    font-size: 30px;
+    font-size: 28px;
     margin-top: 20px;
     line-height: 30px;
-    
+    /* background-color: rgb(68, 12, 65);
+    padding: 10px;
+    border-radius: 20px; */
     @media(min-width: 600px){
         font-size: 50px;
         line-height: 65px;
