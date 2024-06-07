@@ -9,10 +9,10 @@ body{
     display: block;
     margin:auto;
     /* background: linear-gradient(130deg,#6172a4,#322633);  */
-    background-image: url(../imagens/backteste4.jpg);
+    background-image: url(../imagens/backteste6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left;
+    background-position: center;
 
     @media(min-width:600px){
         width: 1400px;
