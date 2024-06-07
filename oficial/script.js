@@ -10,7 +10,7 @@ const portfolio = document.querySelector('.portfolio')
 const section4 = document.querySelector('.section4')
 
 const servicos = [...document.querySelectorAll('.servicos')]
-const section5 = [...document.querySelectorAll('.section5')]
+const section5 = document.querySelectorAll('.section5')
 
 const contato = document.querySelector('.contato')
 const footer = document.querySelector('footer')
@@ -21,6 +21,15 @@ scrollView(servicos, section5)
 scrollView(contato, footer)
 
 // window.sr = ScrollReveal({reset: true})
+
+function irParaSecServicos(){
+    servicos.forEach((el)=>{
+        el.addEventListener('click', ()=>{
+            scrollView(el, section5)
+        })
+    })
+}
+irParaSecServicos()
 
 ScrollReveal().reveal('.section2',{
     duration: 1500,

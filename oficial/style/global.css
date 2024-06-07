@@ -7,8 +7,13 @@
 body{
     width: 100%;
     display: block;
-    margin:auto;
-    background: linear-gradient(130deg,#3b3f40,#6b3f58,#6172a4, #6b3f58,#3b3f40);
+    /* margin:auto;
+    background: linear-gradient(130deg,#3b3f40,#6b3f58,#6172a4, #6b3f58,#3b3f40); */
+    background-image: url(../imagens/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
     @media(min-width:600px){
         width: 1400px;
     }
@@ -30,6 +35,7 @@ header h3{
     margin-top: 10px;
     color: white;
     font-size: 15px;
+    text-shadow: 10px;
     @media(min-width: 600px){
         font-size: 30px;
         /* width: 400px; */
