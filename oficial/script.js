@@ -1,41 +1,51 @@
-const btnMenu = document.querySelector('.iconMenu')
-const boxMenu = document.querySelector('.boxMenu')
+// const btnMenu = document.querySelector('.iconMenu')
+// const boxMenu = document.querySelector('.boxMenu')
 
 import scrollView from "./scrollView.mjs"
 
-const sobre = document.querySelector('.sobre')
-const section2 = document.querySelector('.section2')
 
-const portfolio = document.querySelector('.portfolio')
-const section4 = document.querySelector('.section4')
 
-const servicos = [...document.querySelectorAll('.servicos')]
-const section5 = document.querySelectorAll('.section5')
+// const portfolio = document.querySelector('.portfolio')
+// const section4 = document.querySelector('.section4')
 
-const contato = document.querySelector('.contato')
-const footer = document.querySelector('footer')
+// const servicos = [...document.querySelectorAll('.servicos')]
+// const section5 = document.querySelectorAll('.section5')
 
-scrollView(sobre, section2)
-scrollView(portfolio, section4)
-scrollView(servicos, section5)
-scrollView(contato, footer)
+// const contato = document.querySelector('.contato')
+// const footer = document.querySelector('footer')
+
+// scrollView(sobre, section2)
+// scrollView(portfolio, section4)
+// scrollView(servicos, section5)
+// scrollView(contato, footer)
 
 // window.sr = ScrollReveal({reset: true})
 
-function irParaSecServicos(){
-    servicos.forEach((el)=>{
-        el.addEventListener('click', ()=>{
-            scrollView(el, section5)
-        })
-    })
-}
-irParaSecServicos()
+// function irParaSecServicos(){
+//     servicos.forEach((el)=>{
+//         el.addEventListener('click', ()=>{
+//             scrollView(el, section5)
+//         })
+//     })
+// }
+// irParaSecServicos()
+const sobre = document.querySelector('.sobre')
+const sobreDesktop = document.querySelector('.sobreDesktop')
+const section2 = document.querySelector('.section2')
+scrollView(sobre, section2)
+scrollView(sobreDesktop, section2)
 
-ScrollReveal().reveal('.section2',{
+ScrollReveal().reveal('.divQuemsou',{
     duration: 1500,
     distance:'500px',
     origin: 'left'
 })
+ScrollReveal().reveal('.h3quemsou',{
+    duration: 1500,
+    distance:'500px',
+    origin: 'right'
+})
+
 
 ScrollReveal().reveal('.section3',{
     duration: 1000,
