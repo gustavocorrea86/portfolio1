@@ -27,7 +27,11 @@ header{
     justify-content: space-between;
     padding: 10px;
     /* margin-top: 10px; */
-    background-color: rgba(0, 0, 0, 0.89);
+    /* background-color: rgba(0, 0, 0, 0.89); */
+    background-image: url(../imagens/fundoSec2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
     

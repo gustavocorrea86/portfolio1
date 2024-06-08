@@ -65,11 +65,6 @@ ScrollReveal().reveal('.subSection4',{
 //     origin: 'rigth'
 // })
 
-ScrollReveal().reveal('.subFooter',{
-    duration: 1500,
-    distance:'500px',
-    origin: 'right'
-})
 
 
 // ScrollReveal().reveal('.html',{
