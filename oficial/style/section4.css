@@ -4,10 +4,14 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-    height: 2000px;
+    height: 1900px;
     /* background-color:rgb(28, 65, 175); */
     /* background-image:  linear-gradient(135deg, rgb(107, 167, 190), royalblue, rgb(107, 167, 190)); */
-    background-color: rgba(0, 0, 0, 0.89);
+    /* background-color: rgba(0, 0, 0, 0.89); */
+    background-image: url(../imagens/fundoSec4.png);
+    background-repeat: no-repeat;   
+    background-size: cover;
+    background-position: center;
     @media(min-width:600px){
         height: 550px;
     }
