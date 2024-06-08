@@ -7,11 +7,12 @@
     align-items: center;
     justify-content: center;
     height: 500px;
-    /* background-image: url(../imagens/backsec3.jpg);
+    background-image: url(../imagens/backsec3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
-    background-attachment: fixed; */
+    background-attachment: fixed;
+    
 }
 
 .section3 h3{
@@ -69,7 +70,7 @@
     width: 110px;
     margin: 5px;
     /* padding: 10px; */
-    background-color: rgba(255, 255, 255, 0.180);
+    background-color: rgba(255, 255, 255, 0.281);
     border-radius: 10px;
     @media(min-width: 500px){
         width: 150px;
