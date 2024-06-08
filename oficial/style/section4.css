@@ -14,7 +14,7 @@
 }
 
 .section4 h3{
-    color: white;
+    color:#d86228;
     font-family: "Zen Dots", sans-serif;
     font-weight: 400;
     font-size: 25px;
@@ -41,12 +41,12 @@
 .section4 a{
     padding: 10px;
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: "Zen Dots", sans-serif;
 }
 .section4 a:hover{
     text-decoration: underline;
-    color: white;
+    color: #d86228;
 }
 
 .proj{

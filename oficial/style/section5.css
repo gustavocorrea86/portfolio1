@@ -47,18 +47,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.288);
+    background-color: rgba(0, 0, 0, 0.288);
     width: 50px;
     margin: 5px;
     padding: 10px;
     border-radius: 50%;
     font-size: 20px;
     color: yellow;
+    text-shadow: yellow 5px 0 20px;
     font-family: "Zen Dots", sans-serif;
 }
 
 .textoDaEtapa{
-    width: 300px;
+    /* width: 300px; */
+    height: 150px;
     background-color: rgba(0, 0, 0, 0.24);
     padding: 10px;
     display: flex;

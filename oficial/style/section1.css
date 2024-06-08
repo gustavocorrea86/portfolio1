@@ -58,10 +58,10 @@
 } */
 .dwd{
     color:yellow;
-    font-size: 28px;
+    font-size: 32px;
     margin-top: 20px;
     line-height: 30px;
-    text-shadow: #FC0 2px 0 5px;
+    text-shadow: rgb(253, 227, 121) 2px 0 5px;
     /* background-color: rgb(68, 12, 65);
     padding: 10px;
     border-radius: 20px; */
@@ -71,8 +71,8 @@
     }
 }
 .apresentacao h2{
-    line-height: 40px;
-    font-size: 40px;
+    line-height: 50px;
+    font-size: 50px;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.521) ;
     /* padding: 10px; */
     @media(min-width:600px){
