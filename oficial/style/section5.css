@@ -5,10 +5,10 @@
     align-items: center;
     justify-content: center;
     background-color: brown;
-    background-image: url(../imagens/software-developer-6521720_1920.jpg);
+    background-image: url(../imagens/13237921_5178774.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left center; 
+    background-position: left; 
     background-attachment: fixed;
 }
 .section5 h3{
@@ -59,7 +59,7 @@
 
 .textoDaEtapa{
     width: 300px;
-    background-color: rgba(255, 255, 255, 0.171);
+    background-color: rgba(0, 0, 0, 0.24);
     padding: 10px;
     display: flex;
     align-items: center;

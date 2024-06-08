@@ -1,21 +1,26 @@
 .section2{
+    width: 100%;
     padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    background-color: rgba(9, 13, 53, 0.918);
+    background-color: rgba(0, 0, 0, 0.89);
+    @media(min-width: 600px){
+        display: block;
+    }
+    /* background-image: linear-gradient(135deg, skyblue, royalblue, skyblue); */
+    /* background-color:rgba(24, 48, 119, 0.548); */
     /* background-color: #d86328d3; */
     /* background-image: url(../imagens/backtestesec1.jpg); */
    
 }
 .h3apresentacao{
-    color: #000000;
-    text-align: center;
+    /* color: #000000; */
+    /* text-align: center;
     font-family: "Zen Dots", sans-serif;
     font-weight: 400;
-    font-style: normal;
+    font-style: normal; */
     font-size: 20px;
 }
 
@@ -24,16 +29,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.164);
-    border-radius: 10px;
-    margin: 20px;
+    /* background-color: rgba(255, 255, 255, 0.164);
+    border-radius: 10px; */
     padding: 10px;
     @media(min-width: 600px){
-        width: 700px;
+        width: 100%;
     }
 }
 .h3quemsou{
-    color:black;
+    color:#d86228;
     text-align: center;
     font-family: "Zen Dots", sans-serif;
     font-weight: 400;
@@ -46,38 +50,20 @@
 
 .divQuemsou{
     @media(min-width: 600px){
-    width: 700px;
-    padding: 50px;
-    /* background-color: rgba(0, 0, 0, 0.11); */
-    border-radius: 10px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
     }
 }
 .section2 h3{
     color: white;
     text-align: center;
-    font-family: "Zen Dots", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 20px;
     @media(min-width:600px){
         font-size: 30px;
+        text-align: center;
     }
 }
 
-.avatar{
-    display: none;
-    @media(min-width: 600px){
-        display: block;
-        width: 500px;
-        padding: 50px;
-        /* background-color: rgba(0, 0, 0, 0.281); */
-        border-radius: 10px;
-    }
-}
 
-.avatar img{
-    width: 300px;
-    
-  
-}
 
