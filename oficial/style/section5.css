@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: brown;
 }
 .section5 h3{
     font-family: "Zen Dots", sans-serif;

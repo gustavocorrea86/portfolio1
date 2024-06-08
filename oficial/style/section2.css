@@ -4,6 +4,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 500px;
+    background-image: url(../imagens/backtestesec1.jpg);
 }
 .h3apresentacao{
     color: #000000;

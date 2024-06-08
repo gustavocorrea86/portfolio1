@@ -1,11 +1,17 @@
 .section3{
     width: 100%;
     padding: 10px;
-    margin-top: 70px;
+    /* margin-top: 70px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 500px;
+    /* background-image: url(../imagens/backsec3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed; */
 }
 
 .section3 h3{
