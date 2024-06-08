@@ -27,15 +27,17 @@
     align-items: center;
     justify-items: center;
     grid-template-columns: 1fr;
+   
     @media(min-width:700px){
         grid-template-columns: repeat(2, minmax(100px, 400px));
         align-items: center;
         justify-content: center;
     }
     @media(min-width:900px){
-        grid-template-columns: repeat(4, minmax(350px, 800px));
+        grid-template-columns: repeat(4, minmax(300px, 800px));
         align-items: center;
         justify-content: center;
+        padding: 10px;
     }
 }
 .section4 a{
@@ -62,6 +64,7 @@
     margin: 10px;
     @media(min-width:600px){
         margin: 10px;
+        width: 280px;
     }
 }
 .proj:hover{
@@ -82,6 +85,7 @@
     margin: 20px;
     @media(min-width: 500px){
         margin: 10px;
+        width: 290px;
     }
 }
 .proj1Mobile img{

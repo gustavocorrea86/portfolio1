@@ -51,6 +51,11 @@
     color: white;
     /* padding: 20px; */
     margin: 10px;
+    @media(min-width: 500px){
+        margin-left: 20px;
+        /* padding: 10px; */
+      
+    }
    
 }
 /* .apresentacao p{
@@ -66,7 +71,7 @@
     padding: 10px;
     border-radius: 20px; */
     @media(min-width: 600px){
-        font-size: 50px;
+        font-size: 40px;
         line-height: 65px;
     }
 }
@@ -82,13 +87,6 @@
     }
 }
 
-.arrow{
-    position: absolute;
-    width: 25px;
-    top: 90%;
-    left: 50%;
-    animation: seta 1s infinite ease-in-out;
-}
 
 
 

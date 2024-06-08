@@ -35,7 +35,7 @@ const section2 = document.querySelector('.section2')
 scrollView(sobre, section2)
 scrollView(sobreDesktop, section2)
 
-ScrollReveal().reveal('.divQuemsou',{
+ScrollReveal().reveal('.subSection2',{
     duration: 1500,
     distance:'500px',
     origin: 'left'
@@ -47,13 +47,13 @@ ScrollReveal().reveal('.h3quemsou',{
 })
 
 
-ScrollReveal().reveal('.section3',{
+ScrollReveal().reveal('.subSection3',{
     duration: 1000,
     distance:'500px',
     origin: 'rigth'
 })
 
-ScrollReveal().reveal('.section4',{
+ScrollReveal().reveal('.subSection4',{
     duration: 1500,
     distance:'500px',
     origin: 'left'
