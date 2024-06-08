@@ -1,39 +1,31 @@
-// const btnMenu = document.querySelector('.iconMenu')
-// const boxMenu = document.querySelector('.boxMenu')
-
 import scrollView from "./scrollView.mjs"
 
-
-
-// const portfolio = document.querySelector('.portfolio')
-// const section4 = document.querySelector('.section4')
-
-// const servicos = [...document.querySelectorAll('.servicos')]
-// const section5 = document.querySelectorAll('.section5')
-
-// const contato = document.querySelector('.contato')
-// const footer = document.querySelector('footer')
-
-// scrollView(sobre, section2)
-// scrollView(portfolio, section4)
-// scrollView(servicos, section5)
-// scrollView(contato, footer)
-
-// window.sr = ScrollReveal({reset: true})
-
-// function irParaSecServicos(){
-//     servicos.forEach((el)=>{
-//         el.addEventListener('click', ()=>{
-//             scrollView(el, section5)
-//         })
-//     })
-// }
-// irParaSecServicos()
 const sobre = document.querySelector('.sobre')
 const sobreDesktop = document.querySelector('.sobreDesktop')
 const section2 = document.querySelector('.section2')
 scrollView(sobre, section2)
 scrollView(sobreDesktop, section2)
+
+const portfolio = document.querySelector('.portfolio')
+const portfolioDesktop = document.querySelector('.portfolioDesktop')
+const section4 = document.querySelector('.section4')
+scrollView(portfolio, section4)
+scrollView(portfolioDesktop, section4)
+
+const servicos = document.querySelector('.servicos')
+const servicosDesktop = document.querySelector('.servicosDesktop')
+const section5 = document.querySelector('.section5')
+scrollView(servicos, section5)
+scrollView(servicosDesktop, section5)
+
+
+const contato = document.querySelector('.contato')
+const contatoDesktop = document.querySelector('.contatoDesktop')
+const footer = document.querySelector('footer')
+scrollView(contato, footer)
+scrollView(contatoDesktop, footer)
+
+// window.sr = ScrollReveal({reset: true})
 
 ScrollReveal().reveal('.subSection2',{
     duration: 1500,

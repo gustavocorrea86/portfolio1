@@ -19,7 +19,7 @@ margin: 10px;
 }
 
 .menuDesktop a:hover{
-    color:#854BD0;
+    color:#d86228;
     transform: scale(1.2);
     transition: all .5s ease-in-out;
 }
