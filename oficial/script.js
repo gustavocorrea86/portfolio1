@@ -164,6 +164,11 @@ ScrollReveal().reveal('.etapa10',{
     origin: 'left'
 })
 
+function findNumber(arr, k) {
+    const found = arrTeste.find((el)=> el === 1);
+    console.log(found)
 
+}
+console.log(findNumber(5, 1, 2, 3, 4, 5, 1))
 
 
