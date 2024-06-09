@@ -7,18 +7,19 @@
         display: none;
     }
 }
-.menuDesktop a{
-text-decoration: none;
-color: white;
-font-size: 20px;
-padding: 20px;
-font-family: "Zen Dots", sans-serif;
-font-weight: 400;
-font-style: normal;
-margin: 10px; 
+.menuDesktop p{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px; 
+    cursor: pointer;
 }
 
-.menuDesktop a:hover{
+.menuDesktop p:hover{
     color:#d86228;
     transform: scale(1.2);
     transition: all .5s ease-in-out;

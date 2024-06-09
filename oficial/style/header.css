@@ -29,5 +29,21 @@ header img{
 }
 nav{
     padding: 10px;
-  
+}
+.textoCircular{
+    cursor: pointer;
+    width: 60px;
+    /* margin: 10px; */
+    animation: rotacionar 17s linear infinite;
+    @media(min-width: 600px){
+        display: none;
+    }
+}
+@keyframes rotacionar{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
