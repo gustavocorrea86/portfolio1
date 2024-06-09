@@ -12,15 +12,18 @@ footer h3{
     text-align: center;
 }
 .subFooter{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   @media(min-width: 600px){
-       flex-direction: row;
-   }
+    display: grid;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    @media(min-width: 600px){
+        grid-template-columns: 1fr 1fr;
+    }
+    @media(min-width: 800px){
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
-
 .subFooter img{
     width: 30px;
     margin: 10px;
@@ -41,9 +44,8 @@ footer h3{
     align-items: center;
     justify-content: center;
     @media(min-width: 600px){
-        width: 400px;
-        /*   */
-        /* margin: 20px 40px; */
+      
+        
     }
 }
 

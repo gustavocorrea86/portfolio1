@@ -38,9 +38,8 @@ ScrollReveal().reveal('.h3quemsou',{
     origin: 'right'
 })
 
-
 ScrollReveal().reveal('.subSection3',{
-    duration: 1000,
+    duration: 1500,
     distance:'500px',
     origin: 'rigth'
 })
@@ -50,68 +49,6 @@ ScrollReveal().reveal('.subSection4',{
     distance:'500px',
     origin: 'left'
 })
-
-// ScrollReveal().reveal('.section5',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'rigth'
-// })
-
-
-
-// ScrollReveal().reveal('.html',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'left'
-// })
-
-// ScrollReveal().reveal('.js',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'rigth'
-// })
-
-// ScrollReveal().reveal('.css',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'top'
-// })
-
-// ScrollReveal().reveal('.node',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'left'
-// })
-
-// ScrollReveal().reveal('.mysql',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'top'
-// })
-
-// ScrollReveal().reveal('.mongo',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'rigth'
-// })
-
-// ScrollReveal().reveal('.bootstrap',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'left'
-// })
-
-// ScrollReveal().reveal('.figma',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'top'
-// })
-
-// ScrollReveal().reveal('.ilustrator',{
-//     duration: 1500,
-//     distance:'500px',
-//     origin: 'rigth'
-// })
 
 ScrollReveal().reveal('.secProjRealizados',{
     duration: 1500,

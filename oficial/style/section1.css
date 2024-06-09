@@ -17,23 +17,46 @@
         flex-direction: row;
     } */
 }
-.divLinkWhatsApp{
+/* .divLinkWhatsApp{
     position: absolute;
-    left: 92%;
+    left: 85%;
     top: 55%;
     position: fixed;
     cursor: pointer;
     overflow: hidden;
+    width: 300px;
+    height: 200px;
+    transform: rotate(-90deg);
+    border-radius: 10px 10px;
     @media(min-width: 600px){
         display: none;
     }
 }
 
-.btnWhatsApp img{
-    padding: 5px;
-    width: 35px;
-    background-color: rgba(255, 255, 255, 0.281);
-    border-radius: 10px 0 0 10px;
+.divLinkWhatsApp a{
+    text-decoration: none;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #d86228;
+    padding: 10px;
+    background-color: rgba(19, 19, 19, 0.281);
+    animation: animaBtnOrcamento .1s infinite;
+} */
+
+@keyframes animaBtnOrcamento{
+    0%{
+        transform: scale(1.0);
+        color: #d86228;
+    }
+    50%{
+        transform: scale(1.1);
+        color: yellow;
+    }
+    100%{
+        transform: scale(1.2);
+        color:white;
+    }
 }
 .subSection1 .slideProjs{
     @media(max-width:700px){
@@ -43,9 +66,7 @@
 
 .apresentacao{
     width: 100%;
-    /* font-family: "Zen Maru Gothic", serif;
-    font-weight: 400;
-    font-style: bold; */
+   
     font-family: "Oswald", sans-serif;
     text-align: start;
     color: white;

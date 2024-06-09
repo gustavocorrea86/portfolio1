@@ -5,7 +5,8 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-image: linear-gradient(to left, black, #090060, black) ;
+    background-image: linear-gradient(to left, black, #090060, black);
+    
 }
 
 header h3{
@@ -16,9 +17,7 @@ header h3{
     font-size: 20px;
     text-shadow: 10px;
     @media(min-width: 600px){
-        font-size: 30px;
-        /* width: 400px; */
-        /* margin-left: 30px; */
+        font-size: 20px;
         text-align: center;
     }
 }
