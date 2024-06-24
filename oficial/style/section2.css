@@ -5,7 +5,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
     background-image: linear-gradient(to left, black, #090060, black) ;
     @media(min-width: 600px){
         width: 100%;
