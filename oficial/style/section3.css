@@ -50,14 +50,9 @@
 .figma img{
     width: 40px;
 }
-.mongo img{
-    width: 30px;
-}
+
 .bootstrap img{
     width: 70px;
-}
-.ilustrator img{
-    width: 60px;
 }
 
 .postgress img{
@@ -78,7 +73,6 @@
     height: 110px;
     width: 110px;
     margin: 5px;
-    /* padding: 10px; */
     background-color: rgba(255, 255, 255, 0.281);
     border-radius: 10px;
     @media(min-width: 500px){
